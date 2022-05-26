@@ -52,7 +52,7 @@
     // 右边按钮
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightBtn.frame = CGRectMake(kScreenWidth_XM - 60, kStatusBarHeight_XM, 60 , kNaviStatusBarH_XM - kStatusBarHeight_XM);
-    CGFloat H = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    
     
     self.rightBtn.hidden = YES;
     // 扩大点击区域
