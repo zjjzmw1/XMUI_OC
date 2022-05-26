@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BDD636312D7172F9730B3FB8E446C1C"
-               BuildableName = "Pods-XMUI_OC.framework"
+               BuildableName = "Pods_XMUI_OC.framework"
                BlueprintName = "Pods-XMUI_OC"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
