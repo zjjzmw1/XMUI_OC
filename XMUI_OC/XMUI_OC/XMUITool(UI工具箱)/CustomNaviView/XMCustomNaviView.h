@@ -1,9 +1,8 @@
 //
-//  EYLCustomNaviView.h
-//  FastShake
+//  XMCustomNaviView.h
+//  XMUI_OC
 //
-//  Created by zhangmingwei on 2021/10/27.
-//  Copyright © 2021 Eyolo Network Technology Co., Ltd. All rights reserved.
+//  Created by ext.zhangmingwei1 on 2022/5/26.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,9 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 自定义的导航栏 View
-@interface EYLCustomNaviView : UIView
+@interface XMCustomNaviView : UIView
 
-/// 返回按钮点击事件  -  默认是 pop到上一页面
+/// 返回按钮点击事件
 @property (nonatomic, copy) void (^backBlock)(void);
 /// 右边按钮点击事件
 @property (nonatomic, copy) void (^rightBlock)(void);
@@ -38,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setBackBtnImage:(nullable UIImage *)img title:(nullable NSString *)titleStr;
 /// 设置右边按钮的  图片和标题
 - (void)setRightBtnImage:(nullable UIImage *)img title:(nullable NSString *)titleStr;
+/// 是否展示底部横线
+- (void)showBottomLine:(BOOL)isShow;
 
 @end
 

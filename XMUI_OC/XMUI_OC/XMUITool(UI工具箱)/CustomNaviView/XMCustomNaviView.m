@@ -1,31 +1,26 @@
 //
-//  EYLCustomNaviView.m
-//  FastShake
+//  XMCustomNaviView.m
+//  XMUI_OC
 //
-//  Created by zhangmingwei on 2021/10/27.
-//  Copyright © 2021 Eyolo Network Technology Co., Ltd. All rights reserved.
+//  Created by ext.zhangmingwei1 on 2022/5/26.
 //
 
-#import "EYLCustomNaviView.h"
+#import "XMCustomNaviView.h"
 #import "XMSizeMacro.h"
-#import "UIColor+XMTool.h"
-#import "UIButton+XMTool.h"
-#import "UIView+XMTool.h"
 
-@implementation EYLCustomNaviView
+@implementation XMCustomNaviView
 
 /**
  获取自定义导航栏
  */
 + (instancetype)getInstanceWithTitle:(nullable NSString *)titleStr {
-    EYLCustomNaviView *naviV = [[EYLCustomNaviView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNaviStatusBarH_XM)];
+    XMCustomNaviView *naviV = [[XMCustomNaviView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNaviStatusBarH_XM)];
     [naviV setTitleStr:titleStr];
     return naviV;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    __weak typeof(self) weakSelf = self;
     self.backgroundColor = [UIColor whiteColor];
     // 返回按钮
     self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -33,14 +28,11 @@
     // 扩大点击区域
 //    [self.backBtn setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
     [self.backBtn setImage:[UIImage imageNamed:@"back_black"] forState:UIControlStateNormal];
+    [self.backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     [self addSubview:self.backBtn];
-    [self.backBtn setTapActionWithBlock:^{
-        if (weakSelf.backBlock) {
-            weakSelf.backBlock();
-        } else { // 不写的话，默认pop出去
-//            [[LZLTools getCurrentVC].navigationController popViewControllerAnimated:YES];
-        }
-    }];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backAction)];
+    [self.backBtn addGestureRecognizer:tap];
     // 标题
     self.titleLbl = [[UILabel alloc] init];
     self.titleLbl.font = [UIFont systemFontOfSize:17 weight:UIFontWeightMedium];
@@ -52,17 +44,15 @@
     // 右边按钮
     self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.rightBtn.frame = CGRectMake(kScreenWidth_XM - 60, kStatusBarHeight_XM, 60 , kNaviStatusBarH_XM - kStatusBarHeight_XM);
-    
+    [self.rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     
     self.rightBtn.hidden = YES;
     // 扩大点击区域
 //    [self.rightBtn setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
     [self addSubview:self.rightBtn];
-    [self.rightBtn setTapActionWithBlock:^{
-        if (weakSelf.rightBlock) {
-            weakSelf.rightBlock();
-        }
-    }];
+    UITapGestureRecognizer *rightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(rightAction)];
+    [self.rightBtn addGestureRecognizer:rightTap];
     // 底部横线
     self.lineImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 0.5, kScreenWidth_XM, 0.5)];
     [self addSubview:self.lineImgV];
@@ -93,5 +83,29 @@
         self.rightBtn.hidden = YES; // 隐藏
     }
 }
+
+/// 是否展示底部横线
+- (void)showBottomLine:(BOOL)isShow {
+    self.lineImgV.hidden = !isShow;
+}
+
+#pragma mark - 返回按钮点击
+- (void)backAction {
+    __weak typeof(self) weakSelf = self;
+    if (weakSelf.backBlock) {
+        weakSelf.backBlock();
+    } else { // 不写的话，默认pop出去
+//            [[LZLTools getCurrentVC].navigationController popViewControllerAnimated:YES];
+    }
+}
+
+#pragma mark - 右边按钮点击
+- (void)rightAction {
+    __weak typeof(self) weakSelf = self;
+    if (weakSelf.rightBlock) {
+        weakSelf.rightBlock();
+    }
+}
+
 
 @end

@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "UITableView+XMTool.h"
 #import "XMSizeMacro.h"
-#import "EYLCustomNaviView.h"
+#import "XMCustomNaviView.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -24,8 +24,12 @@
     self.title = @"Home";
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.navigationController setNavigationBarHidden:YES];
-    EYLCustomNaviView *naviV = [EYLCustomNaviView getInstanceWithTitle:@"自定义导航栏"];
+    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"自定义导航栏"];
     [naviV setBackBtnImage:nil title:nil];
+    [naviV setRightBtnImage:nil title:@"更多"];
+    [naviV setRightBlock:^{
+        NSLog(@"点击右边");
+    }];
     naviV.lineImgV.hidden = NO;
     [self.view addSubview:naviV];
     

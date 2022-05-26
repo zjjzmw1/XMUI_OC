@@ -18,12 +18,12 @@
 		E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */; };
 		E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC93283F427E00B6AB00 /* XMLabel.m */; };
 		E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */; };
-		E53CDC9F283F439B00B6AB00 /* EYLCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */; };
 		E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCA2283F502D00B6AB00 /* UIColor+XMTool.m */; };
 		E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCA6283F50DA00B6AB00 /* UIButton+XMTool.m */; };
 		E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAC283F519200B6AB00 /* UIView+XMRotate360.m */; };
 		E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAD283F519200B6AB00 /* UIView+XMTool.m */; };
 		E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAE283F519200B6AB00 /* UIView+XMConvertRect.m */; };
+		E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,6 @@
 		E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XMTool.m"; sourceTree = "<group>"; };
 		E53CDC99283F42E600B6AB00 /* UITableView+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XMTool.h"; sourceTree = "<group>"; };
 		E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMSizeMacro.h; sourceTree = "<group>"; };
-		E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLCustomNaviView.m; sourceTree = "<group>"; };
-		E53CDC9E283F439B00B6AB00 /* EYLCustomNaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLCustomNaviView.h; sourceTree = "<group>"; };
 		E53CDCA1283F502D00B6AB00 /* UIColor+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XMTool.h"; sourceTree = "<group>"; };
 		E53CDCA2283F502D00B6AB00 /* UIColor+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XMTool.m"; sourceTree = "<group>"; };
 		E53CDCA5283F50DA00B6AB00 /* UIButton+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XMTool.h"; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		E53CDCAC283F519200B6AB00 /* UIView+XMRotate360.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMRotate360.m"; sourceTree = "<group>"; };
 		E53CDCAD283F519200B6AB00 /* UIView+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMTool.m"; sourceTree = "<group>"; };
 		E53CDCAE283F519200B6AB00 /* UIView+XMConvertRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMConvertRect.m"; sourceTree = "<group>"; };
+		E53CDCB2283F6A4E00B6AB00 /* XMCustomNaviView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCustomNaviView.h; sourceTree = "<group>"; };
+		E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCustomNaviView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 		E53CDC9C283F439B00B6AB00 /* CustomNaviView */ = {
 			isa = PBXGroup;
 			children = (
-				E53CDC9E283F439B00B6AB00 /* EYLCustomNaviView.h */,
-				E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */,
+				E53CDCB2283F6A4E00B6AB00 /* XMCustomNaviView.h */,
+				E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */,
 			);
 			path = CustomNaviView;
 			sourceTree = "<group>";
@@ -301,12 +301,12 @@
 			files = (
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
+				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
 				E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */,
-				E53CDC9F283F439B00B6AB00 /* EYLCustomNaviView.m in Sources */,
 				E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */,
 				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
