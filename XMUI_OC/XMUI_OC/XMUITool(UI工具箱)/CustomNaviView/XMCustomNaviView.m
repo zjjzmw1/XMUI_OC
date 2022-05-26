@@ -95,7 +95,7 @@
     if (weakSelf.backBlock) {
         weakSelf.backBlock();
     } else { // 不写的话，默认pop出去
-//            [[LZLTools getCurrentVC].navigationController popViewControllerAnimated:YES];
+    [[XMCustomNaviView getCurrentVC].navigationController popViewControllerAnimated:YES];
     }
 }
 
@@ -107,5 +107,31 @@
     }
 }
 
+
+#pragma mark - 获取当前屏幕显示的viewcontroller
++ (nullable UIViewController *)getCurrentVC {
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *currentVC = [XMCustomNaviView getCurrentVCFrom:rootViewController];
+    return currentVC;
+}
+
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC {
+    UIViewController *currentVC;
+    if ([rootVC presentedViewController]) {
+        // 视图是被presented出来的
+        rootVC = [rootVC presentedViewController];
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        // 根视图为UITabBarController
+        currentVC = [XMCustomNaviView getCurrentVCFrom:[(UITabBarController *)rootVC selectedViewController]];
+    } else if ([rootVC isKindOfClass:[UINavigationController class]]) {
+        // 根视图为UINavigationController
+        currentVC = [XMCustomNaviView getCurrentVCFrom:[(UINavigationController *)rootVC visibleViewController]];
+    } else {
+        // 根视图为非导航类
+        currentVC = rootVC;
+    }
+    return currentVC;
+}
 
 @end

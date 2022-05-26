@@ -24,6 +24,8 @@
 		E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAD283F519200B6AB00 /* UIView+XMTool.m */; };
 		E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAE283F519200B6AB00 /* UIView+XMConvertRect.m */; };
 		E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */; };
+		E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB7283F6BA400B6AB00 /* XMToast.m */; };
+		E53CDCBC283F74A900B6AB00 /* ToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* ToastVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,10 @@
 		E53CDCAE283F519200B6AB00 /* UIView+XMConvertRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMConvertRect.m"; sourceTree = "<group>"; };
 		E53CDCB2283F6A4E00B6AB00 /* XMCustomNaviView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCustomNaviView.h; sourceTree = "<group>"; };
 		E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCustomNaviView.m; sourceTree = "<group>"; };
+		E53CDCB6283F6BA400B6AB00 /* XMToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMToast.h; sourceTree = "<group>"; };
+		E53CDCB7283F6BA400B6AB00 /* XMToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMToast.m; sourceTree = "<group>"; };
+		E53CDCBA283F74A900B6AB00 /* ToastVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastVC.h; sourceTree = "<group>"; };
+		E53CDCBB283F74A900B6AB00 /* ToastVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */,
 				E53CDC7C283F3DB500B6AB00 /* ViewController.h */,
 				E53CDC7D283F3DB500B6AB00 /* ViewController.m */,
+				E53CDCB9283F747700B6AB00 /* TestVC */,
 				E53CDC8F283F3F2300B6AB00 /* XMUITool(UI工具箱) */,
 				E53CDC7F283F3DB500B6AB00 /* Main.storyboard */,
 				E53CDC82283F3DB600B6AB00 /* Assets.xcassets */,
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E53CDCB5283F6B4200B6AB00 /* Toast */,
 				E53CDCA8283F518200B6AB00 /* UIView */,
 				E53CDCA4283F50C600B6AB00 /* UIButton */,
 				E53CDCA0283F502100B6AB00 /* UIColor */,
@@ -192,6 +200,24 @@
 				E53CDCAC283F519200B6AB00 /* UIView+XMRotate360.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		E53CDCB5283F6B4200B6AB00 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDCB6283F6BA400B6AB00 /* XMToast.h */,
+				E53CDCB7283F6BA400B6AB00 /* XMToast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		E53CDCB9283F747700B6AB00 /* TestVC */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDCBA283F74A900B6AB00 /* ToastVC.h */,
+				E53CDCBB283F74A900B6AB00 /* ToastVC.m */,
+			);
+			path = TestVC;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -299,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53CDCBC283F74A900B6AB00 /* ToastVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
@@ -309,6 +336,7 @@
 				E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */,
 				E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */,
 				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,
+				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,

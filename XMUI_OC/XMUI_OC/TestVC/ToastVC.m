@@ -1,42 +1,35 @@
 //
-//  ViewController.m
+//  ToastVC.m
 //  XMUI_OC
 //
 //  Created by ext.zhangmingwei1 on 2022/5/26.
 //
 
-#import "ViewController.h"
+#import "ToastVC.h"
+#import "XMCustomNaviView.h"
 #import "UITableView+XMTool.h"
 #import "XMSizeMacro.h"
-#import "XMCustomNaviView.h"
-#import "XMToast.h"
-#import "ToastVC.h"     // 吐司demo
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+#import "XMToast.h"
+
+@interface ToastVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) NSMutableArray    *dataArr;
 
 @end
 
-@implementation ViewController
+@implementation ToastVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Home";
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.navigationController setNavigationBarHidden:YES];
-    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"自定义导航栏"];
-    [naviV setBackBtnImage:nil title:nil];
-    [naviV setRightBtnImage:nil title:@"更多"];
-    [naviV setRightBlock:^{
-        NSLog(@"点击右边");
-        [XMToast showText:@"打了个科技" positionType:XMToastPositionTypeCenter];
-    }];
+    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"Toast"];
     naviV.lineImgV.hidden = NO;
     [self.view addSubview:naviV];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"S 短文案",@"S 合理的中等长度",@" S 不合理的长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案",@"短文案",@"合理的中等长度",@"不合理的长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -71,9 +64,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.row == 0) {
-        ToastVC *vc = [ToastVC new];
-        [self.navigationController pushViewController:vc animated:YES];
+    if (self.dataArr.count > indexPath.row) {
+        NSString *str = self.dataArr[indexPath.row];
+        if (indexPath.row < 3) {
+            [XMToast showText:str positionType:XMToastPositionTypeCenter];
+        } else {
+            [XMToast showText:str positionType:XMToastPositionTypeBottom];
+        }
     }
 }
 
