@@ -15,6 +15,10 @@
 		E53CDC83283F3DB600B6AB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC82283F3DB600B6AB00 /* Assets.xcassets */; };
 		E53CDC86283F3DB600B6AB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC84283F3DB600B6AB00 /* LaunchScreen.storyboard */; };
 		E53CDC89283F3DB600B6AB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC88283F3DB600B6AB00 /* main.m */; };
+		E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */; };
+		E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC93283F427E00B6AB00 /* XMLabel.m */; };
+		E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */; };
+		E53CDC9F283F439B00B6AB00 /* EYLCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,15 @@
 		E53CDC85283F3DB600B6AB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53CDC87283F3DB600B6AB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53CDC88283F3DB600B6AB00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XMTool.m"; sourceTree = "<group>"; };
+		E53CDC92283F427E00B6AB00 /* XMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLabel.h; sourceTree = "<group>"; };
+		E53CDC93283F427E00B6AB00 /* XMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLabel.m; sourceTree = "<group>"; };
+		E53CDC94283F427E00B6AB00 /* UILabel+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XMTool.h"; sourceTree = "<group>"; };
+		E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XMTool.m"; sourceTree = "<group>"; };
+		E53CDC99283F42E600B6AB00 /* UITableView+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XMTool.h"; sourceTree = "<group>"; };
+		E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMSizeMacro.h; sourceTree = "<group>"; };
+		E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLCustomNaviView.m; sourceTree = "<group>"; };
+		E53CDC9E283F439B00B6AB00 /* EYLCustomNaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLCustomNaviView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +95,7 @@
 				E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */,
 				E53CDC7C283F3DB500B6AB00 /* ViewController.h */,
 				E53CDC7D283F3DB500B6AB00 /* ViewController.m */,
+				E53CDC8F283F3F2300B6AB00 /* XMUITool(UI工具箱) */,
 				E53CDC7F283F3DB500B6AB00 /* Main.storyboard */,
 				E53CDC82283F3DB600B6AB00 /* Assets.xcassets */,
 				E53CDC84283F3DB600B6AB00 /* LaunchScreen.storyboard */,
@@ -91,13 +105,52 @@
 			path = XMUI_OC;
 			sourceTree = "<group>";
 		};
+		E53CDC8F283F3F2300B6AB00 /* XMUITool(UI工具箱) */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E53CDC9C283F439B00B6AB00 /* CustomNaviView */,
+				E53CDC97283F42C800B6AB00 /* UITableView */,
+				E53CDC90283F3F7900B6AB00 /* UILabel */,
+			);
+			path = "XMUITool(UI工具箱)";
+			sourceTree = "<group>";
+		};
+		E53CDC90283F3F7900B6AB00 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDC94283F427E00B6AB00 /* UILabel+XMTool.h */,
+				E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */,
+				E53CDC92283F427E00B6AB00 /* XMLabel.h */,
+				E53CDC93283F427E00B6AB00 /* XMLabel.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		E53CDC97283F42C800B6AB00 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDC99283F42E600B6AB00 /* UITableView+XMTool.h */,
+				E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		E53CDC9C283F439B00B6AB00 /* CustomNaviView */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDC9D283F439B00B6AB00 /* EYLCustomNaviView.m */,
+				E53CDC9E283F439B00B6AB00 /* EYLCustomNaviView.h */,
+			);
+			path = CustomNaviView;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */,
 				5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -198,7 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
+				E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
+				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
+				E53CDC9F283F439B00B6AB00 /* EYLCustomNaviView.m in Sources */,
+				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,
 			);
