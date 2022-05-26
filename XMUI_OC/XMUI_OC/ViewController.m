@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "UITableView+XMTool.h"
 #import "XMSizeMacro.h"
+#import "EYLCustomNaviView.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -22,6 +23,11 @@
     [super viewDidLoad];
     self.title = @"Home";
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController setNavigationBarHidden:YES];
+    EYLCustomNaviView *naviV = [EYLCustomNaviView getInstanceWithTitle:@"自定义导航栏"];
+    [naviV setBackBtnImage:nil title:nil];
+    naviV.lineImgV.hidden = NO;
+    [self.view addSubview:naviV];
     
     self.dataArr = [NSMutableArray arrayWithArray:@[@"UILabel",@"UIButton"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];

@@ -22,14 +22,16 @@
 /// 导航栏+状态栏 /// 如果是iOS12以上的iPad，导航栏就是50 + status  ，ipad的导航栏不好确定，不同iPad高度也不同
 #define kNaviStatusBarH_XM (kStatusBarHeight_XM + 44)
 
-#define kTabBarH_XM   (kIsIPhoneXSize_XM ? 83.f : (kIsIpad_XM ? 56.f : 49.f))
-#define kView_bottom_h_XM  (kIsIPhoneXSize_XM ? 34.0 : 0)
+#define kTabBarH_XM   (kIsIphoneX_or_later ? 83.f : (kIsIpad_XM ? 56.f : 49.f))
+#define kView_bottom_h_XM  (kIsIphoneX_or_later ? 34.0 : 0)
 
-/// 当前系统的版本 例如： 9.0/10.0等 float 类型
-#define kCurrent_system_version_float_XM    [[[UIDevice currentDevice] systemVersion] floatValue]
-
-/// 是否是iPhoneX的尺寸大小
-#define kIsIPhoneXSize_XM ([UIScreen mainScreen].bounds.size.height == 812.0f || [UIScreen mainScreen].bounds.size.height == 896.0f)
+/// 判断是否是全面屏
+#define kIsIphoneX_or_later \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
 
 /// 是否是iPhone4的尺寸大小
 #define kIsIPhone4Size_XM ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -42,11 +44,5 @@
 /// 是否是iPad
 #define kIsIpad_XM (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-
-#define kIs_iOS10_XM    ([[UIDevice currentDevice].systemVersion doubleValue] >= 10.0)
-#define kIs_iOS11_XM    ([[UIDevice currentDevice].systemVersion doubleValue] >= 11.0)
-#define kIs_iOS12_XM    ([[UIDevice currentDevice].systemVersion doubleValue] >= 12.0)
-#define kIs_iOS13_XM    ([[UIDevice currentDevice].systemVersion doubleValue] >= 13.0)
-#define kIs_iOS14_XM    ([[UIDevice currentDevice].systemVersion doubleValue] >= 13.0)
 
 #endif /* XMSizeMacro_h */

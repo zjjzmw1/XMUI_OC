@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel       *titleLbl;
 /// 右边按钮
 @property (nonatomic, strong) UIButton      *rightBtn;
+/// 底部横线 默认隐藏
+@property (nonatomic, strong) UIImageView   *lineImgV;
 
 /**
  获取自定义导航栏
