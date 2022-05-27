@@ -87,31 +87,10 @@ const void *kAssociatedxm_contentInsets;
     return label;
 }
 
-/**
- *  获取常用的UILabel
- *
- *  @param font      UIFont
- *  @param text      NSString
- *  @param textColor UIColor
- *
- *  @return UILabel
- */
-+ (UILabel *)getLabelWithFont:(UIFont *)font text:(NSString *)text textColor:(UIColor *)textColor {
-    UILabel *label = [[UILabel alloc] init];
-    if (font) {
-        label.font = font;
-    }
-    label.text = text;
-    label.textAlignment = NSTextAlignmentLeft; // 默认的左对齐
-    label.textColor = textColor;
-    label.backgroundColor = [UIColor clearColor];
-    
-    return label;
-}
-
 -(void)setText:(NSString*)text lineSpacing:(CGFloat)lineSpacing {
     if (!text || lineSpacing < 0.01) {
         self.text = text;
+        [self sizeToFit];
         return;
     }
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -122,5 +101,7 @@ const void *kAssociatedxm_contentInsets;
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
     self.attributedText = attributedString;
+    [self sizeToFit];
 }
+
 @end

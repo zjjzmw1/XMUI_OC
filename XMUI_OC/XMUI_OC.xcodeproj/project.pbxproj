@@ -16,7 +16,6 @@
 		E53CDC86283F3DB600B6AB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC84283F3DB600B6AB00 /* LaunchScreen.storyboard */; };
 		E53CDC89283F3DB600B6AB00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC88283F3DB600B6AB00 /* main.m */; };
 		E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */; };
-		E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC93283F427E00B6AB00 /* XMLabel.m */; };
 		E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */; };
 		E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCA2283F502D00B6AB00 /* UIColor+XMTool.m */; };
 		E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCA6283F50DA00B6AB00 /* UIButton+XMTool.m */; };
@@ -33,6 +32,7 @@
 		E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCCD283F822B00B6AB00 /* WJBaseViewController.m */; };
 		E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD0283F82B000B6AB00 /* JDBMCartTopView.m */; };
 		E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */; };
+		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,6 @@
 		E53CDC87283F3DB600B6AB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53CDC88283F3DB600B6AB00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XMTool.m"; sourceTree = "<group>"; };
-		E53CDC92283F427E00B6AB00 /* XMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLabel.h; sourceTree = "<group>"; };
-		E53CDC93283F427E00B6AB00 /* XMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLabel.m; sourceTree = "<group>"; };
 		E53CDC94283F427E00B6AB00 /* UILabel+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XMTool.h"; sourceTree = "<group>"; };
 		E53CDC98283F42E600B6AB00 /* UITableView+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XMTool.m"; sourceTree = "<group>"; };
 		E53CDC99283F42E600B6AB00 /* UITableView+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XMTool.h"; sourceTree = "<group>"; };
@@ -88,6 +86,8 @@
 		E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMChangePageView.m; sourceTree = "<group>"; };
 		E53CDCD2283F82B000B6AB00 /* JDBMChangePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMChangePageView.h; sourceTree = "<group>"; };
 		E53CDCD3283F82B000B6AB00 /* JDBMCartTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMCartTopView.h; sourceTree = "<group>"; };
+		E53CDCDD2840D69A00B6AB00 /* DemoLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoLabelVC.h; sourceTree = "<group>"; };
+		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +168,6 @@
 			children = (
 				E53CDC94283F427E00B6AB00 /* UILabel+XMTool.h */,
 				E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */,
-				E53CDC92283F427E00B6AB00 /* XMLabel.h */,
-				E53CDC93283F427E00B6AB00 /* XMLabel.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -235,27 +233,28 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
-				E53CDCBE283F81AD00B6AB00 /* 购物车 */,
-				E53CDCBD283F819F00B6AB00 /* Toast */,
+				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
+				E53CDCBE283F81AD00B6AB00 /* 购物车VC */,
+				E53CDCBD283F819F00B6AB00 /* ToastVC */,
 			);
 			path = TestVC;
 			sourceTree = "<group>";
 		};
-		E53CDCBD283F819F00B6AB00 /* Toast */ = {
+		E53CDCBD283F819F00B6AB00 /* ToastVC */ = {
 			isa = PBXGroup;
 			children = (
 				E53CDCBA283F74A900B6AB00 /* ToastVC.h */,
 				E53CDCBB283F74A900B6AB00 /* ToastVC.m */,
 			);
-			path = Toast;
+			path = ToastVC;
 			sourceTree = "<group>";
 		};
-		E53CDCBE283F81AD00B6AB00 /* 购物车 */ = {
+		E53CDCBE283F81AD00B6AB00 /* 购物车VC */ = {
 			isa = PBXGroup;
 			children = (
 				E53CDCBF283F81D300B6AB00 /* 购物车 */,
 			);
-			path = "购物车";
+			path = "购物车VC";
 			sourceTree = "<group>";
 		};
 		E53CDCBF283F81D300B6AB00 /* 购物车 */ = {
@@ -301,6 +300,15 @@
 				E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */,
 			);
 			path = "无用";
+			sourceTree = "<group>";
+		};
+		E53CDCDC2840D67600B6AB00 /* UILabelVC */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDCDD2840D69A00B6AB00 /* DemoLabelVC.h */,
+				E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */,
+			);
+			path = UILabelVC;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -413,7 +421,6 @@
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */,
-				E53CDC96283F427E00B6AB00 /* XMLabel.m in Sources */,
 				E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */,
 				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
 				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
@@ -426,6 +433,7 @@
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
+				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
 				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,

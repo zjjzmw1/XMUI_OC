@@ -12,6 +12,7 @@
 #import "XMToast.h"
 #import "ToastVC.h"     // 吐司demo
 #import "JDBMCartViewController.h"
+#import "DemoLabelVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -75,6 +76,9 @@
     
     if (indexPath.row == 0) {
         vc = [ToastVC new];
+    }
+    if (indexPath.row == 1) {
+        vc = [DemoLabelVC new];
     }
     if (indexPath.row == 3) {
         vc = [JDBMCartViewController new];
