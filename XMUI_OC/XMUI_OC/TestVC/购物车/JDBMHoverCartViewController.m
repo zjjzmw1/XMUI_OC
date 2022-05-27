@@ -112,7 +112,7 @@
     self.mainScrollView.frame = self.view.bounds;
     self.mainScrollView.contentSize = CGSizeMake(0, self.mainScrollView.frame.size.height + self.headerView.frame.size.height);
     // 44 高度的切换view
-    _pageTitleView.frame = CGRectMake(0, CGRectGetMaxY(_headerView.frame),  _pageTitleView.frame.size.width,  _pageTitleView.frame.size.height);
+    _pageTitleView.frame = CGRectMake(0, kNaviStatusBarH_XM,  _pageTitleView.frame.size.width,  _pageTitleView.frame.size.height);
     // 切换view下面的vc
     self.pageScrollView.frame = CGRectMake(0, CGRectGetMaxY(_pageTitleView.frame), self.view.frame.size.width, self.mainScrollView.contentSize.height - CGRectGetMaxY(_pageTitleView.frame));
     self.pageScrollView.contentSize = CGSizeMake(self.view.frame.size.width * _viewControllers.count, 0);
@@ -223,24 +223,9 @@
 }
 // 往上滚动是 + 变大
 - (void)hoverChildViewController:(JDBMHoverChildViewController *)ViewController scrollViewDidScroll:(UIScrollView *)scrollView{
-//    if (self.mainScrollView.contentOffset.y < self.headerView.frame.size.height && self.mainScrollView.contentOffset.y > 0){ // 导航栏要往上走了.
-//        JDBMHoverChildViewController *child = [_viewControllers objectAtIndex:_currentIndex];
-//        child.offsetY = 0;
-//    } else {
-//
-//    }
-//    NSLog(@"aaaaaa===%f",scrollView.contentOffset.y);
-    
-    
     if (self.mainScrollView.contentOffset.y < 0 && self.mainScrollView.contentOffset.y > 0){ // 导航栏要往上走了.
         JDBMHoverChildViewController *child = [_viewControllers objectAtIndex:_currentIndex];
         child.offsetY = 0;
-//        [UIView animateWithDuration:0.2 animations:^{
-//            self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
-//        }];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"kChangeNaviV" object:@(YES)];
-    } else {
-
     }
 }
 
