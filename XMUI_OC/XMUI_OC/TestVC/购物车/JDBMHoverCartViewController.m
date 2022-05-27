@@ -7,6 +7,7 @@
 
 #import "JDBMHoverCartViewController.h"
 #import "XMSizeMacro.h"
+#import "UIView+XMTool.h"
 
 @implementation JDBMHoverChildViewController
 @end
@@ -42,6 +43,10 @@
 }
 @property(nonatomic, strong) JDBMHoverPageScrollView *mainScrollView;
 @property(nonatomic, strong) UIScrollView *pageScrollView;
+
+/// 置顶按钮
+@property (nonatomic, strong) UIButton  *toTopBtn;
+
 @end
 
 @implementation JDBMHoverPageViewController
@@ -91,6 +96,15 @@
     }else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    
+    self.toTopBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.toTopBtn.frame = CGRectMake(kScreenWidth_XM - 100, kScreenHeight_XM - 100, 50, 50);
+    self.toTopBtn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.toTopBtn];
+    __weak typeof(self) weakSelf = self;
+    [self.toTopBtn setTapActionWithBlock:^{
+        [weakSelf toTopAction];
+    }];
 }
 
 - (void)viewDidLayoutSubviews{
@@ -113,6 +127,7 @@
         }
     }
     self.mainScrollView.scrollViewWhites = scrollViews;
+    NSLog(@"sss====%@",self.mainScrollView);
 }
 
 - (void)moveToAtIndex:(NSInteger)index animated:(BOOL)animated{
@@ -161,6 +176,14 @@
         self.mainScrollView.contentOffset = CGPointMake(0, 0); // 下拉
         self.headerView.frame = CGRectMake(0, 0, kScreenWidth_XM, kNaviStatusBarH_XM);
     }];
+}
+
+// 置顶
+- (void)toTopAction {
+    [self dragDownAction];
+    JDBMHoverChildViewController *child = [_viewControllers objectAtIndex:_currentIndex];
+    [child.scrollView setContentOffset:CGPointZero animated:YES];
+    [self.mainScrollView setContentOffset:CGPointZero animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
