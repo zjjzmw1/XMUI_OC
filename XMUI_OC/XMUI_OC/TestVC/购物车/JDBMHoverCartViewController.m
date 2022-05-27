@@ -141,41 +141,50 @@
     }
 }
 
+/// 上滑
+- (void)dragUpAction {
+    self.mainScrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // 上划
+    [UIView animateWithDuration:0.25 animations:^{
+        self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
+    } completion:^(BOOL finished) {
+        self.mainScrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // 上划
+        self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
+    }];
+}
+
+/// 下滑
+- (void)dragDownAction {
+    self.mainScrollView.contentOffset = CGPointMake(0, 0); // 下拉
+    [UIView animateWithDuration:0.25 animations:^{
+        self.headerView.frame = CGRectMake(0, 0, kScreenWidth_XM, kNaviStatusBarH_XM);
+    } completion:^(BOOL finished) {
+        self.mainScrollView.contentOffset = CGPointMake(0, 0); // 下拉
+        self.headerView.frame = CGRectMake(0, 0, kScreenWidth_XM, kNaviStatusBarH_XM);
+    }];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSLog(@"滚动...");
     if (scrollView == self.mainScrollView){
         self.pageScrollView.scrollEnabled = NO;
         JDBMHoverChildViewController *child = [_viewControllers objectAtIndex:_currentIndex];
-        if (child.offsetY < currentY && (child.offsetY < child.scrollView.contentSize.height - kScreenHeight_XM)) { // 下拉
+        if (child.offsetY < currentY && (child.offsetY < child.scrollView.contentSize.height - kScreenHeight_XM)) {
             NSLog(@"下拉");
-            scrollView.contentOffset = CGPointMake(0, 0); // 下拉
-                [UIView animateWithDuration:0.25 animations:^{
-                self.headerView.frame = CGRectMake(0, 0, kScreenWidth_XM, kNaviStatusBarH_XM);
-                } completion:^(BOOL finished) {
-                    scrollView.contentOffset = CGPointMake(0, 0); // 下拉
-                    self.headerView.frame = CGRectMake(0, 0, kScreenWidth_XM, kNaviStatusBarH_XM);
-                }];
+            [self dragDownAction];
         } else if (child.offsetY > currentY){
             NSLog(@"上划了1111");
-            scrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // 上划
-                [UIView animateWithDuration:0.25 animations:^{
-                self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
-                } completion:^(BOOL finished) {
-                    scrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // 上划
-                    self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
-                }];
+            [self dragUpAction];
+        } else {
+            // 暴力滑动的保护:
+            if (self.headerView.frame.origin.y == -kNaviStatusBarH_XM && scrollView.contentOffset.y == 0) {
+                [self dragDownAction];
+            }
         }
         
         currentY = child.offsetY;
         if (child.offsetY > 0) { // 上滑
             if (scrollView.contentOffset.y != 0) { // 保护上划
-                scrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // fix 上滑 移动 kStatusBarHeight_XM
-                [UIView animateWithDuration:0.25 animations:^{
-                self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
-                } completion:^(BOOL finished) {
-                    scrollView.contentOffset = CGPointMake(0, kStatusBarHeight_XM); // 上划
-                    self.headerView.frame = CGRectMake(0, -kNaviStatusBarH_XM, kScreenWidth_XM, kNaviStatusBarH_XM);
-                }];
+                [self dragUpAction];
             }
         } else {
             for (JDBMHoverChildViewController *child in _viewControllers) {
