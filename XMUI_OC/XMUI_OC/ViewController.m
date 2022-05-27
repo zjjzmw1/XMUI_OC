@@ -11,6 +11,7 @@
 #import "XMCustomNaviView.h"
 #import "XMToast.h"
 #import "ToastVC.h"     // 吐司demo
+#import "JDBMCartViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,7 +37,7 @@
     naviV.lineImgV.hidden = NO;
     [self.view addSubview:naviV];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"购物车"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -70,11 +71,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    UIViewController *vc;
     
     if (indexPath.row == 0) {
-        ToastVC *vc = [ToastVC new];
-        [self.navigationController pushViewController:vc animated:YES];
+        vc = [ToastVC new];
     }
+    if (indexPath.row == 3) {
+        vc = [JDBMCartViewController new];
+    }
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
