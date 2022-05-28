@@ -14,7 +14,7 @@
 #import "JDBMCartViewController.h"
 #import "DemoLabelVC.h"
 #import "DemoPopMenuVC.h"
-
+#import "DemoButtonVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -81,6 +81,9 @@
     }
     if ([vcString isEqualToString:@"XMPopMenu"]) {
         vc = [DemoPopMenuVC new];
+    }
+    if ([vcString isEqualToString:@"UIButton"]) {
+        vc = [DemoButtonVC new];
     }
     
     [self.navigationController pushViewController:vc animated:YES];

@@ -15,10 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGPoint origin;
 @property (nonatomic, assign) CGSize  size;
 @property (nonatomic, assign) CGFloat top;
+/// 便利获取  frame.origin.x
 @property (nonatomic, assign) CGFloat left;
+/// 便利获取  frame.origin.y + frame.size.height
 @property (nonatomic, assign) CGFloat bottom;
+/// 便利获取  frame.origin.x + frame.size.width
 @property (nonatomic, assign) CGFloat right;
+/// 便利获取  frame.size.width
 @property (nonatomic, assign) CGFloat width;
+/// 便利获取  frame.size.height
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;

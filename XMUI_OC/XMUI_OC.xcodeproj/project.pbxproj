@@ -12,6 +12,7 @@
 		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD089284233D800DBF3C8 /* DemoBaseVC.m */; };
+		E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		E51AD088284233D800DBF3C8 /* DemoBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoBaseVC.h; sourceTree = "<group>"; };
 		E51AD089284233D800DBF3C8 /* DemoBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoBaseVC.m; sourceTree = "<group>"; };
 		E51AD08B2842346E00DBF3C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E51AD08D28423A1500DBF3C8 /* DemoButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoButtonVC.h; sourceTree = "<group>"; };
+		E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoButtonVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +155,15 @@
 				E51AD089284233D800DBF3C8 /* DemoBaseVC.m */,
 			);
 			path = DemoBaseVC;
+			sourceTree = "<group>";
+		};
+		E51AD08C284239F700DBF3C8 /* UIButtonVC */ = {
+			isa = PBXGroup;
+			children = (
+				E51AD08D28423A1500DBF3C8 /* DemoButtonVC.h */,
+				E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */,
+			);
+			path = UIButtonVC;
 			sourceTree = "<group>";
 		};
 		E53CDC6A283F3DB500B6AB00 = {
@@ -280,6 +292,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E51AD08C284239F700DBF3C8 /* UIButtonVC */,
 				E51AD087284233C000DBF3C8 /* DemoBaseVC */,
 				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
@@ -494,6 +507,7 @@
 				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
 				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
+				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
 				E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,

@@ -15,6 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // 默认隐藏自带导航栏
     self.fd_prefersNavigationBarHidden = YES;
     // 展示自己的导航栏
