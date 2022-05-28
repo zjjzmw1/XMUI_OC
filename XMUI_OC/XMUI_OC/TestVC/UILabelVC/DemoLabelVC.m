@@ -33,11 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController setNavigationBarHidden:YES];
-    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"UILabel"];
-    naviV.lineImgV.hidden = NO;
-    [self.view addSubview:naviV];
-    
+    [self.customNaviView setTitleStr:@"UILabel"];
     
     self.lbl1 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:15] textColor:[UIColor redColor]];
     [self.view addSubview:self.lbl1];

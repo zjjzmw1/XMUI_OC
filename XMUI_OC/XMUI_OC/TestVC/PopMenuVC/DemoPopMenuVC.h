@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoPopMenuVC : UIViewController
+@interface DemoPopMenuVC : DemoBaseVC
 
 @end
 

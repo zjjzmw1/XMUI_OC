@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
 		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
+		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
+		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD089284233D800DBF3C8 /* DemoBaseVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -43,6 +46,13 @@
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
 		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
+		E51AD0802842330000DBF3C8 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
+		E51AD0812842330000DBF3C8 /* XMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNavigationController.m; sourceTree = "<group>"; };
+		E51AD0832842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		E51AD088284233D800DBF3C8 /* DemoBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoBaseVC.h; sourceTree = "<group>"; };
+		E51AD089284233D800DBF3C8 /* DemoBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoBaseVC.m; sourceTree = "<group>"; };
+		E51AD08B2842346E00DBF3C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +126,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E51AD0822842330000DBF3C8 /* 好用的滑动返回第三方未改动--使用方法在XM_UIViewController */,
+				E51AD0802842330000DBF3C8 /* XMNavigationController.h */,
+				E51AD0812842330000DBF3C8 /* XMNavigationController.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		E51AD0822842330000DBF3C8 /* 好用的滑动返回第三方未改动--使用方法在XM_UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E51AD0832842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.h */,
+				E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = "好用的滑动返回第三方未改动--使用方法在XM_UIViewController";
+			sourceTree = "<group>";
+		};
+		E51AD087284233C000DBF3C8 /* DemoBaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				E51AD088284233D800DBF3C8 /* DemoBaseVC.h */,
+				E51AD089284233D800DBF3C8 /* DemoBaseVC.m */,
+			);
+			path = DemoBaseVC;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +188,7 @@
 				E53CDC84283F3DB600B6AB00 /* LaunchScreen.storyboard */,
 				E53CDC87283F3DB600B6AB00 /* Info.plist */,
 				E53CDC88283F3DB600B6AB00 /* main.m */,
+				E51AD08B2842346E00DBF3C8 /* PrefixHeader.pch */,
 			);
 			path = XMUI_OC;
 			sourceTree = "<group>";
@@ -158,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E51AD07F284232EE00DBF3C8 /* UINavigationController */,
 				E53CDCE02841D76600B6AB00 /* PopMenu */,
 				E53CDCB5283F6B4200B6AB00 /* Toast */,
 				E53CDCA8283F518200B6AB00 /* UIView */,
@@ -240,6 +280,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E51AD087284233C000DBF3C8 /* DemoBaseVC */,
 				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
 				E53CDCBD283F819F00B6AB00 /* ToastVC */,
@@ -448,11 +489,13 @@
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */,
+				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
 				E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */,
 				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
 				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
+				E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
 				E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */,
 				E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */,
@@ -466,6 +509,7 @@
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,
 				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
+				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S547MGLNZ8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XMUI_OC/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XMUI_OC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -640,6 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S547MGLNZ8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XMUI_OC/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XMUI_OC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

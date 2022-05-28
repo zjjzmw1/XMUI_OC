@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoToastVC : UIViewController
+@interface DemoToastVC : DemoBaseVC
 
 @end
 

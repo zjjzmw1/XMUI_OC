@@ -8,7 +8,6 @@
 #import "ViewController.h"
 #import "UITableView+XMTool.h"
 #import "XMSizeMacro.h"
-#import "XMCustomNaviView.h"
 #import "XMToast.h"
 
 #import "DemoToastVC.h"
@@ -28,18 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Home";
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [self.navigationController setNavigationBarHidden:YES];
-    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"自定义导航栏"];
-    [naviV setBackBtnImage:nil title:nil];
-    [naviV setRightBtnImage:nil title:@"更多"];
-    [naviV setRightBlock:^{
-        NSLog(@"点击右边");
-        [XMToast showText:@"打了个科技" positionType:XMToastPositionTypeCenter];
-    }];
-    naviV.lineImgV.hidden = NO;
-    [self.view addSubview:naviV];
+    [self.customNaviView setTitleStr:@"自定义导航栏"];
     
     self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];

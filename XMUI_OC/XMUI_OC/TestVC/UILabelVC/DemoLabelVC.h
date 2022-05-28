@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DemoLabelVC : UIViewController
+@interface DemoLabelVC : DemoBaseVC
 
 @end
 

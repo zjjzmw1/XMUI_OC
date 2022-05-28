@@ -24,10 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [self.navigationController setNavigationBarHidden:YES];
-    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"Toast"];
-    naviV.lineImgV.hidden = NO;
-    [self.view addSubview:naviV];
+    [self.customNaviView setTitleStr:@"XMToast"];
     
     self.dataArr = [NSMutableArray arrayWithArray:@[@"S 短文案",@"S 合理的中等长度",@" S 不合理的长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案",@"短文案",@"合理的中等长度",@"不合理的长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案长文案"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];

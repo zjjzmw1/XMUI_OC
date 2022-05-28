@@ -30,10 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController setNavigationBarHidden:YES];
-    XMCustomNaviView *naviV = [XMCustomNaviView getInstanceWithTitle:@"XMPopMenu"];
-    naviV.lineImgV.hidden = NO;
-    [self.view addSubview:naviV];
+    [self.customNaviView setTitleStr:@"XMPopMenu"];
     
     __weak typeof(self) weakSelf = self;
 
@@ -70,7 +67,7 @@
     self.lbl3.frame = CGRectMake(20, self.lbl2.bottom + 20, kScreenWidth_XM - 40, 0);
     [self.lbl3 sizeToFit];
     [self.lbl3 setTapActionWithBlock:^{
-        XMPopMenu *popV = [XMPopMenu showRelyOnView: naviV titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:@[@"back_black",@"back_black",@"back_black"] menuWidth:120 isShowTriangle:YES arrowLeft:0];
+        XMPopMenu *popV = [XMPopMenu showRelyOnView:weakSelf.customNaviView titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:@[@"back_black",@"back_black",@"back_black"] menuWidth:120 isShowTriangle:YES arrowLeft:0];
         popV.clickBlock = ^(int selectRow) {
         NSLog(@"点击了第 %d 行",selectRow);
         };

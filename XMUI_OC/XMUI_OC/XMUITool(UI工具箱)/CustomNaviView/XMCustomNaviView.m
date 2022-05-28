@@ -59,6 +59,11 @@
     self.lineImgV.backgroundColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:0.1];
     self.lineImgV.hidden = YES;
     
+    // 如果是首页就隐藏返回按钮
+    if ([XMCustomNaviView getCurrentVC].navigationController.viewControllers.count == 1) {
+        [self setBackBtnImage:nil title:nil];
+    }
+    
     return self;
 }
 
@@ -95,7 +100,10 @@
     if (weakSelf.backBlock) {
         weakSelf.backBlock();
     } else { // 不写的话，默认pop出去
-    [[XMCustomNaviView getCurrentVC].navigationController popViewControllerAnimated:YES];
+        [[XMCustomNaviView getCurrentVC].navigationController popViewControllerAnimated:YES];
+        [[XMCustomNaviView getCurrentVC] dismissViewControllerAnimated:YES completion:^{
+            
+        }];
     }
 }
 
