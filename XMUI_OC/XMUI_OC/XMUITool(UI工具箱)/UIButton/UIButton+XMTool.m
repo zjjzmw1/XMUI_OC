@@ -147,30 +147,33 @@ static const char * kHitHeightScale      = "hitHeightScale";
             NSDictionary *attrs = @{NSFontAttributeName:button.titleLabel.font};
             titleWidth = [[button currentTitle]sizeWithAttributes:attrs].width;
         }
+        // 整体宽度加宽。否则 sizeToFit之后就展示不全了
+        [button setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, spacing)];
+        // 系统默认是 【图在左、文字在右。 没有间隙的】
         if (type == 0) { // 图片左 整体居中
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-            [button setImageEdgeInsets:UIEdgeInsetsMake(0, -spacing/2.0f, 0, 0)];
-            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, spacing/2.0f, 0, 0)];
+            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, spacing, 0, -spacing)];
+            [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
         } else if (type == 1) { // 图片左 整体居左
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, spacing, 0, -spacing)];
             [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, spacing, 0, 0)];
         } else if (type == 2) { // 图片左 整体居右
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-            [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, spacing)];
-            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+            [button setTitleEdgeInsets:UIEdgeInsetsMake(0, spacing, 0, -spacing)];
+            [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
         } else if (type == 3) { // 图片右 整体居中
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-            button.imageEdgeInsets = UIEdgeInsetsMake(0,titleWidth + spacing, 0, -(titleWidth + spacing));
-            button.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageWidth + spacing), 0, imageWidth + spacing);
+            button.titleEdgeInsets = UIEdgeInsetsMake(0, - imageWidth, 0, imageWidth);
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth + spacing, 0, -(titleWidth + spacing));
         } else if (type == 4) { // 图片右 整体居左
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-            button.imageEdgeInsets = UIEdgeInsetsMake(0,titleWidth + spacing, 0, -(titleWidth + spacing));
-            button.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageWidth + spacing), 0, imageWidth + spacing);
+            button.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth);
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth + spacing, 0, -(titleWidth + spacing));
         } else if (type == 5) { // 图片右 整体居右
             button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-            button.imageEdgeInsets = UIEdgeInsetsMake(0,titleWidth + spacing, 0, -(titleWidth + spacing));
-            button.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageWidth + spacing), 0, imageWidth + spacing);
+            button.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, imageWidth);
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth + spacing, 0, -(titleWidth + spacing));
         }
     }
     return button;
