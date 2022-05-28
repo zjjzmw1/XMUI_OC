@@ -152,7 +152,7 @@
     if (Model.imgName) {
         _titLa.textAlignment=NSTextAlignmentLeft;
         [_imgView setHighlighted:NO];
-        CGFloat imgX =(W-Model.imgW-Model.tit_lenthMax*Model.fontSize-10)/2;
+        CGFloat imgX =(W-Model.imgW-Model.tit_lenthMax*Model.fontSize-10)/2; // 最长文字的那一行计算x
         CGFloat imgY=(_cellHeight-Model.imgH)/2;
         _imgView.frame=CGRectMake(imgX, imgY, Model.imgW, Model.imgH);
         _titLa.frame=CGRectMake(CGRectGetMaxX(_imgView.frame)+10, 0, W-10-CGRectGetMaxX(_imgView.frame), _cellHeight);
@@ -163,7 +163,6 @@
         _titLa.frame=CGRectMake(0, 0, W, _cellHeight);
     }
     _titLa.text=Model.title;
-    //        _titLa.textColor=Model.textColor;
     _titLa.font=[UIFont systemFontOfSize:Model.fontSize];
 }
 - (void)setIsShowSeparator:(BOOL)isShowSeparator{
@@ -286,12 +285,15 @@
         
         //模型赋值
         DataArr=[[NSMutableArray alloc]init];
-        NSString * MaxTit;
-        for(int i=0;i<_titles.count;i++){
-            NSString * tit1=_titles[i];
-            if(tit1.length>MaxTit.length){
-                MaxTit=tit1;
+        // 最大文本长度
+        NSUInteger maxTitleLength = 0;
+        for (int i = 0; i < _titles.count; i++) {
+            NSString *tempTitle = _titles[i];
+            if (tempTitle.length > maxTitleLength) {
+                maxTitleLength = tempTitle.length;
             }
+        }
+        for(int i=0;i<_titles.count;i++){
             XMPopMenuModel * model=[[XMPopMenuModel alloc]init];
             model.fontSize=_fontSize;
             model.textColor=_textColor;
@@ -301,7 +303,7 @@
             model.itemWidth=self.width;
             model.imgH=img.size.height;
             model.imgW=img.size.width;
-            model.tit_lenthMax=MaxTit.length;
+            model.tit_lenthMax = maxTitleLength;
             [DataArr addObject:model];
         }
         [_contentView reloadData];
@@ -334,16 +336,28 @@
     [self show];
 }
 
-/// 在指定位置弹出类方法 - 初始化和弹出合并 arrowLeft: 0 就是默认居中
-+(instancetype)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft {
+/// 第一步:  ---- 初始化方法一： 在指定位置弹出类方法 - 「初始化 + 弹出」
+/// @param point 指定位置弹出 锚点为 （0.5, 0）
+/// @param titles 每行的标题
+/// @param icons 每行的图标，（nil就代表没有图标，文字就会居中，否则文字居左）
+/// @param itemWidth 图标大小
+/// @param isShowTriangle 是否显示三角箭头
+/// @param arrowLeft 箭头距离左边的距离。 0 说明是整体居中
++(instancetype)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(nullable NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft {
     XMPopMenu *popupMenu = [[XMPopMenu alloc] initWithTitles:titles icons:icons menuWidth:itemWidth arrowLeft:arrowLeft];
     popupMenu.isShowTriangle = isShowTriangle;
     [popupMenu showAtPoint:point];
     return popupMenu;
 }
 
-/// 依赖指定view弹出类方法 - 初始化弹出合并 arrowLeft: 0 就是默认居中
-+ (instancetype)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft {
+/// 第一步:  ----  初始化方法二：依赖指定view弹出类方法 - 「初始化 + 弹出」
+/// @param view 依赖于某个view，弹出
+/// @param titles 每行的标题
+/// @param icons 每行的图标，（nil就代表没有图标，文字就会居中，否则文字居左）
+/// @param itemWidth 图标大小
+/// @param isShowTriangle 是否显示三角箭头
+/// @param arrowLeft 箭头距离左边的距离。 0 说明是整体居中
++ (instancetype)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(nullable NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft {
     XMPopMenu * popupMenu=[[XMPopMenu alloc]initWithTitles:titles icons:icons menuWidth:itemWidth arrowLeft:arrowLeft];
     popupMenu.isShowTriangle=isShowTriangle;
     [popupMenu showRelyOnView:view];

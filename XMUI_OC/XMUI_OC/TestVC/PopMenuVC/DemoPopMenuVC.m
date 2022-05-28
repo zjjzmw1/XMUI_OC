@@ -19,6 +19,9 @@
 @property (nonatomic, strong) UILabel   *lbl2;
 @property (nonatomic, strong) UILabel   *lbl3;
 
+@property (nonatomic, strong) UILabel   *lbl4;
+@property (nonatomic, strong) UILabel   *lbl5;
+
 
 @end
 
@@ -41,7 +44,6 @@
     self.lbl1.frame = CGRectMake(20, kNaviStatusBarH_XM + 20, kScreenWidth_XM - 40, 0);
     [self.lbl1 sizeToFit];
     [self.lbl1 setTapActionWithBlock:^{
-//        XMPopMenu *popV = [XMPopMenu showRelyOnView:[UIApplication sharedApplication].keyWindow titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:@[@"back_black",@"back_black",@"back_black"] menuWidth:120 isShowTriangle:NO arrowLeft:5];
         XMPopMenu *popV = [XMPopMenu showAtPoint:CGPointMake(200, 200) titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:nil menuWidth:120 isShowTriangle:YES arrowLeft:0];
         popV.clickBlock = ^(int selectRow) {
         NSLog(@"点击了第 %d 行",selectRow);
@@ -74,6 +76,34 @@
         };
     }];
 
+    
+    self.lbl4 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:15] textColor:[UIColor redColor]];
+    [self.view addSubview:self.lbl4];
+    self.lbl4.textAlignment = NSTextAlignmentRight;
+    self.lbl4.backgroundColor = [UIColor lightGrayColor];
+    self.lbl4.text = @"依赖自己，不带箭头";
+    self.lbl4.frame = CGRectMake(220, self.lbl3.bottom + 20, kScreenWidth_XM - 40, 0);
+    [self.lbl4 sizeToFit];
+    [self.lbl4 setTapActionWithBlock:^{
+        XMPopMenu *popV = [XMPopMenu showRelyOnView: weakSelf.lbl4 titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:nil menuWidth:120 isShowTriangle:NO arrowLeft:0];
+        popV.clickBlock = ^(int selectRow) {
+        NSLog(@"点击了第 %d 行",selectRow);
+        };
+    }];
+    
+    self.lbl5 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:15] textColor:[UIColor redColor]];
+    [self.view addSubview:self.lbl5];
+    self.lbl5.textAlignment = NSTextAlignmentRight;
+    self.lbl5.backgroundColor = [UIColor lightGrayColor];
+    self.lbl5.text = @"依赖自己，带箭头";
+    self.lbl5.frame = CGRectMake(220, kScreenHeight_XM - 100, kScreenWidth_XM - 40, 0);
+    [self.lbl5 sizeToFit];
+    [self.lbl5 setTapActionWithBlock:^{
+        XMPopMenu *popV = [XMPopMenu showRelyOnView: weakSelf.lbl5 titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:nil menuWidth:120 isShowTriangle:YES arrowLeft:0];
+        popV.clickBlock = ^(int selectRow) {
+        NSLog(@"点击了第 %d 行",selectRow);
+        };
+    }];
 }
 
 - (void)dealloc {

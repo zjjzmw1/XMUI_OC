@@ -22,10 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
  第一步：初始化+弹出
  第二步：点击回调
  例如：
-    XMPopMenu *popV = [XMPopMenu showRelyOnView:rightV titles:@[@"扫一扫",@"添加好友",@"通讯录"]  icons:@[@"icon1",@"icon2",@"icon3"] menuWidth:120 isShowTriangle:YES];
-    popV.clickBlock = ^(int selectRow) {
-    NSLog(@"点击了第 %d 行",selectRow);
-    };
+ 
+ XMPopMenu *popV = [XMPopMenu showAtPoint:CGPointMake(200, 200) titles:@[@"扫一扫",@"添加好友",@"通讯录"] icons:nil menuWidth:120 isShowTriangle:YES arrowLeft:0];
+ popV.clickBlock = ^(int selectRow) {
+ NSLog(@"点击了第 %d 行",selectRow);
+ };
+ 
  // 其他属性和方法，是为了自定义。
  */
 /// 类似微信、QQ点击右上角弹出的view（带扫一扫、加好友功能的view）
@@ -39,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param itemWidth 图标大小
 /// @param isShowTriangle 是否显示三角箭头
 /// @param arrowLeft 箭头距离左边的距离。 0 说明是整体居中
-+ (instancetype)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft;
++ (instancetype)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(nullable NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft;
 
 
 /// 第一步:  ----  初始化方法二：依赖指定view弹出类方法 - 「初始化 + 弹出」
@@ -49,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param itemWidth 图标大小
 /// @param isShowTriangle 是否显示三角箭头
 /// @param arrowLeft 箭头距离左边的距离。 0 说明是整体居中
-+ (instancetype)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft;
++ (instancetype)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(nullable NSArray *)icons menuWidth:(CGFloat)itemWidth isShowTriangle:(BOOL)isShowTriangle arrowLeft:(CGFloat)arrowLeft;
 /// 第二步:  ---- 点击回调方法： 点击某一行的回调，返回行的下标
 @property (nonatomic, copy) ClickRowBlock_XM  clickBlock;
 
