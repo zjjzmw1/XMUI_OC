@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
+		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -24,7 +25,7 @@
 		E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCAE283F519200B6AB00 /* UIView+XMConvertRect.m */; };
 		E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */; };
 		E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB7283F6BA400B6AB00 /* XMToast.m */; };
-		E53CDCBC283F74A900B6AB00 /* ToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* ToastVC.m */; };
+		E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */; };
 		E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */; };
 		E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC4283F81D300B6AB00 /* JDBMCartViewController.m */; };
 		E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC5283F81D300B6AB00 /* JDBMPrototypeViewController.m */; };
@@ -33,12 +34,15 @@
 		E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD0283F82B000B6AB00 /* JDBMCartTopView.m */; };
 		E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */; };
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
+		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.release.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.release.xcconfig"; sourceTree = "<group>"; };
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
+		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
+		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,8 +74,8 @@
 		E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCustomNaviView.m; sourceTree = "<group>"; };
 		E53CDCB6283F6BA400B6AB00 /* XMToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMToast.h; sourceTree = "<group>"; };
 		E53CDCB7283F6BA400B6AB00 /* XMToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMToast.m; sourceTree = "<group>"; };
-		E53CDCBA283F74A900B6AB00 /* ToastVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastVC.h; sourceTree = "<group>"; };
-		E53CDCBB283F74A900B6AB00 /* ToastVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastVC.m; sourceTree = "<group>"; };
+		E53CDCBA283F74A900B6AB00 /* DemoToastVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoToastVC.h; sourceTree = "<group>"; };
+		E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoToastVC.m; sourceTree = "<group>"; };
 		E53CDCC0283F81D300B6AB00 /* JDBMPrototypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMPrototypeViewController.h; sourceTree = "<group>"; };
 		E53CDCC1283F81D300B6AB00 /* JDBMCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMCartViewController.h; sourceTree = "<group>"; };
 		E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMPurchaseViewController.m; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		E53CDCD3283F82B000B6AB00 /* JDBMCartTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMCartTopView.h; sourceTree = "<group>"; };
 		E53CDCDD2840D69A00B6AB00 /* DemoLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoLabelVC.h; sourceTree = "<group>"; };
 		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
+		E53CDCE12841D77400B6AB00 /* XMPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPopMenu.h; sourceTree = "<group>"; };
+		E53CDCE22841D77400B6AB00 /* XMPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPopMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E53CDCE02841D76600B6AB00 /* PopMenu */,
 				E53CDCB5283F6B4200B6AB00 /* Toast */,
 				E53CDCA8283F518200B6AB00 /* UIView */,
 				E53CDCA4283F50C600B6AB00 /* UIButton */,
@@ -233,9 +240,10 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
-				E53CDCBE283F81AD00B6AB00 /* 购物车VC */,
 				E53CDCBD283F819F00B6AB00 /* ToastVC */,
+				E53CDCBE283F81AD00B6AB00 /* 购物车VC */,
 			);
 			path = TestVC;
 			sourceTree = "<group>";
@@ -243,8 +251,8 @@
 		E53CDCBD283F819F00B6AB00 /* ToastVC */ = {
 			isa = PBXGroup;
 			children = (
-				E53CDCBA283F74A900B6AB00 /* ToastVC.h */,
-				E53CDCBB283F74A900B6AB00 /* ToastVC.m */,
+				E53CDCBA283F74A900B6AB00 /* DemoToastVC.h */,
+				E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */,
 			);
 			path = ToastVC;
 			sourceTree = "<group>";
@@ -309,6 +317,24 @@
 				E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */,
 			);
 			path = UILabelVC;
+			sourceTree = "<group>";
+		};
+		E53CDCE02841D76600B6AB00 /* PopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDCE12841D77400B6AB00 /* XMPopMenu.h */,
+				E53CDCE22841D77400B6AB00 /* XMPopMenu.m */,
+			);
+			path = PopMenu;
+			sourceTree = "<group>";
+		};
+		E53CDCE42841D77B00B6AB00 /* PopMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */,
+				E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */,
+			);
+			path = PopMenuVC;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -416,7 +442,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E53CDCBC283F74A900B6AB00 /* ToastVC.m in Sources */,
+				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
+				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
@@ -427,6 +454,7 @@
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
+				E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */,
 				E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */,
 				E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */,
 				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,

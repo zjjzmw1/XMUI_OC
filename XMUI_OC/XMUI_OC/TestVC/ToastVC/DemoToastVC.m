@@ -5,21 +5,21 @@
 //  Created by ext.zhangmingwei1 on 2022/5/26.
 //
 
-#import "ToastVC.h"
+#import "DemoToastVC.h"
 #import "XMCustomNaviView.h"
 #import "UITableView+XMTool.h"
 #import "XMSizeMacro.h"
 
 #import "XMToast.h"
 
-@interface ToastVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface DemoToastVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) NSMutableArray    *dataArr;
 
 @end
 
-@implementation ToastVC
+@implementation DemoToastVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

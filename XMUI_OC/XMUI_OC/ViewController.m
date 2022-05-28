@@ -10,9 +10,12 @@
 #import "XMSizeMacro.h"
 #import "XMCustomNaviView.h"
 #import "XMToast.h"
-#import "ToastVC.h"     // 吐司demo
+
+#import "DemoToastVC.h"
 #import "JDBMCartViewController.h"
 #import "DemoLabelVC.h"
+#import "DemoPopMenuVC.h"
+
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -38,7 +41,7 @@
     naviV.lineImgV.hidden = NO;
     [self.view addSubview:naviV];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"购物车"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"购物车",@"XMPopMenu"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -73,15 +76,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     UIViewController *vc;
-    
-    if (indexPath.row == 0) {
-        vc = [ToastVC new];
+    NSString *vcString;
+    if (self.dataArr.count > indexPath.row) {
+        vcString = self.dataArr[indexPath.row];
     }
-    if (indexPath.row == 1) {
+
+    if ([vcString isEqualToString:@"XMToast"]) {
+        vc = [DemoToastVC new];
+    }
+    if ([vcString isEqualToString:@"UILabel"]) {
         vc = [DemoLabelVC new];
     }
-    if (indexPath.row == 3) {
+    if ([vcString isEqualToString:@"购物车"]) {
         vc = [JDBMCartViewController new];
+    }
+    if ([vcString isEqualToString:@"XMPopMenu"]) {
+        vc = [DemoPopMenuVC new];
     }
     
     [self.navigationController pushViewController:vc animated:YES];
