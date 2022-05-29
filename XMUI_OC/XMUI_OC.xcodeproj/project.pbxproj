@@ -19,6 +19,8 @@
 		E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */; };
 		E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A12843332200B5FDC7 /* XMEmptyView.m */; };
 		E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */; };
+		E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A8284367D900B5FDC7 /* XMTextView.m */; };
+		E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -73,6 +75,10 @@
 		E52679A12843332200B5FDC7 /* XMEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMEmptyView.m; sourceTree = "<group>"; };
 		E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoEmptyVC.h; sourceTree = "<group>"; };
 		E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoEmptyVC.m; sourceTree = "<group>"; };
+		E52679A7284367D900B5FDC7 /* XMTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMTextView.h; sourceTree = "<group>"; };
+		E52679A8284367D900B5FDC7 /* XMTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMTextView.m; sourceTree = "<group>"; };
+		E52679AB284368D400B5FDC7 /* DemoTextViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTextViewVC.h; sourceTree = "<group>"; };
+		E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTextViewVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -220,6 +226,24 @@
 			path = EmptyView;
 			sourceTree = "<group>";
 		};
+		E52679A6284367B400B5FDC7 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				E52679A7284367D900B5FDC7 /* XMTextView.h */,
+				E52679A8284367D900B5FDC7 /* XMTextView.m */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		E52679AA284368C000B5FDC7 /* UITextViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				E52679AB284368D400B5FDC7 /* DemoTextViewVC.h */,
+				E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */,
+			);
+			path = UITextViewVC;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E52679A6284367B400B5FDC7 /* UITextView */,
 				E526799F2843330600B5FDC7 /* EmptyView */,
 				E526799728432F8300B5FDC7 /* UITextField */,
 				E51AD09028432D8400DBF3C8 /* UITabBarVC */,
@@ -349,6 +374,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E52679AA284368C000B5FDC7 /* UITextViewVC */,
 				E526799B28432FDF00B5FDC7 /* UITextFieldVC */,
 				E51AD08C284239F700DBF3C8 /* UIButtonVC */,
 				E51AD087284233C000DBF3C8 /* DemoBaseVC */,
@@ -565,8 +591,10 @@
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
+				E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */,
 				E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */,
 				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
+				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
 				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,

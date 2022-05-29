@@ -17,6 +17,7 @@
 #import "DemoButtonVC.h"
 #import "DemoTextFieldVC.h"
 #import "DemoEmptyVC.h"
+#import "DemoTextViewVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -32,7 +33,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.customNaviView setTitleStr:@"自定义导航栏"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -92,6 +93,9 @@
     }
     if ([vcString isEqualToString:@"XMEmptyView"]) {
         vc = [DemoEmptyVC new];
+    }
+    if ([vcString isEqualToString:@"XMTextView"]) {
+        vc = [DemoTextViewVC new];
     }
     
     [self.navigationController pushViewController:vc animated:YES];
