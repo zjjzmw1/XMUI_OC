@@ -10,6 +10,8 @@
 #import "UIColor+XMTool.h"
 #import "XMSizeMacro.h"                 // OC 尺寸相关宏
 
+#import "XMNavigationController.h"      // push自动隐藏tabbar
+
 /// 自定义的tabbar 按钮
 @interface XMTabBarButton : UIButton
 
@@ -117,8 +119,8 @@
 }
 /// 初始化tabbar的几个页面
 - (void)initTabbarVC {
-    NSMutableArray *controllerArray = @[@"HomePageVC",@"CourseCategoryVC",@"StudyVC",@"ShopVC",@"NewMineVC"].mutableCopy;
-    NSArray * titleArray = @[NSLocalizedString(@"课程", nil),NSLocalizedString(@"分类", nil),NSLocalizedString(@"学习", nil), NSLocalizedString(@"商城", nil),NSLocalizedString(@"我的", nil)];
+    NSMutableArray *controllerArray = @[@"ViewController",@"CourseCategoryVC",@"StudyVC",@"ShopVC",@"NewMineVC"].mutableCopy;
+    NSArray * titleArray = @[NSLocalizedString(@"首页", nil),NSLocalizedString(@"分类", nil),NSLocalizedString(@"学习", nil), NSLocalizedString(@"商城", nil),NSLocalizedString(@"我的", nil)];
     NSArray *imageArray= @[@"tabbar_1",@"tabbar_2",@"tabbar_3",@"tabbar_3",@"tabbar_4"];
     //选中图片数组
     NSArray *selImageArray = @[@"tabbar_1_s",@"tabbar_2_s",@"tabbar_3_s",@"tabbar_3_s",@"tabbar_4_s"];
@@ -148,8 +150,10 @@
         vc = [[class alloc]init];
         //        }
         //4. 添加nav控制器
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [tabBarArr addObject:nav];
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        // push自动隐藏tabbar
+        XMNavigationController *navi = [[XMNavigationController alloc] initWithRootViewController:vc];
+        [tabBarArr addObject:navi];
     }
     self.viewControllers = tabBarArr;
 }
@@ -170,6 +174,7 @@
     self.tabBarView.backgroundColor = [UIColor whiteColor];
     [self.tabBar addSubview:self.tabBarView];
     int num = (int)self.controllerArray.count;
+    NSLog(@"yyy===%f,,,%f",kTabBarH_XM,[[UIApplication sharedApplication] keyWindow].safeAreaInsets.bottom);
     for(int i=0;i<num;i++) {
         XMTabBarButton *button = [[XMTabBarButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/num*i, 0, [UIScreen mainScreen].bounds.size.width/num,49)];
         button.tag = 1000+i;

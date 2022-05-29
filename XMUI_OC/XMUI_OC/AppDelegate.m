@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "XMTabBarVC.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.window.backgroundColor = [UIColor whiteColor];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
-    self.window.rootViewController = navi;
+//    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+//    self.window.rootViewController = navi;
+    // 添加tabbar
+    [self.window setRootViewController:[XMTabBarVC defaultManager]];
+
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -19,6 +19,8 @@
 #import "DemoEmptyVC.h"
 #import "DemoTextViewVC.h"
 
+#import "XMTabBarVC.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView       *tableView;
@@ -33,12 +35,21 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.customNaviView setTitleStr:@"自定义导航栏"];
     
+    [self.customNaviView setBackBtnImage:nil title:@"展示点"];
+    [self.customNaviView setRightBtnImage:nil title:@"隐藏"];
+    [self.customNaviView setBackBlock:^{
+        [[XMTabBarVC defaultManager] showPointMarkIndex:2];
+    }];
+    [self.customNaviView setRightBlock:^{
+        [[XMTabBarVC defaultManager] hideMarkIndex:2];
+    }];
+    
     self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.frame = CGRectMake(0, kNaviStatusBarH_XM, kScreenWidth_XM, kScreenHeight_XM - kNaviStatusBarH_XM);
+    self.tableView.frame = CGRectMake(0, kNaviStatusBarH_XM, kScreenWidth_XM, kScreenHeight_XM - kNaviStatusBarH_XM - kTabBarH_XM);
     [self.tableView reloadData];
 }
 
