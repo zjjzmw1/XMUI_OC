@@ -17,6 +17,8 @@
 		E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799428432DF000B5FDC7 /* XMTabBarVC.m */; };
 		E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799828432F9400B5FDC7 /* UITextField+XMTool.m */; };
 		E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */; };
+		E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A12843332200B5FDC7 /* XMEmptyView.m */; };
+		E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -67,6 +69,10 @@
 		E526799928432F9400B5FDC7 /* UITextField+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XMTool.h"; sourceTree = "<group>"; };
 		E526799C28432FFA00B5FDC7 /* DemoTextFieldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTextFieldVC.h; sourceTree = "<group>"; };
 		E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTextFieldVC.m; sourceTree = "<group>"; };
+		E52679A02843332200B5FDC7 /* XMEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMEmptyView.h; sourceTree = "<group>"; };
+		E52679A12843332200B5FDC7 /* XMEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMEmptyView.m; sourceTree = "<group>"; };
+		E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoEmptyVC.h; sourceTree = "<group>"; };
+		E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoEmptyVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -205,6 +211,15 @@
 			path = UITextFieldVC;
 			sourceTree = "<group>";
 		};
+		E526799F2843330600B5FDC7 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				E52679A02843332200B5FDC7 /* XMEmptyView.h */,
+				E52679A12843332200B5FDC7 /* XMEmptyView.m */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E526799F2843330600B5FDC7 /* EmptyView */,
 				E526799728432F8300B5FDC7 /* UITextField */,
 				E51AD09028432D8400DBF3C8 /* UITabBarVC */,
 				E51AD07F284232EE00DBF3C8 /* UINavigationController */,
@@ -340,6 +356,8 @@
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
 				E53CDCBD283F819F00B6AB00 /* ToastVC */,
 				E53CDCBE283F81AD00B6AB00 /* 购物车VC */,
+				E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */,
+				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
 			);
 			path = TestVC;
 			sourceTree = "<group>";
@@ -550,6 +568,7 @@
 				E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */,
 				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
 				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
+				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
@@ -562,6 +581,7 @@
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
+				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
 				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
