@@ -36,12 +36,14 @@
     [self.customNaviView setTitleStr:@"自定义导航栏"];
     
     [self.customNaviView setBackBtnImage:nil title:@"展示点"];
+    self.customNaviView.backBtn.frame = CGRectMake(6, kStatusBarHeight_XM, 60, 44);
     [self.customNaviView setRightBtnImage:nil title:@"隐藏"];
     [self.customNaviView setBackBlock:^{
         [[XMTabBarVC defaultManager] showPointMarkIndex:2];
     }];
     [self.customNaviView setRightBlock:^{
         [[XMTabBarVC defaultManager] hideMarkIndex:2];
+        [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
     self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView"]];
@@ -108,6 +110,9 @@
     if ([vcString isEqualToString:@"XMTextView"]) {
         vc = [DemoTextViewVC new];
     }
+    
+    [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
+
     
     [self.navigationController pushViewController:vc animated:YES];
 }

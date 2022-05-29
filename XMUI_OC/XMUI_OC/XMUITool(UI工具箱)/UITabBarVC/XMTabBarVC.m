@@ -27,10 +27,8 @@
 #define kTabbar_TitleColor_Sel_XM       [UIColor colorFromHexString:@"#e8320d"]
 /// TabBar 背景色
 #define kTabBar_bgColor_XM              [UIColor whiteColor]
-/// 数字角标直径
-#define kNumMark_W_H_XM                 20
 /// 小红点直径
-#define kPointMark_W_H_XM               8
+#define kPointMark_W_H_XM               10
 
 /// TabBarButton中 图片与文字上下所占比
 #define kTabbar_title_img_scale_XM       0.60
@@ -44,6 +42,9 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.clipsToBounds = NO;
+        self.layer.masksToBounds = NO;
+        
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.backgroundColor = kTabBar_bgColor_XM;
@@ -196,13 +197,12 @@
             self.seleBtn = button;
         }
         //角标
-        UILabel *numLabel = [[UILabel alloc] initWithFrame:CGRectMake(button.frame.size.width/2.0 + 8, 4, kNumMark_W_H_XM, kNumMark_W_H_XM)];
+        UILabel *numLabel = [[UILabel alloc] initWithFrame:CGRectMake(button.frame.size.width/2.0 + 9, 2, 0, 0)];
         numLabel.layer.masksToBounds = YES;
-        numLabel.layer.cornerRadius = 10;
         numLabel.backgroundColor = [UIColor redColor];
         numLabel.textColor = [UIColor whiteColor];
         numLabel.textAlignment = NSTextAlignmentCenter;
-        numLabel.font = [UIFont systemFontOfSize:13];
+        numLabel.font = [UIFont systemFontOfSize:11];
         numLabel.tag = 1010+i;
         numLabel.hidden = YES;
         [button addSubview:numLabel];
@@ -248,25 +248,22 @@
     }
     UILabel *numLabel = (UILabel *)[self.tabBarView viewWithTag:1010+index];
     numLabel.hidden=NO;
-    CGRect nFrame = numLabel.frame;
-    if(badge<=0) {
+    if(badge <= 0) {
         //隐藏角标
         [self hideMarkIndex:index];
     } else {
-        if(badge>0&&badge<=9) {
-            nFrame.size.width = kNumMark_W_H_XM;
-        } else if (badge>9&&badge<=19) {
-            nFrame.size.width = kNumMark_W_H_XM+5;
-        } else {
-            nFrame.size.width = kNumMark_W_H_XM+10;
-        }
-        nFrame.size.height = kNumMark_W_H_XM;
-        numLabel.frame = nFrame;
-        numLabel.layer.cornerRadius = kNumMark_W_H_XM/2.0;
+        
         numLabel.text = [NSString stringWithFormat:@"%ld",(long)badge];
         if (badge > 99) {
             numLabel.text =@"99+";
         }
+        
+        [numLabel sizeToFit];
+        CGFloat labelWidth = numLabel.size.width;
+        CGFloat labelHeight = numLabel.size.height;
+        // 根据红点数量确定最终位置大小
+        numLabel.frame = CGRectMake(numLabel.frame.origin.x, numLabel.frame.origin.y, labelWidth + 10, labelHeight + 4);
+        numLabel.layer.cornerRadius = numLabel.frame.size.height/2.0;
     }
 }
 
@@ -281,7 +278,7 @@
         return;
     }
     UILabel *numLabel = (UILabel *)[self.tabBarView viewWithTag:1010+index];
-    numLabel.hidden=NO;
+    numLabel.hidden = NO;
     CGRect nFrame = numLabel.frame;
     nFrame.size.height=kPointMark_W_H_XM;
     nFrame.size.width = kPointMark_W_H_XM;
