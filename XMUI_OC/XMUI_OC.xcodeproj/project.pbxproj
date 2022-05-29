@@ -22,7 +22,6 @@
 		E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A8284367D900B5FDC7 /* XMTextView.m */; };
 		E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
-		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
 		E53CDC81283F3DB500B6AB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC7F283F3DB500B6AB00 /* Main.storyboard */; };
 		E53CDC83283F3DB600B6AB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC82283F3DB600B6AB00 /* Assets.xcassets */; };
@@ -82,8 +81,6 @@
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E53CDC79283F3DB500B6AB00 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		E53CDC7C283F3DB500B6AB00 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E53CDC7D283F3DB500B6AB00 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E53CDC80283F3DB500B6AB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -267,8 +264,6 @@
 			children = (
 				E53CDC76283F3DB500B6AB00 /* AppDelegate.h */,
 				E53CDC77283F3DB500B6AB00 /* AppDelegate.m */,
-				E53CDC79283F3DB500B6AB00 /* SceneDelegate.h */,
-				E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */,
 				E53CDC7C283F3DB500B6AB00 /* ViewController.h */,
 				E53CDC7D283F3DB500B6AB00 /* ViewController.m */,
 				E53CDCB9283F747700B6AB00 /* TestVC */,
@@ -613,7 +608,6 @@
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
 				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
-				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
