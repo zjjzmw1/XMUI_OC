@@ -174,7 +174,6 @@
     self.tabBarView.backgroundColor = [UIColor whiteColor];
     [self.tabBar addSubview:self.tabBarView];
     int num = (int)self.controllerArray.count;
-    NSLog(@"yyy===%f,,,%f",kTabBarH_XM,[[UIApplication sharedApplication] keyWindow].safeAreaInsets.bottom);
     for(int i=0;i<num;i++) {
         XMTabBarButton *button = [[XMTabBarButton alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/num*i, 0, [UIScreen mainScreen].bounds.size.width/num,49)];
         button.tag = 1000+i;

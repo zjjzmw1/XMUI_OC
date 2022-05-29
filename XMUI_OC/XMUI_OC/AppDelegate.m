@@ -22,6 +22,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
 //    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
 //    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible]; // 这句话之后，是否全面屏的相关的宏定义才准确。否则不对。会导致下面用到全面屏的方法的时候不对
     // 添加tabbar
     [self.window setRootViewController:[XMTabBarVC defaultManager]];
 
