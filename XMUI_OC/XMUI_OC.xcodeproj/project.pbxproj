@@ -13,6 +13,8 @@
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD089284233D800DBF3C8 /* DemoBaseVC.m */; };
 		E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */; };
+		E526799528432DF000B5FDC7 /* Tabbar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E526799228432DF000B5FDC7 /* Tabbar.xcassets */; };
+		E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799428432DF000B5FDC7 /* XMTabBarVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -56,6 +58,9 @@
 		E51AD08B2842346E00DBF3C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E51AD08D28423A1500DBF3C8 /* DemoButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoButtonVC.h; sourceTree = "<group>"; };
 		E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoButtonVC.m; sourceTree = "<group>"; };
+		E526799228432DF000B5FDC7 /* Tabbar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tabbar.xcassets; sourceTree = "<group>"; };
+		E526799328432DF000B5FDC7 /* XMTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTabBarVC.h; sourceTree = "<group>"; };
+		E526799428432DF000B5FDC7 /* XMTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTabBarVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,6 +171,16 @@
 			path = UIButtonVC;
 			sourceTree = "<group>";
 		};
+		E51AD09028432D8400DBF3C8 /* UITabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				E526799228432DF000B5FDC7 /* Tabbar.xcassets */,
+				E526799328432DF000B5FDC7 /* XMTabBarVC.h */,
+				E526799428432DF000B5FDC7 /* XMTabBarVC.m */,
+			);
+			path = UITabBarVC;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E51AD09028432D8400DBF3C8 /* UITabBarVC */,
 				E51AD07F284232EE00DBF3C8 /* UINavigationController */,
 				E53CDCE02841D76600B6AB00 /* PopMenu */,
 				E53CDCB5283F6B4200B6AB00 /* Toast */,
@@ -461,6 +477,7 @@
 				E53CDC86283F3DB600B6AB00 /* LaunchScreen.storyboard in Resources */,
 				E53CDC83283F3DB600B6AB00 /* Assets.xcassets in Resources */,
 				E53CDC81283F3DB500B6AB00 /* Main.storyboard in Resources */,
+				E526799528432DF000B5FDC7 /* Tabbar.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +539,7 @@
 				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,
+				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
