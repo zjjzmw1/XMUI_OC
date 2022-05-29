@@ -15,6 +15,7 @@
 #import "DemoLabelVC.h"
 #import "DemoPopMenuVC.h"
 #import "DemoButtonVC.h"
+#import "DemoTextFieldVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -30,7 +31,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.customNaviView setTitleStr:@"自定义导航栏"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -84,6 +85,9 @@
     }
     if ([vcString isEqualToString:@"UIButton"]) {
         vc = [DemoButtonVC new];
+    }
+    if ([vcString isEqualToString:@"UITextField"]) {
+        vc = [DemoTextFieldVC new];
     }
     
     [self.navigationController pushViewController:vc animated:YES];

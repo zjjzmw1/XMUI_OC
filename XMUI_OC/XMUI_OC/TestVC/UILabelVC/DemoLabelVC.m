@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.customNaviView setTitleStr:@"UILabel"];
+    [self.customNaviView setTitleStr:@"UILabel+XMTool"];
     
     self.lbl1 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:15] textColor:[UIColor redColor]];
     [self.view addSubview:self.lbl1];

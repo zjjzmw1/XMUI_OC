@@ -15,6 +15,8 @@
 		E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD08E28423A1500DBF3C8 /* DemoButtonVC.m */; };
 		E526799528432DF000B5FDC7 /* Tabbar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E526799228432DF000B5FDC7 /* Tabbar.xcassets */; };
 		E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799428432DF000B5FDC7 /* XMTabBarVC.m */; };
+		E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799828432F9400B5FDC7 /* UITextField+XMTool.m */; };
+		E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7A283F3DB500B6AB00 /* SceneDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
@@ -61,6 +63,10 @@
 		E526799228432DF000B5FDC7 /* Tabbar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Tabbar.xcassets; sourceTree = "<group>"; };
 		E526799328432DF000B5FDC7 /* XMTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTabBarVC.h; sourceTree = "<group>"; };
 		E526799428432DF000B5FDC7 /* XMTabBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTabBarVC.m; sourceTree = "<group>"; };
+		E526799828432F9400B5FDC7 /* UITextField+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XMTool.m"; sourceTree = "<group>"; };
+		E526799928432F9400B5FDC7 /* UITextField+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XMTool.h"; sourceTree = "<group>"; };
+		E526799C28432FFA00B5FDC7 /* DemoTextFieldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTextFieldVC.h; sourceTree = "<group>"; };
+		E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTextFieldVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +187,24 @@
 			path = UITabBarVC;
 			sourceTree = "<group>";
 		};
+		E526799728432F8300B5FDC7 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				E526799928432F9400B5FDC7 /* UITextField+XMTool.h */,
+				E526799828432F9400B5FDC7 /* UITextField+XMTool.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		E526799B28432FDF00B5FDC7 /* UITextFieldVC */ = {
+			isa = PBXGroup;
+			children = (
+				E526799C28432FFA00B5FDC7 /* DemoTextFieldVC.h */,
+				E526799D28432FFA00B5FDC7 /* DemoTextFieldVC.m */,
+			);
+			path = UITextFieldVC;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E526799728432F8300B5FDC7 /* UITextField */,
 				E51AD09028432D8400DBF3C8 /* UITabBarVC */,
 				E51AD07F284232EE00DBF3C8 /* UINavigationController */,
 				E53CDCE02841D76600B6AB00 /* PopMenu */,
@@ -308,6 +333,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E526799B28432FDF00B5FDC7 /* UITextFieldVC */,
 				E51AD08C284239F700DBF3C8 /* UIButtonVC */,
 				E51AD087284233C000DBF3C8 /* DemoBaseVC */,
 				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
@@ -515,6 +541,7 @@
 			files = (
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
+				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
@@ -539,6 +566,7 @@
 				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E53CDC7B283F3DB500B6AB00 /* SceneDelegate.m in Sources */,
+				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,

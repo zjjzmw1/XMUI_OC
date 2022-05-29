@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.customNaviView setTitleStr:@"UIButton"];
+    [self.customNaviView setTitleStr:@"UIButton+XMTool"];
     
     
     self.btn1 = [UIButton getButtonWithTitle:@"便利按钮不设置宽高" titleColor:[UIColor redColor] font:[UIFont systemFontOfSize:15]];
