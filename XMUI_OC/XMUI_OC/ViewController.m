@@ -11,7 +11,6 @@
 #import "XMToast.h"
 
 #import "DemoToastVC.h"
-#import "JDBMCartViewController.h"
 #import "DemoLabelVC.h"
 #import "DemoPopMenuVC.h"
 #import "DemoButtonVC.h"
@@ -37,8 +36,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.customNaviView setTitleStr:@"自定义导航栏"];
     
-    [self.customNaviView setBackBtnImage:nil title:@"展示点"];
-    self.customNaviView.backBtn.frame = CGRectMake(6, kStatusBarHeight_XM, 60, 44);
+    [self.customNaviView setBackBtnImage:nil title:@"显示"];
     [self.customNaviView setRightBtnImage:nil title:@"隐藏"];
     [self.customNaviView setBackBlock:^{
         [[XMTabBarVC defaultManager] showPointMarkIndex:2];
@@ -93,9 +91,6 @@
     }
     if ([vcString isEqualToString:@"UILabel"]) {
         vc = [DemoLabelVC new];
-    }
-    if ([vcString isEqualToString:@"购物车"]) {
-        vc = [JDBMCartViewController new];
     }
     if ([vcString isEqualToString:@"XMPopMenu"]) {
         vc = [DemoPopMenuVC new];

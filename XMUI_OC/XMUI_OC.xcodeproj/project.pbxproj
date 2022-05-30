@@ -40,13 +40,6 @@
 		E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB3283F6A4E00B6AB00 /* XMCustomNaviView.m */; };
 		E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCB7283F6BA400B6AB00 /* XMToast.m */; };
 		E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */; };
-		E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */; };
-		E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC4283F81D300B6AB00 /* JDBMCartViewController.m */; };
-		E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC5283F81D300B6AB00 /* JDBMPrototypeViewController.m */; };
-		E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCC7283F81D300B6AB00 /* JDBMHoverCartViewController.m */; };
-		E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCCD283F822B00B6AB00 /* WJBaseViewController.m */; };
-		E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD0283F82B000B6AB00 /* JDBMCartTopView.m */; };
-		E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */; };
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
 /* End PBXBuildFile section */
@@ -118,20 +111,6 @@
 		E53CDCB7283F6BA400B6AB00 /* XMToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMToast.m; sourceTree = "<group>"; };
 		E53CDCBA283F74A900B6AB00 /* DemoToastVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoToastVC.h; sourceTree = "<group>"; };
 		E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoToastVC.m; sourceTree = "<group>"; };
-		E53CDCC0283F81D300B6AB00 /* JDBMPrototypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMPrototypeViewController.h; sourceTree = "<group>"; };
-		E53CDCC1283F81D300B6AB00 /* JDBMCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMCartViewController.h; sourceTree = "<group>"; };
-		E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMPurchaseViewController.m; sourceTree = "<group>"; };
-		E53CDCC3283F81D300B6AB00 /* JDBMHoverCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMHoverCartViewController.h; sourceTree = "<group>"; };
-		E53CDCC4283F81D300B6AB00 /* JDBMCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMCartViewController.m; sourceTree = "<group>"; };
-		E53CDCC5283F81D300B6AB00 /* JDBMPrototypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMPrototypeViewController.m; sourceTree = "<group>"; };
-		E53CDCC6283F81D300B6AB00 /* JDBMPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMPurchaseViewController.h; sourceTree = "<group>"; };
-		E53CDCC7283F81D300B6AB00 /* JDBMHoverCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMHoverCartViewController.m; sourceTree = "<group>"; };
-		E53CDCCC283F822B00B6AB00 /* WJBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WJBaseViewController.h; sourceTree = "<group>"; };
-		E53CDCCD283F822B00B6AB00 /* WJBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WJBaseViewController.m; sourceTree = "<group>"; };
-		E53CDCD0283F82B000B6AB00 /* JDBMCartTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMCartTopView.m; sourceTree = "<group>"; };
-		E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBMChangePageView.m; sourceTree = "<group>"; };
-		E53CDCD2283F82B000B6AB00 /* JDBMChangePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMChangePageView.h; sourceTree = "<group>"; };
-		E53CDCD3283F82B000B6AB00 /* JDBMCartTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBMCartTopView.h; sourceTree = "<group>"; };
 		E53CDCDD2840D69A00B6AB00 /* DemoLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoLabelVC.h; sourceTree = "<group>"; };
 		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
 		E53CDCE12841D77400B6AB00 /* XMPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPopMenu.h; sourceTree = "<group>"; };
@@ -415,7 +394,6 @@
 				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
 				E53CDCBD283F819F00B6AB00 /* ToastVC */,
-				E53CDCBE283F81AD00B6AB00 /* 购物车VC */,
 				E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */,
 				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
 			);
@@ -429,59 +407,6 @@
 				E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */,
 			);
 			path = ToastVC;
-			sourceTree = "<group>";
-		};
-		E53CDCBE283F81AD00B6AB00 /* 购物车VC */ = {
-			isa = PBXGroup;
-			children = (
-				E53CDCBF283F81D300B6AB00 /* 购物车 */,
-			);
-			path = "购物车VC";
-			sourceTree = "<group>";
-		};
-		E53CDCBF283F81D300B6AB00 /* 购物车 */ = {
-			isa = PBXGroup;
-			children = (
-				E53CDCC1283F81D300B6AB00 /* JDBMCartViewController.h */,
-				E53CDCC4283F81D300B6AB00 /* JDBMCartViewController.m */,
-				E53CDCC3283F81D300B6AB00 /* JDBMHoverCartViewController.h */,
-				E53CDCC7283F81D300B6AB00 /* JDBMHoverCartViewController.m */,
-				E53CDCDA283F8CA500B6AB00 /* 容器内的两个VC */,
-				E53CDCDB283F8D2500B6AB00 /* 无用 */,
-				E53CDCCF283F82B000B6AB00 /* View */,
-			);
-			name = "购物车";
-			sourceTree = "<group>";
-		};
-		E53CDCCF283F82B000B6AB00 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E53CDCD3283F82B000B6AB00 /* JDBMCartTopView.h */,
-				E53CDCD0283F82B000B6AB00 /* JDBMCartTopView.m */,
-				E53CDCD2283F82B000B6AB00 /* JDBMChangePageView.h */,
-				E53CDCD1283F82B000B6AB00 /* JDBMChangePageView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E53CDCDA283F8CA500B6AB00 /* 容器内的两个VC */ = {
-			isa = PBXGroup;
-			children = (
-				E53CDCC0283F81D300B6AB00 /* JDBMPrototypeViewController.h */,
-				E53CDCC5283F81D300B6AB00 /* JDBMPrototypeViewController.m */,
-			);
-			path = "容器内的两个VC";
-			sourceTree = "<group>";
-		};
-		E53CDCDB283F8D2500B6AB00 /* 无用 */ = {
-			isa = PBXGroup;
-			children = (
-				E53CDCCC283F822B00B6AB00 /* WJBaseViewController.h */,
-				E53CDCCD283F822B00B6AB00 /* WJBaseViewController.m */,
-				E53CDCC6283F81D300B6AB00 /* JDBMPurchaseViewController.h */,
-				E53CDCC2283F81D300B6AB00 /* JDBMPurchaseViewController.m */,
-			);
-			path = "无用";
 			sourceTree = "<group>";
 		};
 		E53CDCDC2840D67600B6AB00 /* UILabelVC */ = {
@@ -625,13 +550,9 @@
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
-				E53CDCCE283F822B00B6AB00 /* WJBaseViewController.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
 				E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */,
-				E53CDCC9283F81D300B6AB00 /* JDBMCartViewController.m in Sources */,
-				E53CDCD4283F82B000B6AB00 /* JDBMCartTopView.m in Sources */,
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
-				E53CDCD5283F82B000B6AB00 /* JDBMChangePageView.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
@@ -647,12 +568,9 @@
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
-				E53CDCC8283F81D300B6AB00 /* JDBMPurchaseViewController.m in Sources */,
-				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
-				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
