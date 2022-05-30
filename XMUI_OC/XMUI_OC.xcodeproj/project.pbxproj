@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
+		E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7928449D2E002863E2 /* UIImage+XMTool.m */; };
+		E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7D28449D5C002863E2 /* DemoImageVC.m */; };
 		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
 		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -53,6 +55,10 @@
 		3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.release.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.release.xcconfig"; sourceTree = "<group>"; };
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
+		E5085E7928449D2E002863E2 /* UIImage+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMTool.m"; sourceTree = "<group>"; };
+		E5085E7A28449D2E002863E2 /* UIImage+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMTool.h"; sourceTree = "<group>"; };
+		E5085E7C28449D5C002863E2 /* DemoImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageVC.h; sourceTree = "<group>"; };
+		E5085E7D28449D5C002863E2 /* DemoImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoImageVC.m; sourceTree = "<group>"; };
 		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
 		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
 		E51AD0802842330000DBF3C8 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
@@ -150,6 +156,24 @@
 				3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5085E7828449CC7002863E2 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E7A28449D2E002863E2 /* UIImage+XMTool.h */,
+				E5085E7928449D2E002863E2 /* UIImage+XMTool.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		E5085E7F28449D68002863E2 /* UIImageVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E7C28449D5C002863E2 /* DemoImageVC.h */,
+				E5085E7D28449D5C002863E2 /* DemoImageVC.m */,
+			);
+			path = UIImageVC;
 			sourceTree = "<group>";
 		};
 		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
@@ -294,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5085E7828449CC7002863E2 /* UIImage */,
 				E52679A6284367B400B5FDC7 /* UITextView */,
 				E526799F2843330600B5FDC7 /* EmptyView */,
 				E526799728432F8300B5FDC7 /* UITextField */,
@@ -381,6 +406,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5085E7F28449D68002863E2 /* UIImageVC */,
 				E52679AE28444DD800B5FDC7 /* UIViewVC */,
 				E52679AA284368C000B5FDC7 /* UITextViewVC */,
 				E526799B28432FDF00B5FDC7 /* UITextFieldVC */,
@@ -593,6 +619,7 @@
 			files = (
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
+				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
 				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
 				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
@@ -624,6 +651,7 @@
 				E53CDCCA283F81D300B6AB00 /* JDBMPrototypeViewController.m in Sources */,
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
+				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
 				E53CDCCB283F81D300B6AB00 /* JDBMHoverCartViewController.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
