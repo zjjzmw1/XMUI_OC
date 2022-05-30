@@ -21,6 +21,7 @@
 		E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */; };
 		E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679A8284367D900B5FDC7 /* XMTextView.m */; };
 		E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */; };
+		E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E52679B028444DEE00B5FDC7 /* DemoViewVC.m */; };
 		E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC77283F3DB500B6AB00 /* AppDelegate.m */; };
 		E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDC7D283F3DB500B6AB00 /* ViewController.m */; };
 		E53CDC81283F3DB500B6AB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53CDC7F283F3DB500B6AB00 /* Main.storyboard */; };
@@ -78,6 +79,8 @@
 		E52679A8284367D900B5FDC7 /* XMTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMTextView.m; sourceTree = "<group>"; };
 		E52679AB284368D400B5FDC7 /* DemoTextViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTextViewVC.h; sourceTree = "<group>"; };
 		E52679AC284368D400B5FDC7 /* DemoTextViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTextViewVC.m; sourceTree = "<group>"; };
+		E52679AF28444DEE00B5FDC7 /* DemoViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewVC.h; sourceTree = "<group>"; };
+		E52679B028444DEE00B5FDC7 /* DemoViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewVC.m; sourceTree = "<group>"; };
 		E53CDC73283F3DB500B6AB00 /* XMUI_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMUI_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53CDC76283F3DB500B6AB00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E53CDC77283F3DB500B6AB00 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -241,6 +244,15 @@
 			path = UITextViewVC;
 			sourceTree = "<group>";
 		};
+		E52679AE28444DD800B5FDC7 /* UIViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				E52679AF28444DEE00B5FDC7 /* DemoViewVC.h */,
+				E52679B028444DEE00B5FDC7 /* DemoViewVC.m */,
+			);
+			path = UIViewVC;
+			sourceTree = "<group>";
+		};
 		E53CDC6A283F3DB500B6AB00 = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +381,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E52679AE28444DD800B5FDC7 /* UIViewVC */,
 				E52679AA284368C000B5FDC7 /* UITextViewVC */,
 				E526799B28432FDF00B5FDC7 /* UITextFieldVC */,
 				E51AD08C284239F700DBF3C8 /* UIButtonVC */,
@@ -581,6 +594,7 @@
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
+				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,

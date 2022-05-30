@@ -12,6 +12,7 @@
 
 - (void)xmRotate360WithDuration:(CGFloat)aDuration repeatCount:(CGFloat)aRepeatCount timingMode:(enum XMRotate360TimingMode)aMode {
     [self stopRotateAnimation_XM];
+    // 关键帧动画，z轴旋转
     CAKeyframeAnimation *theAnimation = [CAKeyframeAnimation animation];
     theAnimation.values = [NSArray arrayWithObjects:
                            [NSValue valueWithCATransform3D:CATransform3DMakeRotation(0, 0,0,1)],
