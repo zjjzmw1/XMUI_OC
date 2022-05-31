@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 自定义AlertView
 @interface XMAlertView : UIView
 
+/// 确定按钮点击
+@property (nonatomic, copy) void (^clickSubmitBlock) (void);
+/// 取消按钮点击
+@property (nonatomic, copy) void (^clickCancelBlock) (void);
+
 /// 初始化
 + (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr;
 

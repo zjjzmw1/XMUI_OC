@@ -66,8 +66,15 @@
     [XMToast sharedInstance].frame = [XMToast sharedInstance].superview.frame;
     [XMToast sharedInstance].userInteractionEnabled = NO;
     
-    // 展示文字
-    [XMToast sharedInstance].titleLbl.text = text;
+    // 添加行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:5];
+    [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+    [paragraphStyle setAlignment:NSTextAlignmentCenter];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
+    [XMToast sharedInstance].titleLbl.attributedText = attributedString;
+    
     [XMToast sharedInstance].titleLbl.frame = CGRectMake(0, 0, kScreenWidth_XM - 60 * 2, 0);
     [[XMToast sharedInstance].titleLbl sizeToFit];
     

@@ -66,7 +66,17 @@
 + (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr {
     XMAlertView *alertV = [[XMAlertView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth_XM, kScreenHeight_XM)];
     alertV.titleLbl.text = titleStr;
-    alertV.contentLbl.text = contentStr;
+    // 添加内容行间距
+    if (contentStr.length > 0) {
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setLineSpacing:5];
+        [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
+        [paragraphStyle setAlignment:NSTextAlignmentCenter];
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:contentStr];
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [contentStr length])];
+        alertV.contentLbl.attributedText = attributedString;
+    }
+    
     [alertV.cancelBtn setTitle:cancelStr forState:UIControlStateNormal];
     [alertV.submitBtn setTitle:submitStr forState:UIControlStateNormal];
     
@@ -135,6 +145,14 @@
         [[UIApplication sharedApplication].windows.firstObject addSubview:self];
     }
     [self reloadFrame];
+    self.maskView.alpha = 0.0;
+    self.alpha = 0.8;
+    self.contentView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.5, 0.5);
+    [UIView animateWithDuration:0.1 animations:^{
+        self.maskView.alpha = 0.5;
+        self.alpha = 1.0;
+        self.contentView.transform = CGAffineTransformIdentity;
+    }];
 }
 
 /// 隐藏方法
@@ -146,11 +164,17 @@
 /// 确定按钮点击
 - (void)clickSubmitAction {
     [self hiddenAction];
+    if (self.clickSubmitBlock) {
+        self.clickSubmitBlock();
+    }
 }
 
 /// 取消按钮点击
 - (void)clickCancelAction {
     [self hiddenAction];
+    if (self.clickCancelBlock) {
+        self.clickCancelBlock();
+    }
 }
 
 #pragma mark - 懒加载
