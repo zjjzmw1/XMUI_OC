@@ -95,28 +95,28 @@
 - (void)initFrame {
     self.maskView.frame = CGRectMake(0, 0, kScreenWidth_XM, kScreenHeight_XM);
     self.contentView.frame = CGRectMake(_contentLeftSpace, (kScreenHeight_XM - _contentHeight)/2.0, kScreenWidth_XM - _contentLeftSpace*2.0, _contentHeight);
-    self.titleLbl.frame = CGRectMake(10, 24, self.contentView.width - 20, 0);
-    self.scrollView.frame = CGRectMake(10, self.titleLbl.bottom + 18, self.contentView.width - 20, 0);
-    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 20, 0);
+    self.titleLbl.frame = CGRectMake(20, 24, self.contentView.width - 40, 0);
+    self.scrollView.frame = CGRectMake(20, self.titleLbl.bottom + 18, self.contentView.width - 40, 0);
+    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 40, 0);
     self.cancelBtn.frame = CGRectMake(32, self.contentLbl.bottom + 24, _btnWidth, _btnHeight);
     self.submitBtn.frame = CGRectMake(self.cancelBtn.right + 18, self.cancelBtn.top, _btnWidth, _btnHeight);
 }
 
 /// 刷新布局
 - (void)reloadFrame {
-    self.titleLbl.frame = CGRectMake(10, 24, self.contentView.width - 20, self.titleLbl.height);
+    self.titleLbl.frame = CGRectMake(20, 24, self.contentView.width - 40, self.titleLbl.height);
     // 内容的top
     CGFloat scrollViewTop = self.titleLbl.bottom + 18;
     if (self.titleLbl.text.length <= 0) { // 没标题
         scrollViewTop = 24;
     }
-    self.scrollView.frame = CGRectMake(10, scrollViewTop, self.contentView.width - 20, self.contentLbl.height);
-    self.scrollView.contentSize = CGSizeMake(self.contentView.width - 20, self.contentLbl.height);
-    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 20, self.contentLbl.height);
+    self.scrollView.frame = CGRectMake(20, scrollViewTop, self.contentView.width - 40, self.contentLbl.height);
+    self.scrollView.contentSize = CGSizeMake(self.contentView.width - 40, self.contentLbl.height);
+    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 40, self.contentLbl.height);
     // contentLbl 最大高度
     CGFloat maxContentLblHeight = _maxHeight - self.titleLbl.height - 18 - 24 - _btnHeight - 18;
     if (self.contentLbl.height > maxContentLblHeight) { // 超过了最大高度
-        self.scrollView.frame = CGRectMake(10, scrollViewTop, self.contentView.width - 20, maxContentLblHeight);
+        self.scrollView.frame = CGRectMake(20, scrollViewTop, self.contentView.width - 40, maxContentLblHeight);
     }
     
     // 按钮的 top
