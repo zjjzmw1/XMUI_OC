@@ -62,7 +62,11 @@
     return self;
 }
 
-/// 初始化
+/// 自定义弹框 初始化
+/// @param titleStr 标题，没有就传 nil
+/// @param contentStr 内容文字，没有就传 nil
+/// @param cancelStr 左边按钮，没有就传 nil
+/// @param submitStr 右边按钮，没有传 nil
 + (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr {
     XMAlertView *alertV = [[XMAlertView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth_XM, kScreenHeight_XM)];
     alertV.titleLbl.text = titleStr;
