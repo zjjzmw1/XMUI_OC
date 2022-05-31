@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XMAlertView : UIView
 
 /// 初始化
-+ (XMAlertView *)initWithTitle:(NSString *)titleStr contentStr:(NSString *)contentStr cancelStr:(NSString *)cancelStr submitStr:(NSString *)submitStr;
++ (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr;
 
 - (void)showAction;
 

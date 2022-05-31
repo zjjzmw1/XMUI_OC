@@ -18,12 +18,16 @@
     CGFloat _btnWidth;
     /// 按钮高度
     CGFloat _btnHeight;
+    /// 容器的最大高度
+    CGFloat _maxHeight;
 }
 
 /// 容器
 @property (nonatomic, strong) UIView        *contentView;
 /// 蒙层
 @property (nonatomic, strong) UIView        *maskView;
+/// 存放长文的scrollView
+@property (nonatomic, strong) UIScrollView  *scrollView;
 /// 标题label
 @property (nonatomic, strong) UILabel       *titleLbl;
 /// 内容label
@@ -42,8 +46,9 @@
     
     [self addSubview:self.maskView];
     [self addSubview:self.contentView];
+    [self.contentView addSubview:self.scrollView];
     [self.contentView addSubview:self.titleLbl];
-    [self.contentView addSubview:self.contentLbl];
+    [self.scrollView addSubview:self.contentLbl];
     [self.contentView addSubview:self.cancelBtn];
     [self.contentView addSubview:self.submitBtn];
     
@@ -52,13 +57,13 @@
     _contentWidth = (kScreenWidth_XM - _contentLeftSpace*2.0);
     _contentHeight = 150; // 默认容器高度
     _btnWidth = (_contentWidth - 18 - 33*2)/2.0; // 按钮宽度
-    _btnHeight = 28;
-    
+    _btnHeight = 32;
+    _maxHeight = kScreenHeight_XM - kNaviStatusBarH_XM - kTabBarH_XM - 100; // 最大高度
     return self;
 }
 
 /// 初始化
-+ (XMAlertView *)initWithTitle:(NSString *)titleStr contentStr:(NSString *)contentStr cancelStr:(NSString *)cancelStr submitStr:(NSString *)submitStr {
++ (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr {
     XMAlertView *alertV = [[XMAlertView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth_XM, kScreenHeight_XM)];
     alertV.titleLbl.text = titleStr;
     alertV.contentLbl.text = contentStr;
@@ -77,7 +82,8 @@
     self.maskView.frame = CGRectMake(0, 0, kScreenWidth_XM, kScreenHeight_XM);
     self.contentView.frame = CGRectMake(_contentLeftSpace, (kScreenHeight_XM - _contentHeight)/2.0, kScreenWidth_XM - _contentLeftSpace*2.0, _contentHeight);
     self.titleLbl.frame = CGRectMake(10, 24, self.contentView.width - 20, 0);
-    self.contentLbl.frame = CGRectMake(10, self.titleLbl.bottom + 18, self.contentView.width - 20, 0);
+    self.scrollView.frame = CGRectMake(10, self.titleLbl.bottom + 18, self.contentView.width - 20, 0);
+    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 20, 0);
     self.cancelBtn.frame = CGRectMake(32, self.contentLbl.bottom + 24, _btnWidth, _btnHeight);
     self.submitBtn.frame = CGRectMake(self.cancelBtn.right + 18, self.cancelBtn.top, _btnWidth, _btnHeight);
 }
@@ -85,9 +91,36 @@
 /// 刷新布局
 - (void)reloadFrame {
     self.titleLbl.frame = CGRectMake(10, 24, self.contentView.width - 20, self.titleLbl.height);
-    self.contentLbl.frame = CGRectMake(10, self.titleLbl.bottom + 18, self.contentView.width - 20, self.contentLbl.height);
-    self.cancelBtn.frame = CGRectMake(32, self.contentLbl.bottom + 24, _btnWidth, _btnHeight);
-    self.submitBtn.frame = CGRectMake(self.cancelBtn.right + 18, self.cancelBtn.top, _btnWidth, _btnHeight);
+    // 内容的top
+    CGFloat scrollViewTop = self.titleLbl.bottom + 18;
+    if (self.titleLbl.text.length <= 0) { // 没标题
+        scrollViewTop = 24;
+    }
+    self.scrollView.frame = CGRectMake(10, scrollViewTop, self.contentView.width - 20, self.contentLbl.height);
+    self.scrollView.contentSize = CGSizeMake(self.contentView.width - 20, self.contentLbl.height);
+    self.contentLbl.frame = CGRectMake(0, 0, self.contentView.width - 20, self.contentLbl.height);
+    // contentLbl 最大高度
+    CGFloat maxContentLblHeight = _maxHeight - self.titleLbl.height - 18 - 24 - _btnHeight - 18;
+    if (self.contentLbl.height > maxContentLblHeight) { // 超过了最大高度
+        self.scrollView.frame = CGRectMake(10, scrollViewTop, self.contentView.width - 20, maxContentLblHeight);
+    }
+    
+    // 按钮的 top
+    CGFloat btnTop = self.scrollView.bottom + 24;
+    if (self.contentLbl.text.length <= 0) { // 没有内容
+        btnTop = self.titleLbl.bottom + 24;
+    }
+    
+    self.cancelBtn.frame = CGRectMake(32, btnTop, _btnWidth, _btnHeight);
+    self.submitBtn.frame = CGRectMake(self.cancelBtn.right + 18, btnTop, _btnWidth, _btnHeight);
+    if (self.cancelBtn.currentTitle.length <= 0) { // 没有取消按钮
+        self.cancelBtn.hidden = YES;
+        self.submitBtn.frame = CGRectMake((self.contentView.width - _btnWidth)/2.0, btnTop, _btnWidth, _btnHeight);
+    }
+    if (self.submitBtn.currentTitle.length <= 0) { // 没有确定按钮
+        self.submitBtn.hidden = YES;
+        self.cancelBtn.frame = CGRectMake((self.contentView.width - _btnWidth)/2.0, btnTop, _btnWidth, _btnHeight);
+    }
     // 重新自适应容器的高度
     _contentHeight = self.submitBtn.bottom + 18;
     self.contentView.frame = CGRectMake(_contentLeftSpace, (kScreenHeight_XM - _contentHeight)/2.0, kScreenWidth_XM - _contentLeftSpace*2.0, _contentHeight);
@@ -122,6 +155,15 @@
 
 #pragma mark - 懒加载
 
+- (UIView *)maskView {
+    if (!_maskView) {
+        _maskView = [[UIView alloc] init];
+        _maskView.backgroundColor = [UIColor blackColor];
+        _maskView.alpha = 0.5;
+    }
+    return _maskView;
+}
+
 - (UIView *)contentView {
     if (!_contentView) {
         _contentView = [[UIView alloc] init];
@@ -132,13 +174,12 @@
     return _contentView;
 }
 
-- (UIView *)maskView {
-    if (!_maskView) {
-        _maskView = [[UIView alloc] init];
-        _maskView.backgroundColor = [UIColor blackColor];
-        _maskView.alpha = 0.5;
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.backgroundColor = [UIColor clearColor];
     }
-    return _maskView;
+    return _scrollView;
 }
 
 - (UILabel *)titleLbl {
