@@ -13,6 +13,9 @@
 		E5085E832844E327002863E2 /* XMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E822844E327002863E2 /* XMAlertView.m */; };
 		E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E872844ED74002863E2 /* DemoAlertVC.m */; };
 		E5085E8C28458E44002863E2 /* UIView+XMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E8B28458E44002863E2 /* UIView+XMFrame.m */; };
+		E5085E952846147F002863E2 /* XMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E942846147F002863E2 /* XMSignView.m */; };
+		E5085E9928461542002863E2 /* XMCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E9828461542002863E2 /* XMCanvasView.m */; };
+		E5085E9D28461901002863E2 /* DemoSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E9C28461901002863E2 /* DemoSignVC.m */; };
 		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
 		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -62,6 +65,12 @@
 		E5085E8928458DE2002863E2 /* XMUIToolHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMUIToolHeader.h; sourceTree = "<group>"; };
 		E5085E8A28458E44002863E2 /* UIView+XMFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XMFrame.h"; sourceTree = "<group>"; };
 		E5085E8B28458E44002863E2 /* UIView+XMFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMFrame.m"; sourceTree = "<group>"; };
+		E5085E932846147F002863E2 /* XMSignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSignView.h; sourceTree = "<group>"; };
+		E5085E942846147F002863E2 /* XMSignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSignView.m; sourceTree = "<group>"; };
+		E5085E9728461542002863E2 /* XMCanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCanvasView.h; sourceTree = "<group>"; };
+		E5085E9828461542002863E2 /* XMCanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCanvasView.m; sourceTree = "<group>"; };
+		E5085E9B28461901002863E2 /* DemoSignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSignVC.h; sourceTree = "<group>"; };
+		E5085E9C28461901002863E2 /* DemoSignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSignVC.m; sourceTree = "<group>"; };
 		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
 		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
 		E51AD0802842330000DBF3C8 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
@@ -190,6 +199,34 @@
 				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
 			);
 			path = EmptyVC;
+			sourceTree = "<group>";
+		};
+		E5085E922846141B002863E2 /* SignView */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E932846147F002863E2 /* XMSignView.h */,
+				E5085E942846147F002863E2 /* XMSignView.m */,
+				E5085E962846150C002863E2 /* 画布 */,
+			);
+			path = SignView;
+			sourceTree = "<group>";
+		};
+		E5085E962846150C002863E2 /* 画布 */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E9728461542002863E2 /* XMCanvasView.h */,
+				E5085E9828461542002863E2 /* XMCanvasView.m */,
+			);
+			path = "画布";
+			sourceTree = "<group>";
+		};
+		E5085E9A284618EA002863E2 /* SignVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E9B28461901002863E2 /* DemoSignVC.h */,
+				E5085E9C28461901002863E2 /* DemoSignVC.m */,
+			);
+			path = SignVC;
 			sourceTree = "<group>";
 		};
 		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
@@ -335,6 +372,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5085E922846141B002863E2 /* SignView */,
 				E5085E802844E314002863E2 /* AlertView */,
 				E5085E7828449CC7002863E2 /* UIImage */,
 				E52679A6284367B400B5FDC7 /* UITextView */,
@@ -426,6 +464,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5085E9A284618EA002863E2 /* SignVC */,
 				E5085E842844ED4E002863E2 /* AlertVC */,
 				E5085E7F28449D68002863E2 /* UIImageVC */,
 				E52679AE28444DD800B5FDC7 /* UIViewVC */,
@@ -597,9 +636,11 @@
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
+				E5085E9928461542002863E2 /* XMCanvasView.m in Sources */,
 				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
 				E53CDC78283F3DB500B6AB00 /* AppDelegate.m in Sources */,
 				E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				E5085E9D28461901002863E2 /* DemoSignVC.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
 				E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */,
 				E53CDCA3283F502D00B6AB00 /* UIColor+XMTool.m in Sources */,
@@ -613,6 +654,7 @@
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
+				E5085E952846147F002863E2 /* XMSignView.m in Sources */,
 				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
@@ -763,6 +805,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XMUI_OC/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XMUI_OC/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要访问您的相册，为您提供保持图片等服务";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -794,6 +837,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XMUI_OC/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XMUI_OC/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "需要访问您的相册，为您提供保持图片等服务";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

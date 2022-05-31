@@ -20,6 +20,7 @@
 #import "DemoViewVC.h"
 #import "DemoImageVC.h"
 #import "DemoAlertVC.h"
+#import "DemoSignVC.h"
 
 #import "XMTabBarVC.h"
 
@@ -47,7 +48,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -116,6 +117,9 @@
     }
     if ([vcString isEqualToString:@"XMAlertView"]) {
         vc = [DemoAlertVC new];
+    }
+    if ([vcString isEqualToString:@"XMSignView"]) {
+        vc = [DemoSignVC new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
