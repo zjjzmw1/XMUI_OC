@@ -10,6 +10,9 @@
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
 		E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7928449D2E002863E2 /* UIImage+XMTool.m */; };
 		E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7D28449D5C002863E2 /* DemoImageVC.m */; };
+		E5085E832844E327002863E2 /* XMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E822844E327002863E2 /* XMAlertView.m */; };
+		E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E872844ED74002863E2 /* DemoAlertVC.m */; };
+		E5085E8C28458E44002863E2 /* UIView+XMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E8B28458E44002863E2 /* UIView+XMFrame.m */; };
 		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
 		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -52,6 +55,13 @@
 		E5085E7A28449D2E002863E2 /* UIImage+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMTool.h"; sourceTree = "<group>"; };
 		E5085E7C28449D5C002863E2 /* DemoImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageVC.h; sourceTree = "<group>"; };
 		E5085E7D28449D5C002863E2 /* DemoImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoImageVC.m; sourceTree = "<group>"; };
+		E5085E812844E327002863E2 /* XMAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAlertView.h; sourceTree = "<group>"; };
+		E5085E822844E327002863E2 /* XMAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAlertView.m; sourceTree = "<group>"; };
+		E5085E862844ED74002863E2 /* DemoAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAlertVC.h; sourceTree = "<group>"; };
+		E5085E872844ED74002863E2 /* DemoAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAlertVC.m; sourceTree = "<group>"; };
+		E5085E8928458DE2002863E2 /* XMUIToolHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMUIToolHeader.h; sourceTree = "<group>"; };
+		E5085E8A28458E44002863E2 /* UIView+XMFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XMFrame.h"; sourceTree = "<group>"; };
+		E5085E8B28458E44002863E2 /* UIView+XMFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMFrame.m"; sourceTree = "<group>"; };
 		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
 		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
 		E51AD0802842330000DBF3C8 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
@@ -153,6 +163,33 @@
 				E5085E7D28449D5C002863E2 /* DemoImageVC.m */,
 			);
 			path = UIImageVC;
+			sourceTree = "<group>";
+		};
+		E5085E802844E314002863E2 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E812844E327002863E2 /* XMAlertView.h */,
+				E5085E822844E327002863E2 /* XMAlertView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		E5085E842844ED4E002863E2 /* AlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5085E862844ED74002863E2 /* DemoAlertVC.h */,
+				E5085E872844ED74002863E2 /* DemoAlertVC.m */,
+			);
+			path = AlertVC;
+			sourceTree = "<group>";
+		};
+		E5085E8D2845969D002863E2 /* EmptyVC */ = {
+			isa = PBXGroup;
+			children = (
+				E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */,
+				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
+			);
+			path = EmptyVC;
 			sourceTree = "<group>";
 		};
 		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
@@ -296,7 +333,9 @@
 		E53CDC8F283F3F2300B6AB00 /* XMUITool(UI工具箱) */ = {
 			isa = PBXGroup;
 			children = (
+				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5085E802844E314002863E2 /* AlertView */,
 				E5085E7828449CC7002863E2 /* UIImage */,
 				E52679A6284367B400B5FDC7 /* UITextView */,
 				E526799F2843330600B5FDC7 /* EmptyView */,
@@ -363,6 +402,8 @@
 		E53CDCA8283F518200B6AB00 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				E5085E8A28458E44002863E2 /* UIView+XMFrame.h */,
+				E5085E8B28458E44002863E2 /* UIView+XMFrame.m */,
 				E53CDCAB283F519200B6AB00 /* UIView+XMTool.h */,
 				E53CDCAD283F519200B6AB00 /* UIView+XMTool.m */,
 				E53CDCAA283F519200B6AB00 /* UIView+XMConvertRect.h */,
@@ -385,6 +426,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5085E842844ED4E002863E2 /* AlertVC */,
 				E5085E7F28449D68002863E2 /* UIImageVC */,
 				E52679AE28444DD800B5FDC7 /* UIViewVC */,
 				E52679AA284368C000B5FDC7 /* UITextViewVC */,
@@ -394,8 +436,7 @@
 				E53CDCE42841D77B00B6AB00 /* PopMenuVC */,
 				E53CDCDC2840D67600B6AB00 /* UILabelVC */,
 				E53CDCBD283F819F00B6AB00 /* ToastVC */,
-				E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */,
-				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
+				E5085E8D2845969D002863E2 /* EmptyVC */,
 			);
 			path = TestVC;
 			sourceTree = "<group>";
@@ -546,6 +587,7 @@
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
 				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
+				E5085E8C28458E44002863E2 /* UIView+XMFrame.m in Sources */,
 				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
@@ -571,6 +613,8 @@
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
+				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
+				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

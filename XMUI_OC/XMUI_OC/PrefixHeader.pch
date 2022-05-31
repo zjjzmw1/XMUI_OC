@@ -17,9 +17,7 @@
 // baseVC
 #import "DemoBaseVC.h"
 
-/// 常用属性方法 .left、right、等
-#import "UIView+XMTool.h"
-// 常用的尺寸相关的宏定义
-#import "XMSizeMacro.h"
+// 大部分组件都需要的头文件
+#import "XMUIToolHeader.h"
 
 #endif /* PrefixHeader_pch */

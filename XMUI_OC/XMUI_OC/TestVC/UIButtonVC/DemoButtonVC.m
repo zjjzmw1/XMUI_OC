@@ -10,6 +10,8 @@
 #import "UIButton+XMTool.h"
 #import "XMToast.h"
 
+#import "UIView+XMTool.h"
+
 @interface DemoButtonVC ()
 
 @property (nonatomic, strong) UIButton  *btn1;
