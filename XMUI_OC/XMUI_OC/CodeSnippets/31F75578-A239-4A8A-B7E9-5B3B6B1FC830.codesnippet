@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>klazybutton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// &lt;##&gt;
+    private lazy var &lt;##&gt;: UIButton = {
+        let btn = UIButton.instance(title: &lt;##&gt;, img: nil)
+        
+        return btn
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>31F75578-A239-4A8A-B7E9-5B3B6B1FC830</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>klazybutton</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>klazybutton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

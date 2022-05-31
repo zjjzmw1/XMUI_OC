@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kRac_add_OC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:&lt;#@"kNotificationWillBecomeFront"#&gt; object:nil] takeUntil:[self rac_willDeallocSignal]] subscribeNext:^(id x) {
+        
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FB43D35D-2CA5-470A-BE74-251D4AA762E1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>kRac_add_OC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>kRac_add_OC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
