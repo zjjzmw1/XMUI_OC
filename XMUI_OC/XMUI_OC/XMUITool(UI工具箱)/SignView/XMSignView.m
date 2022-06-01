@@ -76,6 +76,7 @@
         // 旋转90度
         self.canvasView.transform = CGAffineTransformIdentity;
         [UIView animateWithDuration:0.2 animations:^{
+            self.canvasView.alpha = 1.0;
             self.canvasView.transform = CGAffineTransformMakeRotation(M_PI/2.0);
         } completion:^(BOOL finished) {
             
@@ -161,10 +162,16 @@
 }
 
 - (void)dismissAction {
-    [self setHidden:YES];
-    if (self.hiddenActionBlock) {
-        self.hiddenActionBlock();
-    }
+    // -- 恢复竖屏
+    [UIView animateWithDuration:0.2 animations:^{
+        self.transform = CGAffineTransformIdentity;
+        self.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self setHidden:YES];
+        if (self.hiddenActionBlock) {
+            self.hiddenActionBlock();
+        }
+    }];
 }
 
 #pragma private method
