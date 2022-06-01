@@ -139,9 +139,11 @@ static char kDTActionHandlerLongPressGestureKey;
 /// @param colorArr 渐变的颜色数组
 /// @param startP 渐变色的开始位置比如：CGPointMake(0.5, 0.0)
 /// @param endP 渐变色的结束位置比如：CGPointMake(0.5, 1.0)
-+ (CAGradientLayer *)getGradientLayerWithColorArray:(NSArray *)colorArr startPoint:(CGPoint)startP endPoint:(CGPoint)endP {
+/// @param layerSize 渐变色的大小
+
++ (CAGradientLayer *)getGradientLayerWithColorArray:(NSArray *)colorArr startPoint:(CGPoint)startP endPoint:(CGPoint)endP size:(CGSize)layerSize {
     CAGradientLayer *gradentLayer = [CAGradientLayer layer];
-    gradentLayer.frame = CGRectMake(0, 0, kScreenWidth, kNavBarHeight);
+    gradentLayer.frame = CGRectMake(0, 0, layerSize.width, layerSize.height);
     gradentLayer.startPoint = startP;
     gradentLayer.endPoint = endP;
     NSMutableArray *lastArr = [NSMutableArray array];
