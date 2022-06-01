@@ -50,7 +50,7 @@
 - (UIImage *)signatureImage {
     UIGraphicsBeginImageContext(self.frame.size);//创建一个基于位图的上下文，并设置当前上下文
     CGContextRef contex = UIGraphicsGetCurrentContext();//获取图形上下文
-    UIRectClip(CGRectMake(3, 15, self.frame.size.width-6, self.frame.size.height-30));//裁剪区域
+    UIRectClip(CGRectMake(0, kStatusBarHeight_XM, self.frame.size.width - 44, self.frame.size.height - kStatusBarHeight_XM - kSafeAreaBottom_XM));//裁剪区域
     [self.layer renderInContext:contex];
     UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
     NSData* imageData =  UIImagePNGRepresentation(image);//生成 PNG 格式的图片（如果是其他格式，可以自行更改）
@@ -84,12 +84,6 @@
     [self.pathsArray removeAllObjects];
     [self.backPathsArray removeAllObjects];
     [self setNeedsDisplay];
-}
-
-#pragma mark - 保存到相册
-- (void)saveSignature {
-    UIImage *pngImage = [self signatureImage];
-    UIImageWriteToSavedPhotosAlbum(pngImage, self, nil, NULL);
 }
 
 #pragma mark - Touches Action

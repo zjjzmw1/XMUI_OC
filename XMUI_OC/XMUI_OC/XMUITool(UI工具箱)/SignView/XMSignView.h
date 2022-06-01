@@ -12,11 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 签名view
 @interface XMSignView : UIView
 
-@property (nonatomic, strong) UIImage *callbackImage;
-@property (nonatomic, strong) void (^imageDataBlock)(XMSignView *, UIImage *image);
-@property (nonatomic, strong) void (^onClickViewBlock)(BOOL isWillState);//弹出的视图显示状态 NO 未显示， YES显示
+/// 是否正在显示
+@property (nonatomic, assign) BOOL  isShowing;
 
-- (void)setCallbackImageUrl:(NSString *)url;
+/// 签名完成的图片回调
+@property (nonatomic, strong) void (^finishImageDataBlock)(XMSignView *, UIImage *image);
+
+/// 展示横屏签名view
+- (void)showAction;
 
 @end
 

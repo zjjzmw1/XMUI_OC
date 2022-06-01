@@ -10,6 +10,11 @@
 
 @interface DemoSignVC ()
 
+/// 开始签名的按钮
+@property (nonatomic, strong)  UIButton *signBtn;
+/// 签名的view
+@property (nonatomic, strong) XMSignView    *signView;
+
 @end
 
 @implementation DemoSignVC
@@ -17,37 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"签名"];
-    
-    XMSignView *signatureView = [[XMSignView alloc] initWithFrame:CGRectMake(10, 100, kScreenWidth_XM - 20, 104)];
-   // [signatureView setCallbackImageUrl:@"https://alifei03.cfp.cn/creative/vcg/veer/1600water/veer-373869702.jpg"];
-    signatureView.backgroundColor = [UIColor blueColor];
-//    signatureView.isEdit = NO;
-    NSLog(@"当前的image %@", signatureView.callbackImage);
-    
-    signatureView.imageDataBlock = ^(XMSignView *signatureView,UIImage * _Nonnull image) {
-        NSLog(@"实时变化的image %@", image);
+    // 开始签名的入口
+    self.signBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.signBtn];
+    [self.signBtn setTitle:@"开始签名" forState:UIControlStateNormal];
+    [self.signBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.signBtn addTarget:self action:@selector(clickSignAction) forControlEvents:UIControlEventTouchUpInside];
+    self.signBtn.frame = CGRectMake(20, 140, kScreenWidth_XM - 40, 40);
+    // 签名view
+    self.signView = [[XMSignView alloc] initWithFrame:CGRectMake(50, 300, kScreenWidth_XM - 100, 104)];
+    self.signView.backgroundColor = [UIColor blueColor];
+    __weak typeof(self) weakSelf = self;
+    self.signView.finishImageDataBlock = ^(XMSignView *signatureView,UIImage * _Nonnull image) {
+        NSLog(@"返回最新的签名image %@", image);
     };
-    
-    signatureView.onClickViewBlock = ^(BOOL isWillState) {
-        if (!isWillState) {
-
-            
-        } else {
-            // 画布消失，此时要旋转成竖屏
-        }
-    };
-    [self.view addSubview:signatureView];
+    [self.view addSubview:self.signView];
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)clickSignAction {
+    [self.signView showAction];
 }
-*/
+
+- (BOOL)prefersStatusBarHidden {
+    return self.signView.isShowing;
+}
 
 @end

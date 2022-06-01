@@ -10,9 +10,9 @@
 
 @interface WJCanvasView : UIView
 
-@property (strong, nonatomic) UIButton *enterBtn;
-@property (strong, nonatomic) UIButton *resetlBtn;
-@property (strong, nonatomic) UIButton *closeBtn;
+@property (strong, nonatomic) UIButton *submitBtn;
+@property (strong, nonatomic) UIButton *cancelBtn;
+@property (strong, nonatomic) UIButton *backBtn;
 @property (nonatomic, strong) XMCanvasView *signatureView;
 @property (nonatomic, strong) void (^imageDataBlock)(UIImage *image);
 @property (nonatomic, strong) void (^hiddenActionBlock)(void);
@@ -23,12 +23,10 @@
 
 @interface XMSignView ()
 
-@property (nonatomic, strong) UILabel *titleLabel;
+// 最终返回到上个页面的图片view
 @property (nonatomic, strong) UIImageView *callbackView;
-//@property (nonatomic, strong) UILabel *callbackLabel;
 @property (nonatomic, strong) WJCanvasView *canvasView;
 @property (nonatomic, assign) BOOL isCanvas;
-@property (nonatomic, strong) UILabel *starLabel;
 
 @end
 
@@ -43,38 +41,16 @@
     return self;
 }
 
-#pragma mark - public method
-
-- (void)setCallbackImageUrl:(NSString *)url {
-//    if (url) {
-//        [self.callbackView yy_setImageWithURL:[NSURL URLWithString:url]
-//                                placeholder:nil
-//                                    options:YYWebImageOptionIgnoreFailedURL
-//                                    manager:[YYWebImageManager sharedManager]
-//                                   progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-//
-//        } transform:^UIImage * _Nullable(UIImage * _Nonnull image, NSURL * _Nonnull url) {
-//            UIImage *rotatedImage = [UIImage imageWithCGImage:image.CGImage scale:1.0f orientation:UIImageOrientationUp];
-//            return rotatedImage;
-//        } completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
-//            self.callbackView.image = image;
-//            self.callbackView.hidden = NO;
-//            self.callbackImage = image;
-//        }];
-//    }
-//
-//    NSString *title = @"签字";
-//    NSMutableAttributedString *mutAtt = [[NSMutableAttributedString alloc] initWithString:title attributes: @{NSForegroundColorAttributeName: [UIColor redColor],NSFontAttributeName : [UIFont systemFontOfSize:14}];
-//    self.titleLabel.attributedText = mutAtt;
+- (void)initViews {
+    [self addSubview:self.callbackView];
+    self.callbackView.frame = CGRectMake((self.frame.size.width - 160)/2.0, (self.frame.size.height - 58)/2.0, 160, 58);
 }
 
-#pragma mark - private method
-
-- (void)onTapSignatureAction {
+/// 展示横屏签名view
+- (void)showAction {
+    self.isShowing = YES;
+    [[XMSignView getCurrentVC] setNeedsStatusBarAppearanceUpdate];
     if (!_isCanvas) {
-        if (self.onClickViewBlock) {
-            self.onClickViewBlock(NO);
-        }
         if (!_canvasView) {
             __weak typeof(self) weakSelf = self;
             // 横屏的签名view
@@ -84,16 +60,14 @@
                 UIImage *rotatedImage = [UIImage imageWithCGImage:image.CGImage scale:1.0f orientation:UIImageOrientationUp];
                 weakSelf.callbackView.hidden = NO;
                 weakSelf.callbackView.image = rotatedImage;
-                weakSelf.callbackImage = rotatedImage;
-                if (weakSelf.imageDataBlock) {
-                    weakSelf.imageDataBlock(weakSelf, rotatedImage);
+                if (weakSelf.finishImageDataBlock) {
+                    weakSelf.finishImageDataBlock(weakSelf, rotatedImage);
                 }
             };
             _canvasView.hiddenActionBlock = ^() {
-                if (weakSelf.onClickViewBlock) {
-                    weakSelf.onClickViewBlock(YES);
-                    weakSelf.isCanvas = NO;
-                }
+                weakSelf.isCanvas = NO;
+                weakSelf.isShowing = NO;
+                [[XMSignView getCurrentVC] setNeedsStatusBarAppearanceUpdate];
             };
             [[UIApplication sharedApplication].keyWindow addSubview:self.canvasView];
             self.canvasView.center = self.canvasView.superview.center; // 居中
@@ -111,35 +85,8 @@
     }
 }
 
-- (void)initViews {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapSignatureAction)];
-    [self addGestureRecognizer:tap];
-
-    [self addSubview:self.titleLabel];
-    self.titleLabel.frame = CGRectMake(20, 15, kScreenWidth_XM, 20);
-        
-    [self addSubview:self.callbackView];
-    self.callbackView.frame = CGRectMake(0, self.titleLabel.bottom + 6, 160, 58);
-}
-
-#pragma mark - set and get
--(UILabel *)titleLabel {
-    if (!_titleLabel) {
-        _titleLabel = [UILabel new];
-        _titleLabel.font = [UIFont systemFontOfSize:14];
-        _titleLabel.textColor = [UIColor blackColor];
-        NSString *title = @"签字";
-        NSString *tip = @"  仅支持手动签名，不支持键盘输入";
-        NSMutableAttributedString *mutAtt = [[NSMutableAttributedString alloc] initWithString:title attributes: @{NSForegroundColorAttributeName: [UIColor redColor],NSFontAttributeName : [UIFont systemFontOfSize:14]}];
-        [mutAtt appendAttributedString:[[NSMutableAttributedString alloc] initWithString:tip attributes: @{NSFontAttributeName : [UIFont systemFontOfSize:12], NSForegroundColorAttributeName: [UIColor redColor]}]];
-        self.titleLabel.attributedText = mutAtt;
-    }
-    return _titleLabel;
-}
-
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.width, self.height) byRoundingCorners:UIRectCornerAllCorners  cornerRadii:CGSizeMake(10, 10)];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = CGRectMake(0, 0, self.width - 10*2, self.height);
@@ -153,8 +100,36 @@
         _callbackView.backgroundColor = [UIColor whiteColor];
         _callbackView.contentMode = UIViewContentModeScaleAspectFit;
         _callbackView.hidden = YES;
+        _callbackView.layer.masksToBounds = YES;
+        _callbackView.layer.cornerRadius = 5;
     }
     return _callbackView;
+}
+
+#pragma mark - 获取当前屏幕显示的viewcontroller
++ (nullable UIViewController *)getCurrentVC {
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *currentVC = [XMSignView getCurrentVCFrom:rootViewController];
+    return currentVC;
+}
+
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC {
+    UIViewController *currentVC;
+    if ([rootVC presentedViewController]) {
+        // 视图是被presented出来的
+        rootVC = [rootVC presentedViewController];
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        // 根视图为UITabBarController
+        currentVC = [XMSignView getCurrentVCFrom:[(UITabBarController *)rootVC selectedViewController]];
+    } else if ([rootVC isKindOfClass:[UINavigationController class]]) {
+        // 根视图为UINavigationController
+        currentVC = [XMSignView getCurrentVCFrom:[(UINavigationController *)rootVC visibleViewController]];
+    } else {
+        // 根视图为非导航类
+        currentVC = rootVC;
+    }
+    return currentVC;
 }
 
 @end
@@ -172,10 +147,17 @@
     return self;
 }
 
-#pragma event action
-
+/// 取消
 - (void)resetAction {
     [_signatureView clearSignature];
+}
+
+/// 确定
+- (void)enterAction {
+    if (self.imageDataBlock) {
+        self.imageDataBlock(_signatureView.signatureImage);
+    }
+    [self dismissAction]; // 这里包含：隐藏、旋转屏幕
 }
 
 - (void)dismissAction {
@@ -185,74 +167,61 @@
     }
 }
 
-- (void)enterAction {
-    [_signatureView saveSignature];
-    if (self.imageDataBlock) {
-        self.imageDataBlock(_signatureView.signatureImage);
-    }
-    [self dismissAction]; // 这里包含：隐藏、旋转屏幕
-}
-
-
 #pragma private method
 
 - (void)initViews {
-    [self addSubview:self.navView];
-    [self addSubview:self.signatureView];
-    [self addSubview:self.resetlBtn];
-    [self addSubview:self.enterBtn];
-    [self addSubview:self.closeBtn];
-    [self addSubview:self.titleLabel];
-    
-    self.navView.frame = CGRectMake(0, 0, kScreenHeight_XM, 44);
-    self.closeBtn.frame = CGRectMake(50, 50, 60, 30);
+    [self addSubview:self.titleLabel]; // 横屏导航栏标题
+    [self addSubview:self.signatureView]; // 画布
+    [self addSubview:self.backBtn]; // 返回按钮
+    [self addSubview:self.cancelBtn]; // 取消
+    [self addSubview:self.submitBtn]; // 确定
+     
     self.titleLabel.frame = CGRectMake(0, 0, kScreenHeight_XM, 44);
-
-//    [self.signatureView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self).offset(12);
-//        make.bottom.and.right.equalTo(self).offset(-12);
-//        make.top.equalTo(self.navView.mas_bottom).offset(12);
-//    }];
-    self.signatureView.frame = CGRectMake(12, self.navView.bottom + 12, kScreenHeight_XM - 24, kScreenWidth_XM - 24);
-    
-    self.resetlBtn.frame = CGRectMake(60, kScreenWidth_XM - 100, self.closeBtn.width, self.closeBtn.height);
-
-    self.enterBtn.frame = CGRectMake(self.resetlBtn.right + 100, self.closeBtn.top, self.closeBtn.width, self.closeBtn.height);
+    self.signatureView.frame = CGRectMake(kStatusBarHeight_XM, 44, kScreenHeight_XM - kStatusBarHeight_XM - kSafeAreaBottom_XM, kScreenWidth_XM - 44);
+    self.backBtn.frame = CGRectMake(kStatusBarHeight_XM, 0, 44, 44);
+    self.cancelBtn.frame = CGRectMake(kScreenHeight_XM/2.0 - 66 - 40, kScreenWidth_XM - 60, 66, 40);
+    self.submitBtn.frame = CGRectMake(kScreenHeight_XM/2.0 + 40, kScreenWidth_XM - 60, 66, 40);
 }
 
 
 #pragma mark - set and get
 
-- (UIButton *)resetlBtn {
-    if (!_resetlBtn) {
-        _resetlBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_resetlBtn setTitle:@"取消" forState:UIControlStateNormal];
-        [_resetlBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+- (UIButton *)cancelBtn {
+    if (!_cancelBtn) {
+        _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_cancelBtn setTitle:@"重置" forState:UIControlStateNormal];
+        [_cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _cancelBtn.backgroundColor = [UIColor redColor];
+        _cancelBtn.layer.masksToBounds = YES;
+        _cancelBtn.layer.cornerRadius = 6;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetAction)];
-        [_resetlBtn addGestureRecognizer:tap];
+        [_cancelBtn addGestureRecognizer:tap];
     }
-    return _resetlBtn;
+    return _cancelBtn;
 }
 
-- (UIButton *)enterBtn {
-    if (!_enterBtn) {
-        _enterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_enterBtn setTitle:@"确定" forState:UIControlStateNormal];
-        [_enterBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+- (UIButton *)submitBtn {
+    if (!_submitBtn) {
+        _submitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_submitBtn setTitle:@"确定" forState:UIControlStateNormal];
+        [_submitBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _submitBtn.backgroundColor = [UIColor blueColor];
+        _submitBtn.layer.masksToBounds = YES;
+        _submitBtn.layer.cornerRadius = 6;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(enterAction)];
-        [_enterBtn addGestureRecognizer:tap];
+        [_submitBtn addGestureRecognizer:tap];
     }
-    return _enterBtn;
+    return _submitBtn;
 }
 
-- (UIButton *)closeBtn {
-    if (!_closeBtn) {
-        _closeBtn = [[UIButton alloc] initWithFrame:CGRectZero];
-        [_closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_closeBtn setImage:[UIImage imageNamed:@"back_black"] forState:UIControlStateNormal];
-        [_closeBtn addTarget:self action:@selector(dismissAction) forControlEvents:UIControlEventTouchUpInside];
+- (UIButton *)backBtn {
+    if (!_backBtn) {
+        _backBtn = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"back_black"] forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(dismissAction) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _closeBtn;
+    return _backBtn;
 }
 
 - (XMCanvasView *)signatureView {
@@ -264,20 +233,12 @@
     return _signatureView;
 }
 
-
-- (UIView *)navView {
-    if (!_navView) {
-        _navView = [[UIView alloc] init];
-        _navView.backgroundColor = [UIColor whiteColor];
-    }
-    return _navView;
-}
-
+/// 横屏导航栏 标题
 -(UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.font = [UIFont systemFontOfSize:17];
-        _titleLabel.textColor = [UIColor redColor];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:17];
+        _titleLabel.textColor = [UIColor blackColor];
         _titleLabel.text = @"签字";
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
