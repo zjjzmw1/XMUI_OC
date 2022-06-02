@@ -52,6 +52,7 @@
 		E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */; };
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
+		E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D4128489A6A00E2F256 /* XMProgressBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,8 @@
 		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
 		E53CDCE12841D77400B6AB00 /* XMPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPopMenu.h; sourceTree = "<group>"; };
 		E53CDCE22841D77400B6AB00 /* XMPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPopMenu.m; sourceTree = "<group>"; };
+		E5702D4028489A6A00E2F256 /* XMProgressBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMProgressBarView.h; sourceTree = "<group>"; };
+		E5702D4128489A6A00E2F256 /* XMProgressBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMProgressBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,15 @@
 				E5085EAE2848812A002863E2 /* XMUploadProgressView.m */,
 			);
 			path = UploadProgress;
+			sourceTree = "<group>";
+		};
+		E5085EB328489A11002863E2 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D4028489A6A00E2F256 /* XMProgressBarView.h */,
+				E5702D4128489A6A00E2F256 /* XMProgressBarView.m */,
+			);
+			path = ProgressBar;
 			sourceTree = "<group>";
 		};
 		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
@@ -422,6 +434,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5085EB328489A11002863E2 /* ProgressBar */,
 				E5085EAC28488100002863E2 /* UploadProgress */,
 				E5085EA2284850D3002863E2 /* Tool */,
 				E5085E922846141B002863E2 /* SignView */,
@@ -715,6 +728,7 @@
 				E5085E952846147F002863E2 /* XMSignView.m in Sources */,
 				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
+				E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

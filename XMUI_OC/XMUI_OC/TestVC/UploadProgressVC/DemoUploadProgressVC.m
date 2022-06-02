@@ -6,14 +6,19 @@
 //
 
 #import "DemoUploadProgressVC.h"
-#import "XMUploadProgressView.h"
 
+#import "XMUploadProgressView.h" // 上传图片的状态view
+#import "XMProgressBarView.h"   // 进度条 + 文字
 @interface DemoUploadProgressVC ()
 
 @property (nonatomic, strong) XMUploadProgressView  *uploadView1;
 @property (nonatomic, strong) XMUploadProgressView  *uploadView2;
 @property (nonatomic, strong) XMUploadProgressView  *uploadView3;
 @property (nonatomic, strong) XMUploadProgressView  *uploadView4;
+
+@property (nonatomic, strong) XMProgressBarView     *progressBarV1;
+@property (nonatomic, strong) XMProgressBarView     *progressBarV2;
+@property (nonatomic, strong) XMProgressBarView     *progressBarV3;
 
 @end
 
@@ -51,6 +56,19 @@
     self.uploadView4.deleteImageSuccessBlock = ^{
         NSLog(@"删除了。。44");
     };
+
+    // 进度条
+    self.progressBarV1 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.uploadView4.bottom + 60, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV1];
+    [self.progressBarV1 reloadDataWithProgress:0];
+    
+    self.progressBarV2 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.uploadView4.bottom + 100, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV2];
+    [self.progressBarV2 reloadDataWithProgress:0.66];
+
+    self.progressBarV3 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.uploadView4.bottom + 150, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV3];
+    [self.progressBarV3 reloadDataWithProgress:1];
 
 }
 
