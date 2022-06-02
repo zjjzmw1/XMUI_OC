@@ -10,6 +10,7 @@
 #import "XMSizeMacro.h"
 #import "XMToast.h"
 
+#import "XMTabBarVC.h"
 #import "DemoToastVC.h"
 #import "DemoLabelVC.h"
 #import "DemoPopMenuVC.h"
@@ -22,8 +23,7 @@
 #import "DemoAlertVC.h"
 #import "DemoSignVC.h"
 #import "DemoToolVC.h"
-
-#import "XMTabBarVC.h"
+#import "DemoUploadProgressVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -49,7 +49,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"XMUploadProgressView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -124,6 +124,9 @@
     }
     if ([vcString isEqualToString:@"XMTool"]) {
         vc = [DemoToolVC new];
+    }
+    if ([vcString isEqualToString:@"XMUploadProgressView"]) {
+        vc = [DemoUploadProgressVC new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
