@@ -36,6 +36,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// 创建一条横线 : 横线的frame，和颜色
 + (UIView *)getLineViewWithFrame:(CGRect)frame color:(UIColor *)color;
 
+/*
+ 如果更改了一个图层的AnchorPoint，那么这个图层会发送位移。原因不表，看看文档便知。问题是发生位移之后，我们怎么将位移修复回来
+ */
+/// 设置某个视图的锚点 ------ （动画执行完，别忘了把锚点改为默认值 (0.5，0.5)）
+- (void)setAnchorPoint:(CGPoint)anchorPoint;
+
+/// 获取渐变的layer
+/// @param colorArr 渐变的颜色数组
+/// @param startP 渐变色的开始位置比如：CGPointMake(0.5, 0.0)
+/// @param endP 渐变色的结束位置比如：CGPointMake(0.5, 1.0)
+/// @param layerSize 渐变色的大小
+
++ (CAGradientLayer *)getGradientLayerWithColorArray:(NSArray *)colorArr startPoint:(CGPoint)startP endPoint:(CGPoint)endP size:(CGSize)layerSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

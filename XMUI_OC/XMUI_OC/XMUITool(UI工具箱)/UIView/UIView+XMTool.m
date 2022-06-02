@@ -121,4 +121,40 @@ static char kDTActionHandlerLongPressGestureKey;
     return line;
 }
 
+/*
+ 如果更改了一个图层的AnchorPoint，那么这个图层会发送位移。原因不表，看看文档便知。问题是发生位移之后，我们怎么将位移修复回来
+ */
+/// 设置某个视图的锚点 ------ （动画执行完，别忘了把锚点改为默认值 (0.5，0.5)）
+- (void)setAnchorPoint:(CGPoint)anchorPoint {
+    CGPoint oldOrigin = self.frame.origin;
+    self.layer.anchorPoint = anchorPoint;
+    CGPoint newOrigin = self.frame.origin;
+    CGPoint transition;
+    transition.x = newOrigin.x - oldOrigin.x;
+    transition.y = newOrigin.y - oldOrigin.y;
+    self.center = CGPointMake(self.center.x - transition.x, self.center.y - transition.y);
+}
+
+/// 获取渐变的layer
+/// @param colorArr 渐变的颜色数组
+/// @param startP 渐变色的开始位置比如：CGPointMake(0.5, 0.0)
+/// @param endP 渐变色的结束位置比如：CGPointMake(0.5, 1.0)
+/// @param layerSize 渐变色的大小
+
++ (CAGradientLayer *)getGradientLayerWithColorArray:(NSArray *)colorArr startPoint:(CGPoint)startP endPoint:(CGPoint)endP size:(CGSize)layerSize {
+    CAGradientLayer *gradentLayer = [CAGradientLayer layer];
+    gradentLayer.frame = CGRectMake(0, 0, layerSize.width, layerSize.height);
+    gradentLayer.startPoint = startP;
+    gradentLayer.endPoint = endP;
+    NSMutableArray *lastArr = [NSMutableArray array];
+    for (int i = 0; i < colorArr.count; i++) {
+        UIColor *color = colorArr[i];
+        [lastArr addObject:(__bridge id)color.CGColor];
+    }
+    gradentLayer.colors = lastArr;
+    gradentLayer.locations = @[@(0), @(1.0f)];
+    return gradentLayer;
+}
+
+
 @end
