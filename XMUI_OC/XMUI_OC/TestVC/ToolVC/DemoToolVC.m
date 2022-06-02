@@ -22,7 +22,7 @@
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"DemoToolVC"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取手机剩余内存",@"获取当前VC",@"移除某一个VC"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取手机剩余内存",@"获取当前VC",@"移除某一个VC",@"拨打电话"]];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -85,6 +85,9 @@
         // 根据需求，选一个vc
         UIViewController *tempVC = [XMTool getCurrentVC].navigationController.viewControllers.lastObject;
         [XMTool removeVC:tempVC];
+    }
+    if ([vcString isEqualToString:@"拨打电话"]) {
+        [XMTool callPhoneAction:@"18010125752"];
     }
     
 }

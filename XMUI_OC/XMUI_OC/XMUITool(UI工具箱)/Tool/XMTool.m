@@ -149,4 +149,21 @@
     }];
 }
 
+#pragma mark - 拨打电话功能
+
+/// 拨打电话
+/// @param phoneString 电话号码字符串
++ (void)callPhoneAction:(NSString *)phoneString {
+    if (phoneString.length > 0) {
+        NSString *lastStr = [[NSString alloc] initWithFormat:@"tel:%@",phoneString];
+        NSURL *phoneURL = [NSURL URLWithString:lastStr];
+        if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
+//            [[UIApplication sharedApplication] openURL:phoneURL];
+            [[UIApplication sharedApplication] openURL:phoneURL options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        }
+    }
+}
+
 @end

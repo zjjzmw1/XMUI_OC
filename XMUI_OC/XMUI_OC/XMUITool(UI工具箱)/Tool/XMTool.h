@@ -31,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 清除网页WKWebView缓存 WKWebsiteDataStore
 + (void)clearWKWebViewCache;
 
+/// 拨打电话
+/// @param phoneString 电话号码字符串
++ (void)callPhoneAction:(NSString *)phoneString;
+
 @end
 
 NS_ASSUME_NONNULL_END
