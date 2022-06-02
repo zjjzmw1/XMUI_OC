@@ -16,6 +16,8 @@
 		E5085E952846147F002863E2 /* XMSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E942846147F002863E2 /* XMSignView.m */; };
 		E5085E9928461542002863E2 /* XMCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E9828461542002863E2 /* XMCanvasView.m */; };
 		E5085E9D28461901002863E2 /* DemoSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E9C28461901002863E2 /* DemoSignVC.m */; };
+		E5085EA5284850E8002863E2 /* XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085EA4284850E8002863E2 /* XMTool.m */; };
+		E5085EAA284858BD002863E2 /* DemoToolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085EA9284858BD002863E2 /* DemoToolVC.m */; };
 		E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */; };
 		E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0812842330000DBF3C8 /* XMNavigationController.m */; };
 		E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E51AD0842842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -71,6 +73,11 @@
 		E5085E9828461542002863E2 /* XMCanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCanvasView.m; sourceTree = "<group>"; };
 		E5085E9B28461901002863E2 /* DemoSignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSignVC.h; sourceTree = "<group>"; };
 		E5085E9C28461901002863E2 /* DemoSignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSignVC.m; sourceTree = "<group>"; };
+		E5085EA3284850E8002863E2 /* XMTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMTool.h; sourceTree = "<group>"; };
+		E5085EA4284850E8002863E2 /* XMTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMTool.m; sourceTree = "<group>"; };
+		E5085EA62848526D002863E2 /* XMToolMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMToolMacro.h; sourceTree = "<group>"; };
+		E5085EA8284858BD002863E2 /* DemoToolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoToolVC.h; sourceTree = "<group>"; };
+		E5085EA9284858BD002863E2 /* DemoToolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoToolVC.m; sourceTree = "<group>"; };
 		E51AD07C2841D7F900DBF3C8 /* DemoPopMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPopMenuVC.h; sourceTree = "<group>"; };
 		E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPopMenuVC.m; sourceTree = "<group>"; };
 		E51AD0802842330000DBF3C8 /* XMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNavigationController.h; sourceTree = "<group>"; };
@@ -229,6 +236,25 @@
 			path = SignVC;
 			sourceTree = "<group>";
 		};
+		E5085EA2284850D3002863E2 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E5085EA3284850E8002863E2 /* XMTool.h */,
+				E5085EA4284850E8002863E2 /* XMTool.m */,
+				E5085EA62848526D002863E2 /* XMToolMacro.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E5085EA7284858A2002863E2 /* ToolVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5085EA8284858BD002863E2 /* DemoToolVC.h */,
+				E5085EA9284858BD002863E2 /* DemoToolVC.m */,
+			);
+			path = ToolVC;
+			sourceTree = "<group>";
+		};
 		E51AD07F284232EE00DBF3C8 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +398,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5085EA2284850D3002863E2 /* Tool */,
 				E5085E922846141B002863E2 /* SignView */,
 				E5085E802844E314002863E2 /* AlertView */,
 				E5085E7828449CC7002863E2 /* UIImage */,
@@ -464,6 +491,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5085EA7284858A2002863E2 /* ToolVC */,
 				E5085E9A284618EA002863E2 /* SignVC */,
 				E5085E842844ED4E002863E2 /* AlertVC */,
 				E5085E7F28449D68002863E2 /* UIImageVC */,
@@ -627,6 +655,7 @@
 				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
 				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
 				E5085E8C28458E44002863E2 /* UIView+XMFrame.m in Sources */,
+				E5085EAA284858BD002863E2 /* DemoToolVC.m in Sources */,
 				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
@@ -650,6 +679,7 @@
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
+				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,

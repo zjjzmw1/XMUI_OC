@@ -41,7 +41,12 @@
 }
 
 - (void)clickSignAction {
-    [self.signView showAction];
+    NSString *phoneStr = [[NSString alloc] initWithFormat:@"tel:%@",@"18703213293"];
+    NSURL *phoneURL = [NSURL URLWithString:phoneStr];
+    if ([[UIApplication sharedApplication] canOpenURL:phoneURL]) {
+        [[UIApplication sharedApplication] openURL:phoneURL];
+    }
+//    [self.signView showAction];
 }
 
 - (BOOL)prefersStatusBarHidden {

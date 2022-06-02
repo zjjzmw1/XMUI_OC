@@ -20,7 +20,8 @@
     tableV.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableV.backgroundColor = [UIColor whiteColor];
     tableV.rowHeight = UITableViewAutomaticDimension;
-    tableV.estimatedRowHeight = 0; // 个别场景：太小会跳动，太大会算不准。可以根据具体页面调整这个值。
+    // 0 就是不自动适配高度了。
+//    tableV.estimatedRowHeight = 0; // 个别场景：太小会跳动，太大会算不准。可以根据具体页面调整这个值。
     tableV.estimatedSectionHeaderHeight = 0;
     tableV.estimatedSectionFooterHeight = 0;
     if (@available(iOS 11.0, *)) {

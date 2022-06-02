@@ -48,7 +48,15 @@
     return self;
 }
 
+/// 上下居中弹出存文字 toast 「默认1.5s后消失，文字长的话，会适当延迟消失时间」
+/// @param text  弹出文字
++ (void)showTextToCenter:(NSString *)text {
+    [XMToast showText:text positionType:XMToastPositionTypeCenter];
+}
+
 /// 弹出存文字 toast 「默认1.5s后消失，文字长的话，会适当延迟消失时间」
+/// @param text 弹出文字
+/// @param positionType  居中 还是 底部
 + (void)showText:(NSString *)text positionType:(XMToastPositionType)positionType {
     [[XMToast sharedInstance].timer invalidate];
     [XMToast sharedInstance].timer = nil;
