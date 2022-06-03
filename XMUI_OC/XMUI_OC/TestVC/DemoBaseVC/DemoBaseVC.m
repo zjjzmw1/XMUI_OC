@@ -7,6 +7,8 @@
 
 #import "DemoBaseVC.h"
 
+#import "XMToast.h"
+
 @interface DemoBaseVC ()
 
 @end
@@ -25,14 +27,9 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    NSLog(@"页面销毁了");
+    [XMToast showTextToCenter:[NSString stringWithFormat:@"%@ - %@",NSStringFromClass(self.class),@"页面销毁了"]];
 }
-*/
 
 @end

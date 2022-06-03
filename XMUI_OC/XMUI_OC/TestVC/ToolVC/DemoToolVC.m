@@ -9,6 +9,7 @@
 #import "XMTool.h"
 #import "XMToast.h"
 #import "XMToolMacro.h"
+#import "XMTimer.h"
 
 @interface DemoToolVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"DemoToolVC"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换",@"runtime-NSObect/NSArray/NSDictionary保护"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"关闭全局定时器",@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换",@"runtime-NSObect/NSArray/NSDictionary保护"]];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,6 +84,9 @@
     NSString *vcString;
     if (self.dataArr.count > indexPath.row) {
         vcString = self.dataArr[indexPath.row];
+    }
+    if ([vcString isEqualToString:@"关闭全局定时器"]) {
+        [[XMTimer defaultManager] xm_cancelTimerWithName:kGlobalTimerName];
     }
     if ([vcString isEqualToString:@"获取当前VC"]) {
         NSString *lastStr = NSStringFromClass([XMTool getCurrentVC].class);

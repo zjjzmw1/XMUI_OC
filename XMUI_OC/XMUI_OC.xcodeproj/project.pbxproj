@@ -61,6 +61,9 @@
 		E5702D72284A485000E2F256 /* NSString+XMValid.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D6E284A485000E2F256 /* NSString+XMValid.m */; };
 		E5702D73284A485000E2F256 /* NSString+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D6F284A485000E2F256 /* NSString+XMTool.m */; };
 		E5702D77284A48C300E2F256 /* NSDate+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D76284A48C300E2F256 /* NSDate+XMTool.m */; };
+		E5702D7B284A4C2100E2F256 /* XMTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D7A284A4C2100E2F256 /* XMTimer.m */; };
+		E5702D7F284A4CAC00E2F256 /* DemoTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D7E284A4CAC00E2F256 /* DemoTimerVC.m */; };
+		E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +177,12 @@
 		E5702D70284A485000E2F256 /* NSString+XMBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMBusiness.h"; sourceTree = "<group>"; };
 		E5702D75284A48C300E2F256 /* NSDate+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XMTool.h"; sourceTree = "<group>"; };
 		E5702D76284A48C300E2F256 /* NSDate+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMTool.m"; sourceTree = "<group>"; };
+		E5702D79284A4C2100E2F256 /* XMTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTimer.h; sourceTree = "<group>"; };
+		E5702D7A284A4C2100E2F256 /* XMTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTimer.m; sourceTree = "<group>"; };
+		E5702D7D284A4CAC00E2F256 /* DemoTimerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTimerVC.h; sourceTree = "<group>"; };
+		E5702D7E284A4CAC00E2F256 /* DemoTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTimerVC.m; sourceTree = "<group>"; };
+		E5702D81284A4E9400E2F256 /* NSNumber+XMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+XMSafe.h"; sourceTree = "<group>"; };
+		E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+XMSafe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +563,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5702D7C284A4C8D00E2F256 /* TimerVC */,
 				E5085EA7284858A2002863E2 /* ToolVC */,
 				E5085EAB284880C7002863E2 /* UploadProgressVC */,
 				E5085E9A284618EA002863E2 /* SignVC */,
@@ -611,6 +621,8 @@
 		E5702D59284A46A000E2F256 /* XMFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				E5702D80284A4E9400E2F256 /* XM_NSNumber */,
+				E5702D78284A4C2100E2F256 /* XM_NSTimer */,
 				E5702D74284A48C300E2F256 /* XM_NSDate */,
 				E5702D6A284A485000E2F256 /* XM_NSString */,
 				E5702D66284A47B100E2F256 /* XM_NSObject */,
@@ -677,6 +689,33 @@
 				E5702D76284A48C300E2F256 /* NSDate+XMTool.m */,
 			);
 			path = XM_NSDate;
+			sourceTree = "<group>";
+		};
+		E5702D78284A4C2100E2F256 /* XM_NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D79284A4C2100E2F256 /* XMTimer.h */,
+				E5702D7A284A4C2100E2F256 /* XMTimer.m */,
+			);
+			path = XM_NSTimer;
+			sourceTree = "<group>";
+		};
+		E5702D7C284A4C8D00E2F256 /* TimerVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D7D284A4CAC00E2F256 /* DemoTimerVC.h */,
+				E5702D7E284A4CAC00E2F256 /* DemoTimerVC.m */,
+			);
+			path = TimerVC;
+			sourceTree = "<group>";
+		};
+		E5702D80284A4E9400E2F256 /* XM_NSNumber */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D81284A4E9400E2F256 /* NSNumber+XMSafe.h */,
+				E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */,
+			);
+			path = XM_NSNumber;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -789,6 +828,7 @@
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E5702D73284A485000E2F256 /* NSString+XMTool.m in Sources */,
 				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
+				E5702D7F284A4CAC00E2F256 /* DemoTimerVC.m in Sources */,
 				E526799E28432FFA00B5FDC7 /* DemoTextFieldVC.m in Sources */,
 				E5085E8C28458E44002863E2 /* UIView+XMFrame.m in Sources */,
 				E5085EAA284858BD002863E2 /* DemoToolVC.m in Sources */,
@@ -801,6 +841,7 @@
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
 				E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
+				E5702D7B284A4C2100E2F256 /* XMTimer.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E5085E9928461542002863E2 /* XMCanvasView.m in Sources */,
 				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
@@ -816,6 +857,7 @@
 				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
+				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,

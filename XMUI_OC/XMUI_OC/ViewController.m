@@ -24,6 +24,7 @@
 #import "DemoSignVC.h"
 #import "DemoToolVC.h"
 #import "DemoUploadProgressVC.h"
+#import "DemoTimerVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -49,7 +50,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMTimer"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -127,6 +128,9 @@
     }
     if ([vcString isEqualToString:@"ProgressView"]) {
         vc = [DemoUploadProgressVC new];
+    }
+    if ([vcString isEqualToString:@"XMTimer"]) {
+        vc = [DemoTimerVC new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
