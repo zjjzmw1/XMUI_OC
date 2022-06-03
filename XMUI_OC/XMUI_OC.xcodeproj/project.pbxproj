@@ -53,6 +53,7 @@
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
 		E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D4128489A6A00E2F256 /* XMProgressBarView.m */; };
+		E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D5B284A46D000E2F256 /* XMLocationTrans.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +151,8 @@
 		E53CDCE22841D77400B6AB00 /* XMPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPopMenu.m; sourceTree = "<group>"; };
 		E5702D4028489A6A00E2F256 /* XMProgressBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMProgressBarView.h; sourceTree = "<group>"; };
 		E5702D4128489A6A00E2F256 /* XMProgressBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMProgressBarView.m; sourceTree = "<group>"; };
+		E5702D5B284A46D000E2F256 /* XMLocationTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLocationTrans.m; sourceTree = "<group>"; };
+		E5702D5C284A46D000E2F256 /* XMLocationTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLocationTrans.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +437,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5702D59284A46A000E2F256 /* XMFoundation */,
 				E5085EA2284850D3002863E2 /* Tool */,
 				E5085EB328489A11002863E2 /* ProgressBar */,
 				E5085EAC28488100002863E2 /* UploadProgress */,
@@ -583,6 +587,23 @@
 			path = PopMenuVC;
 			sourceTree = "<group>";
 		};
+		E5702D59284A46A000E2F256 /* XMFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D5A284A46D000E2F256 /* XM_LocationTrans */,
+			);
+			path = XMFoundation;
+			sourceTree = "<group>";
+		};
+		E5702D5A284A46D000E2F256 /* XM_LocationTrans */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D5C284A46D000E2F256 /* XMLocationTrans.h */,
+				E5702D5B284A46D000E2F256 /* XMLocationTrans.m */,
+			);
+			path = XM_LocationTrans;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +750,7 @@
 				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
 				E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */,
+				E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
