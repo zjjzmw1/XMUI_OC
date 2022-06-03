@@ -49,7 +49,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"XMUploadProgressView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -125,7 +125,7 @@
     if ([vcString isEqualToString:@"XMTool"]) {
         vc = [DemoToolVC new];
     }
-    if ([vcString isEqualToString:@"XMUploadProgressView"]) {
+    if ([vcString isEqualToString:@"ProgressView"]) {
         vc = [DemoUploadProgressVC new];
     }
     

@@ -5,11 +5,6 @@
 //  Created by ext.zhangmingwei1 on 2022/6/2.
 //
 #import "XMTool.h"
-
-// 获取手机剩余空间用的
-#include <sys/param.h>
-#include <sys/mount.h>
-
 #import <WebKit/WebKit.h>
 
 @implementation XMTool
@@ -63,19 +58,6 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *lastPath = [NSString stringWithFormat:@"%@/YCDownload/video",[paths lastObject]];
     return [XMTool getFolderSizeAtPath_Bytes:lastPath];
-}
-
-/// 获取手机剩余空间大小单位是：bytes
-+ (float)getMyPhoneFree_Bytes {
-    struct statfs buf;
-    float freespace = -1;
-    if(statfs("/var", &buf) >= 0) {
-        freespace = (long long)(buf.f_bsize * buf.f_bfree);
-    }
-    if (freespace < 0) {
-        freespace = 0;
-    }
-    return freespace;
 }
 
 /// 获取某个文件夹的大小 单位：bytes

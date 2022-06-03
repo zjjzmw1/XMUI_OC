@@ -23,7 +23,7 @@
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"DemoToolVC"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取手机剩余内存",@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地"]];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,10 +83,6 @@
     NSString *vcString;
     if (self.dataArr.count > indexPath.row) {
         vcString = self.dataArr[indexPath.row];
-    }
-    if ([vcString isEqualToString:@"获取手机剩余内存"]) {
-       NSString *lastStr = [XMTool getFileSizeStringFromBytes_XM:[XMTool getMyPhoneFree_Bytes]];
-        [XMToast showTextToCenter:lastStr];
     }
     if ([vcString isEqualToString:@"获取当前VC"]) {
         NSString *lastStr = NSStringFromClass([XMTool getCurrentVC].class);

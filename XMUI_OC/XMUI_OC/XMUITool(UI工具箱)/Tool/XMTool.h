@@ -22,9 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取本地视频的缓存大小。---- 这里可以根据自己项目存储的位置选择修改。
 + (float)getLocalVideoCache_Bytes;
 
-/// 获取手机剩余空间大小单位是：bytes
-+ (float)getMyPhoneFree_Bytes;
-
 /// 根据 byte的大小，返回 多少GB /MB/KB/B
 + (NSString *)getFileSizeStringFromBytes_XM:(uint64_t)byteSize;
 
