@@ -54,6 +54,9 @@
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
 		E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D4128489A6A00E2F256 /* XMProgressBarView.m */; };
 		E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D5B284A46D000E2F256 /* XMLocationTrans.m */; };
+		E5702D64284A479600E2F256 /* NSMutableDictionary+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D60284A479600E2F256 /* NSMutableDictionary+XMSafe.m */; };
+		E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D63284A479600E2F256 /* NSArray+XMSafe.m */; };
+		E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D68284A47B100E2F256 /* NSObject+XMRuntime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,6 +156,12 @@
 		E5702D4128489A6A00E2F256 /* XMProgressBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMProgressBarView.m; sourceTree = "<group>"; };
 		E5702D5B284A46D000E2F256 /* XMLocationTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLocationTrans.m; sourceTree = "<group>"; };
 		E5702D5C284A46D000E2F256 /* XMLocationTrans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLocationTrans.h; sourceTree = "<group>"; };
+		E5702D5F284A479600E2F256 /* NSMutableDictionary+XMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+XMSafe.h"; sourceTree = "<group>"; };
+		E5702D60284A479600E2F256 /* NSMutableDictionary+XMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+XMSafe.m"; sourceTree = "<group>"; };
+		E5702D62284A479600E2F256 /* NSArray+XMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XMSafe.h"; sourceTree = "<group>"; };
+		E5702D63284A479600E2F256 /* NSArray+XMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XMSafe.m"; sourceTree = "<group>"; };
+		E5702D67284A47B100E2F256 /* NSObject+XMRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XMRuntime.h"; sourceTree = "<group>"; };
+		E5702D68284A47B100E2F256 /* NSObject+XMRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XMRuntime.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +599,9 @@
 		E5702D59284A46A000E2F256 /* XMFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				E5702D66284A47B100E2F256 /* XM_NSObject */,
+				E5702D61284A479600E2F256 /* XM_NSArray */,
+				E5702D5E284A479600E2F256 /* XM_NSDictionary */,
 				E5702D5A284A46D000E2F256 /* XM_LocationTrans */,
 			);
 			path = XMFoundation;
@@ -602,6 +614,33 @@
 				E5702D5B284A46D000E2F256 /* XMLocationTrans.m */,
 			);
 			path = XM_LocationTrans;
+			sourceTree = "<group>";
+		};
+		E5702D5E284A479600E2F256 /* XM_NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D5F284A479600E2F256 /* NSMutableDictionary+XMSafe.h */,
+				E5702D60284A479600E2F256 /* NSMutableDictionary+XMSafe.m */,
+			);
+			path = XM_NSDictionary;
+			sourceTree = "<group>";
+		};
+		E5702D61284A479600E2F256 /* XM_NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D62284A479600E2F256 /* NSArray+XMSafe.h */,
+				E5702D63284A479600E2F256 /* NSArray+XMSafe.m */,
+			);
+			path = XM_NSArray;
+			sourceTree = "<group>";
+		};
+		E5702D66284A47B100E2F256 /* XM_NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D67284A47B100E2F256 /* NSObject+XMRuntime.h */,
+				E5702D68284A47B100E2F256 /* NSObject+XMRuntime.m */,
+			);
+			path = XM_NSObject;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -723,6 +762,7 @@
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
 				E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */,
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
+				E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E5085E9928461542002863E2 /* XMCanvasView.m in Sources */,
@@ -740,12 +780,14 @@
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
+				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,
 				E526799A28432F9400B5FDC7 /* UITextField+XMTool.m in Sources */,
 				E5085EB228488E40002863E2 /* DemoUploadProgressVC.m in Sources */,
 				E526799628432DF000B5FDC7 /* XMTabBarVC.m in Sources */,
 				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
+				E5702D64284A479600E2F256 /* NSMutableDictionary+XMSafe.m in Sources */,
 				E5085E952846147F002863E2 /* XMSignView.m in Sources */,
 				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,

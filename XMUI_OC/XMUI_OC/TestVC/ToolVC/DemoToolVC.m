@@ -23,7 +23,7 @@
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"DemoToolVC"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"获取当前VC",@"移除某一个VC",@"拨打电话",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换",@"runtime-NSObect/NSArray/NSDictionary保护"]];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
