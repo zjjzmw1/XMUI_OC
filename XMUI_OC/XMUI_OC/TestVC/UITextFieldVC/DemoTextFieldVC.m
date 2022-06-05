@@ -8,7 +8,9 @@
 #import "DemoTextFieldVC.h"
 #import "UITextField+XMTool.h"
 
-@interface DemoTextFieldVC ()
+#import "XMToast.h"
+
+@interface DemoTextFieldVC ()<UITextFieldDelegate>
 
 @property (nonatomic, strong) UITextField   *textField;
 
@@ -25,6 +27,8 @@
     self.textField.frame = CGRectMake(50, 200, 200, 40);
     self.textField.placeholder = @"用户名";
     self.textField.backgroundColor = [UIColor redColor];
+    // 最多长度的限制
+    self.textField.delegate = self;
     
 }
 
@@ -33,5 +37,12 @@
 }
 
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (textField.text.length + string.length > 8) { // 假如最多展示8个字符
+        [XMToast showTextToCenter:@"最多输入8个字符"];
+        return NO;
+    }
+    return YES;
+}
 
 @end
