@@ -64,6 +64,8 @@
 		E5702D7B284A4C2100E2F256 /* XMTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D7A284A4C2100E2F256 /* XMTimer.m */; };
 		E5702D7F284A4CAC00E2F256 /* DemoTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D7E284A4CAC00E2F256 /* DemoTimerVC.m */; };
 		E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */; };
+		E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */; };
+		E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +185,10 @@
 		E5702D7E284A4CAC00E2F256 /* DemoTimerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTimerVC.m; sourceTree = "<group>"; };
 		E5702D81284A4E9400E2F256 /* NSNumber+XMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+XMSafe.h"; sourceTree = "<group>"; };
 		E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+XMSafe.m"; sourceTree = "<group>"; };
+		E5702D85284CADAC00E2F256 /* XMCircleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCircleProgressView.h; sourceTree = "<group>"; };
+		E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCircleProgressView.m; sourceTree = "<group>"; };
+		E5702D89284CAFD000E2F256 /* DemoCircleProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCircleProgressVC.h; sourceTree = "<group>"; };
+		E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCircleProgressVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +473,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5702D84284CAD7300E2F256 /* CircleProgressView */,
 				E5702D59284A46A000E2F256 /* XMFoundation */,
 				E5085EA2284850D3002863E2 /* Tool */,
 				E5085EB328489A11002863E2 /* ProgressBar */,
@@ -563,6 +570,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5702D88284CAFB200E2F256 /* CircleProgressVC */,
 				E5702D7C284A4C8D00E2F256 /* TimerVC */,
 				E5085EA7284858A2002863E2 /* ToolVC */,
 				E5085EAB284880C7002863E2 /* UploadProgressVC */,
@@ -718,6 +726,24 @@
 			path = XM_NSNumber;
 			sourceTree = "<group>";
 		};
+		E5702D84284CAD7300E2F256 /* CircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D85284CADAC00E2F256 /* XMCircleProgressView.h */,
+				E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */,
+			);
+			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		E5702D88284CAFB200E2F256 /* CircleProgressVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5702D89284CAFD000E2F256 /* DemoCircleProgressVC.h */,
+				E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */,
+			);
+			path = CircleProgressVC;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +852,7 @@
 			files = (
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
+				E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */,
 				E5702D73284A485000E2F256 /* NSString+XMTool.m in Sources */,
 				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
 				E5702D7F284A4CAC00E2F256 /* DemoTimerVC.m in Sources */,
@@ -875,6 +902,7 @@
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
 				E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */,
 				E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */,
+				E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
