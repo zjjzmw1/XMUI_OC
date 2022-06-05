@@ -7,6 +7,7 @@
 
 #import "DemoCircleProgressVC.h"
 #import "XMCircleProgressView.h"
+#import "XMCircleGradientProgressView.h"
 
 @interface DemoCircleProgressVC ()
 
@@ -15,8 +16,11 @@
 @property (nonatomic, strong) XMCircleProgressView  *cicleProgressV3;
 @property (nonatomic, strong) XMCircleProgressView  *cicleProgressV4;
 
-@property (nonatomic, strong) XMCircleProgressView  *cicleProgressV5;
-@property (nonatomic, strong) XMCircleProgressView  *cicleProgressV6;
+// 渐变色
+@property (nonatomic, strong) XMCircleGradientProgressView  *gradientV1;
+@property (nonatomic, strong) XMCircleGradientProgressView  *gradientV2;
+@property (nonatomic, strong) XMCircleGradientProgressView  *gradientV3;
+@property (nonatomic, strong) XMCircleGradientProgressView  *gradientV4;
 
 
 @end
@@ -43,19 +47,35 @@
     self.cicleProgressV4 = [[XMCircleProgressView alloc] initWithFrame:CGRectMake(200, 300, 100, 100)];
     [self.view addSubview:self.cicleProgressV4];
     self.cicleProgressV4.progress = 1.0;
-    
-    self.cicleProgressV5 = [[XMCircleProgressView alloc] initWithFrame:CGRectMake(50, 450, 100, 100)];
-    [self.view addSubview:self.cicleProgressV5];
-    self.cicleProgressV5.progress = 0.25;
-    [self.cicleProgressV5 updateStartAngle:1.5 * M_PI endAngle:1.5 * M_PI + M_PI * 2 clockwise:YES];
-
-    self.cicleProgressV6 = [[XMCircleProgressView alloc] initWithFrame:CGRectMake(200, 450, 100, 100)];
-    [self.view addSubview:self.cicleProgressV6];
-    self.cicleProgressV6.progress = 0.25;
     // 不是完整的圆  --- 类似仪表板
     CGFloat start = M_PI - 0.25 * M_PI;
     CGFloat end = start + M_PI * 2 - 0.5 * M_PI;
-    [self.cicleProgressV6 updateStartAngle:start endAngle:end clockwise:YES];
+    [self.cicleProgressV4 updateStartAngle:start endAngle:end clockwise:YES];
+
+    
+    // 渐变
+    
+    self.gradientV1 = [[XMCircleGradientProgressView alloc] initWithFrame:CGRectMake(50, 450, 100, 100)];
+    [self.view addSubview:self.gradientV1];
+    self.gradientV1.progress = 1;
+
+    self.gradientV2 = [[XMCircleGradientProgressView alloc] initWithFrame:CGRectMake(200, 450, 100, 100)];
+    [self.view addSubview:self.gradientV2];
+    self.gradientV2.progress = 0.9;
+    
+    self.gradientV3 = [[XMCircleGradientProgressView alloc] initWithFrame:CGRectMake(50, 580, 100, 100)];
+    [self.view addSubview:self.gradientV3];
+    self.gradientV3.progress = 1;
+
+    self.gradientV4 = [[XMCircleGradientProgressView alloc] initWithFrame:CGRectMake(200, 580, 100, 100)];
+    [self.view addSubview:self.gradientV4];
+    self.gradientV4.progress = 0.9;
+    // 不是完整的圆  --- 类似仪表板
+    CGFloat start2 = M_PI - 0.25 * M_PI;
+    CGFloat end2 = start2 + M_PI * 2 - 0.5 * M_PI;
+    [self.gradientV3 updateStartAngle:start2 endAngle:end2 clockwise:YES];
+    [self.gradientV4 updateStartAngle:start2 endAngle:end2 clockwise:YES];
+
 
 }
 

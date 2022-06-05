@@ -66,6 +66,7 @@
 		E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D82284A4E9400E2F256 /* NSNumber+XMSafe.m */; };
 		E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */; };
 		E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */; };
+		E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -189,6 +190,8 @@
 		E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCircleProgressView.m; sourceTree = "<group>"; };
 		E5702D89284CAFD000E2F256 /* DemoCircleProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCircleProgressVC.h; sourceTree = "<group>"; };
 		E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCircleProgressVC.m; sourceTree = "<group>"; };
+		E5702D8C284CDA3400E2F256 /* XMCircleGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCircleGradientProgressView.h; sourceTree = "<group>"; };
+		E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCircleGradientProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -731,6 +734,8 @@
 			children = (
 				E5702D85284CADAC00E2F256 /* XMCircleProgressView.h */,
 				E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */,
+				E5702D8C284CDA3400E2F256 /* XMCircleGradientProgressView.h */,
+				E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */,
 			);
 			path = CircleProgressView;
 			sourceTree = "<group>";
@@ -887,6 +892,7 @@
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
+				E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
 				E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */,

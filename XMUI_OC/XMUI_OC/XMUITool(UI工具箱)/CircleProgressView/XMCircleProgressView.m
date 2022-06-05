@@ -83,7 +83,7 @@
     if (!_backLayer) {
         CAShapeLayer *backLayer = [CAShapeLayer layer];
         backLayer.fillColor = [UIColor clearColor].CGColor;
-        [self updateLayerProperty:backLayer withColor:[UIColor lightGrayColor]]; // 背景颜色
+        [self updateLayerProperty:backLayer withColor:[UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]]; // 背景颜色
         [self.layer insertSublayer:backLayer atIndex:0];
         _backLayer = backLayer;
     }
