@@ -67,6 +67,7 @@
 		E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D86284CADAC00E2F256 /* XMCircleProgressView.m */; };
 		E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */; };
 		E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */; };
+		E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,8 @@
 		E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCircleProgressVC.m; sourceTree = "<group>"; };
 		E5702D8C284CDA3400E2F256 /* XMCircleGradientProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMCircleGradientProgressView.h; sourceTree = "<group>"; };
 		E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCircleGradientProgressView.m; sourceTree = "<group>"; };
+		E5702D8F284D60B400E2F256 /* UILabel+GradientLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+GradientLayer.h"; sourceTree = "<group>"; };
+		E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GradientLayer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +509,8 @@
 			children = (
 				E53CDC94283F427E00B6AB00 /* UILabel+XMTool.h */,
 				E53CDC91283F427E00B6AB00 /* UILabel+XMTool.m */,
+				E5702D8F284D60B400E2F256 /* UILabel+GradientLayer.h */,
+				E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -869,6 +874,7 @@
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
+				E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */,
 				E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */,
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
 				E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */,

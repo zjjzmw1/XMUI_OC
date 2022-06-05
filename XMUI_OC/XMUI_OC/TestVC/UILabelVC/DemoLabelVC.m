@@ -11,6 +11,8 @@
 #import "UILabel+XMTool.h"
 #import "XMCustomNaviView.h"
 
+#import "UILabel+GradientLayer.h"
+
 @interface DemoLabelVC ()
 
 @property (nonatomic, strong) UILabel   *lbl1;
@@ -79,27 +81,20 @@
         self.lbl5.frame = CGRectMake(20, self.lbl4.bottom + 20, 200, 20);
     }
     
-    self.lbl6 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:12] textColor:[UIColor redColor]];
+    self.lbl6 = [UILabel getLabelWithFont:[UIFont systemFontOfSize:16] textColor:[UIColor redColor]];
     [self.view addSubview:self.lbl6];
     self.lbl6.xm_contentInsets = UIEdgeInsetsMake(5, 5, 5, 5);
-    self.lbl6.backgroundColor = [UIColor lightGrayColor];
+    self.lbl6.backgroundColor = [UIColor grayColor];
     self.lbl6.frame = CGRectMake(20, self.lbl5.bottom + 20, 200, 20);
     self.lbl6.text = @"实现最大宽度";
     [self.lbl6 sizeToFit];
     if (self.lbl6.frame.size.width > 200) {
         self.lbl6.frame = CGRectMake(20, self.lbl5.bottom + 20, 200, 20);
     }
-
+    
+    // 添加渐变色
+    [self.lbl6 addGradientTextAction];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
