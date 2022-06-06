@@ -79,15 +79,15 @@
     // 进度条
     self.progressBarV4 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV3.bottom + 20, kScreenWidth_XM - 100, 20)];
     [self.view addSubview:self.progressBarV4];
-    [self.progressBarV4 reloadOtherDataWithProgress:0];
+    [self.progressBarV4 reloadDataWithProgress:0];
     
     self.progressBarV5 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV4.bottom + 20, kScreenWidth_XM - 100, 20)];
     [self.view addSubview:self.progressBarV5];
-    [self.progressBarV5 reloadOtherDataWithProgress:0.66];
+    [self.progressBarV5 reloadDataWithProgress:0.66];
 
     self.progressBarV6 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV5.bottom + 20, kScreenWidth_XM - 100, 20)];
     [self.view addSubview:self.progressBarV6];
-    [self.progressBarV6 reloadOtherDataWithProgress:1];
+    [self.progressBarV6 reloadDataWithProgress:1];
 
     
     
