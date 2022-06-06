@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param progress  「0 -- 1」 CGFloat类型
 - (void)reloadDataWithProgress:(CGFloat)progress;
 
+- (void)reloadOtherDataWithProgress:(CGFloat)progress;
+
 @end
 
 NS_ASSUME_NONNULL_END

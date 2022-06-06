@@ -23,6 +23,9 @@ typedef enum  {
 /// 进度Label
 @property (nonatomic, strong) UILabel       *progressLbl;
 
+/// 进度背景色
+@property (nonatomic, strong) UIImage       *progressBigImage;
+
 @end
 
 @implementation XMProgressBarView
@@ -166,6 +169,32 @@ typedef enum  {
     
     return image;
 }
+-(UIImage *)progressBigImage{
+    if(!_progressBigImage){
+        _progressBigImage =[XMProgressBarView getImageFromColors:@[[XMProgressBarView colorFromHexString:@"#FA6419"],[XMProgressBarView colorFromHexString:@"#FA2C19"]] ByGradientType:ProgressGradientType_LeftToRight size:CGSizeMake(self.frame.size.width, 10)];
+        //设置progressImgV填充类型
+        self.progressImgV.contentMode = UIViewContentModeScaleToFill;
+        }
+    return _progressBigImage;
+}
+
+/// 刷新进度条进度
+/// @param progress  「0 -- 1」 CGFloat类型
+- (void)reloadOtherDataWithProgress:(CGFloat)progress {
+    self.progressLbl.text = [NSString stringWithFormat:@"%.0f%%",progress*100];
+    [self.progressLbl sizeToFit];
+    CGFloat labelWidth = self.progressLbl.frame.size.width;
+    CGFloat labelHeight = self.progressLbl.frame.size.height;
+    if (labelHeight < 10) {
+        labelHeight = 10;
+    }
+    CGFloat barWidth = self.frame.size.width - labelWidth - 10;
+    self.barBgImageV.frame = CGRectMake(0, 0, barWidth, 10);
+    self.progressImgV.frame = CGRectMake(0, 0, barWidth * progress, 10);
+    self.progressLbl.frame = CGRectMake(barWidth + 10, (10 - labelHeight)/2.0, labelWidth, labelHeight);
+    self.progressImgV.image = self.progressBigImage;
+}
+
 
 
 @end
