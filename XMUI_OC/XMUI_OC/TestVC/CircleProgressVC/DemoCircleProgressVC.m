@@ -47,6 +47,8 @@
     self.cicleProgressV4 = [[XMCircleProgressView alloc] initWithFrame:CGRectMake(200, 300, 100, 100)];
     [self.view addSubview:self.cicleProgressV4];
     self.cicleProgressV4.progress = 1.0;
+    self.cicleProgressV4.animationDuration = 1.5;
+
     // 不是完整的圆  --- 类似仪表板
     CGFloat start = M_PI - 0.25 * M_PI;
     CGFloat end = start + M_PI * 2 - 0.5 * M_PI;
@@ -70,6 +72,7 @@
     self.gradientV4 = [[XMCircleGradientProgressView alloc] initWithFrame:CGRectMake(200, 580, 100, 100)];
     [self.view addSubview:self.gradientV4];
     self.gradientV4.progress = 0.9;
+    self.gradientV4.animationDuration = 1.5;
     // 不是完整的圆  --- 类似仪表板
     CGFloat start2 = M_PI - 0.25 * M_PI;
     CGFloat end2 = start2 + M_PI * 2 - 0.5 * M_PI;

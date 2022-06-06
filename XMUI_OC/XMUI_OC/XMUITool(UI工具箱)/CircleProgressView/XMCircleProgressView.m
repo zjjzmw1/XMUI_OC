@@ -44,6 +44,10 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(width * 0.5, height * 0.5) radius:width * 0.5 startAngle:self.currentStartAngle endAngle:self.currentEndAngle clockwise:self.currentClockwise];
     self.backLayer.path = path.CGPath;
     self.progressLayer.path = path.CGPath;
+    
+    if (self.animationDuration > 0) {
+        [self showAnimationWithDuration:self.animationDuration];
+    }
 }
 
 /// 更新起始点 --- 默认是：「从9点方向顺时针转一圈」
@@ -77,6 +81,32 @@
     layer.lineCap = kCALineCapRound;
     layer.strokeColor = color.CGColor;
 }
+
+- (void)showAnimationWithDuration:(CFTimeInterval)duraton {
+    // 线条 动画效果
+    // 上半部分动画
+    CABasicAnimation *pathAnima = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnima.duration = duraton/2.0; // 动画时间
+    pathAnima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    pathAnima.fromValue = [NSNumber numberWithFloat:0.0f]; // 开始点
+    pathAnima.toValue = [NSNumber numberWithFloat:self.progressLayer.strokeEnd]; // 结束点
+    pathAnima.fillMode = kCAFillModeForwards;
+    pathAnima.removedOnCompletion = NO;
+    [self.progressLayer addAnimation:pathAnima forKey:@"strokeEnd"];
+    
+    /*
+     // 如果一个小图标走特定的贝塞尔曲线的话，用 keyframe
+     CAKeyframeAnimation* keyFrameAni = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+     keyFrameAni.repeatCount = 1;
+     keyFrameAni.path = sunPath.CGPath;
+     keyFrameAni.duration = 3;
+     keyFrameAni.beginTime = CACurrentMediaTime(); // 开始时间：当期那时间秒（绝对值）
+     keyFrameAni.fillMode = kCAFillModeForwards;
+     keyFrameAni.removedOnCompletion = NO;
+     [self.iconImgV.layer addAnimation:keyFrameAni forKey:@"keyFrameAnimation"];
+     */
+}
+
 
 #pragma mark - 懒加载
 - (CAShapeLayer *)backLayer {

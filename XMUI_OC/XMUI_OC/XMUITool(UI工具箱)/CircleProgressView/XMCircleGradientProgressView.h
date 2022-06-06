@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XMCircleGradientProgressView : UIView
 
 /// 刷新进度 「0 -- 1」
-@property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, assign) CGFloat           progress;
+/// 动画更新进度 - 0 不展示动画
+@property (nonatomic, assign) CFTimeInterval    animationDuration;
 
 /// 更新起始点 --- 默认是：「从6点方向顺时针转一圈」
 /// @param startAngle 起点：默认是：M_PI/2
