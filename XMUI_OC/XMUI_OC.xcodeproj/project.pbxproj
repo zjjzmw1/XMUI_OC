@@ -68,6 +68,8 @@
 		E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8A284CAFD000E2F256 /* DemoCircleProgressVC.m */; };
 		E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */; };
 		E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */; };
+		E5702DA7284F567000E2F256 /* XMImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DA6284F567000E2F256 /* XMImageLabelView.m */; };
+		E5702DAB284F5B5A00E2F256 /* DemoImageLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +197,10 @@
 		E5702D8D284CDA3400E2F256 /* XMCircleGradientProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMCircleGradientProgressView.m; sourceTree = "<group>"; };
 		E5702D8F284D60B400E2F256 /* UILabel+GradientLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+GradientLayer.h"; sourceTree = "<group>"; };
 		E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GradientLayer.m"; sourceTree = "<group>"; };
+		E5702DA5284F567000E2F256 /* XMImageLabelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMImageLabelView.h; sourceTree = "<group>"; };
+		E5702DA6284F567000E2F256 /* XMImageLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMImageLabelView.m; sourceTree = "<group>"; };
+		E5702DA9284F5B5A00E2F256 /* DemoImageLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageLabelVC.h; sourceTree = "<group>"; };
+		E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoImageLabelVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +485,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5702DA4284F564F00E2F256 /* ImageLabelView */,
 				E5702D84284CAD7300E2F256 /* CircleProgressView */,
 				E5702D59284A46A000E2F256 /* XMFoundation */,
 				E5085EA2284850D3002863E2 /* Tool */,
@@ -578,6 +585,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5702DA8284F5B3400E2F256 /* ImageLabelVC */,
 				E5702D88284CAFB200E2F256 /* CircleProgressVC */,
 				E5702D7C284A4C8D00E2F256 /* TimerVC */,
 				E5085EA7284858A2002863E2 /* ToolVC */,
@@ -754,6 +762,24 @@
 			path = CircleProgressVC;
 			sourceTree = "<group>";
 		};
+		E5702DA4284F564F00E2F256 /* ImageLabelView */ = {
+			isa = PBXGroup;
+			children = (
+				E5702DA5284F567000E2F256 /* XMImageLabelView.h */,
+				E5702DA6284F567000E2F256 /* XMImageLabelView.m */,
+			);
+			path = ImageLabelView;
+			sourceTree = "<group>";
+		};
+		E5702DA8284F5B3400E2F256 /* ImageLabelVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5702DA9284F5B5A00E2F256 /* DemoImageLabelVC.h */,
+				E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */,
+			);
+			path = ImageLabelVC;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +906,7 @@
 				E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */,
 				E52679A52843349E00B5FDC7 /* DemoEmptyVC.m in Sources */,
 				E5702D7B284A4C2100E2F256 /* XMTimer.m in Sources */,
+				E5702DAB284F5B5A00E2F256 /* DemoImageLabelVC.m in Sources */,
 				E53CDCAF283F519200B6AB00 /* UIView+XMRotate360.m in Sources */,
 				E5085E9928461542002863E2 /* XMCanvasView.m in Sources */,
 				E51AD08F28423A1500DBF3C8 /* DemoButtonVC.m in Sources */,
@@ -910,6 +937,7 @@
 				E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */,
 				E5702D64284A479600E2F256 /* NSMutableDictionary+XMSafe.m in Sources */,
 				E5085E952846147F002863E2 /* XMSignView.m in Sources */,
+				E5702DA7284F567000E2F256 /* XMImageLabelView.m in Sources */,
 				E5085E832844E327002863E2 /* XMAlertView.m in Sources */,
 				E5085E882844ED74002863E2 /* DemoAlertVC.m in Sources */,
 				E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */,
