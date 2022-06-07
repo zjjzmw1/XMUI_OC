@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.customNaviView setTitleStr:@"XMImageLabelView"];
 
     self.imgLblView1 = [[XMImageLabelView alloc] initWithFrame:CGRectMake(50, 150, 100, 60)];
     [self.view addSubview:self.imgLblView1];
