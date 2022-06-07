@@ -23,6 +23,9 @@ typedef enum  {
 /// 进度Label
 @property (nonatomic, strong) UILabel       *progressLbl;
 
+/// 进度背景色
+@property (nonatomic, strong) UIImage       *progressBigImage;
+
 @end
 
 @implementation XMProgressBarView
@@ -43,7 +46,6 @@ typedef enum  {
     return self;
 }
 
-
 /// 刷新进度条进度
 /// @param progress  「0 -- 1」 CGFloat类型
 - (void)reloadDataWithProgress:(CGFloat)progress {
@@ -58,8 +60,6 @@ typedef enum  {
     self.barBgImageV.frame = CGRectMake(0, 0, barWidth, 10);
     self.progressImgV.frame = CGRectMake(0, 0, barWidth * progress, 10);
     self.progressLbl.frame = CGRectMake(barWidth + 10, (10 - labelHeight)/2.0, labelWidth, labelHeight);
-    UIImage *progressImage = [XMProgressBarView getImageFromColors:@[[XMProgressBarView colorFromHexString:@"#FA6419"],[XMProgressBarView colorFromHexString:@"#FA2C19"]] ByGradientType:ProgressGradientType_LeftToRight size:self.progressImgV.size];
-    self.progressImgV.image = progressImage;
 }
 
 #pragma mark - 懒加载
@@ -79,6 +79,9 @@ typedef enum  {
         _progressImgV = [[UIImageView alloc] init];
         _progressImgV.layer.masksToBounds = YES;
         _progressImgV.layer.cornerRadius = 5;
+        //设置progressImgV填充类型
+        _progressImgV.contentMode = UIViewContentModeScaleToFill;
+        _progressImgV.image = self.progressBigImage;
     }
     return _progressImgV;
 }
@@ -91,6 +94,13 @@ typedef enum  {
         _progressLbl.text = @"0%";
     }
     return _progressLbl;
+}
+
+- (UIImage *)progressBigImage {
+    if(!_progressBigImage){
+        _progressBigImage =[XMProgressBarView getImageFromColors:@[[XMProgressBarView colorFromHexString:@"#FA6419"],[XMProgressBarView colorFromHexString:@"#FA2C19"]] ByGradientType:ProgressGradientType_LeftToRight size:CGSizeMake(self.frame.size.width, 10)];
+        }
+    return _progressBigImage;
 }
 
 #pragma mark - 方便的获取16进制的颜色，不引起其他类目，避免耦合性太高。
@@ -166,6 +176,5 @@ typedef enum  {
     
     return image;
 }
-
 
 @end

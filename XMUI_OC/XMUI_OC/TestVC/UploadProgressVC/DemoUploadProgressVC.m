@@ -20,6 +20,10 @@
 @property (nonatomic, strong) XMProgressBarView     *progressBarV2;
 @property (nonatomic, strong) XMProgressBarView     *progressBarV3;
 
+
+@property (nonatomic, strong) XMProgressBarView     *progressBarV4;
+@property (nonatomic, strong) XMProgressBarView     *progressBarV5;
+@property (nonatomic, strong) XMProgressBarView     *progressBarV6;
 @end
 
 @implementation DemoUploadProgressVC
@@ -69,6 +73,25 @@
     self.progressBarV3 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.uploadView4.bottom + 150, kScreenWidth_XM - 100, 20)];
     [self.view addSubview:self.progressBarV3];
     [self.progressBarV3 reloadDataWithProgress:1];
+    
+    
+    
+    // 进度条
+    self.progressBarV4 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV3.bottom + 20, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV4];
+    [self.progressBarV4 reloadDataWithProgress:0];
+    
+    self.progressBarV5 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV4.bottom + 20, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV5];
+    [self.progressBarV5 reloadDataWithProgress:0.66];
+
+    self.progressBarV6 = [[XMProgressBarView alloc] initWithFrame:CGRectMake(50, self.progressBarV5.bottom + 20, kScreenWidth_XM - 100, 20)];
+    [self.view addSubview:self.progressBarV6];
+    [self.progressBarV6 reloadDataWithProgress:1];
+
+    
+    
+    
 
 }
 
