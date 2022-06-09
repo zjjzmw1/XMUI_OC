@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
+		E50059B42851F36700928920 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B22851F36700928920 /* SPPageMenu.m */; };
+		E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B72851F3D100928920 /* DemoPageMenuVC.m */; };
+		E50059BB2851F64E00928920 /* FirstPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059BA2851F64E00928920 /* FirstPageMenuVC.m */; };
 		E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7928449D2E002863E2 /* UIImage+XMTool.m */; };
 		E5085E7E28449D5C002863E2 /* DemoImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E7D28449D5C002863E2 /* DemoImageVC.m */; };
 		E5085E832844E327002863E2 /* XMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5085E822844E327002863E2 /* XMAlertView.m */; };
@@ -78,6 +81,12 @@
 		3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.release.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.release.xcconfig"; sourceTree = "<group>"; };
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
+		E50059B22851F36700928920 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
+		E50059B32851F36700928920 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
+		E50059B62851F3D100928920 /* DemoPageMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPageMenuVC.h; sourceTree = "<group>"; };
+		E50059B72851F3D100928920 /* DemoPageMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPageMenuVC.m; sourceTree = "<group>"; };
+		E50059B92851F64E00928920 /* FirstPageMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstPageMenuVC.h; sourceTree = "<group>"; };
+		E50059BA2851F64E00928920 /* FirstPageMenuVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstPageMenuVC.m; sourceTree = "<group>"; };
 		E5085E7928449D2E002863E2 /* UIImage+XMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMTool.m"; sourceTree = "<group>"; };
 		E5085E7A28449D2E002863E2 /* UIImage+XMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMTool.h"; sourceTree = "<group>"; };
 		E5085E7C28449D5C002863E2 /* DemoImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageVC.h; sourceTree = "<group>"; };
@@ -227,6 +236,26 @@
 				3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E50059B12851F32F00928920 /* XMPageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E50059B32851F36700928920 /* SPPageMenu.h */,
+				E50059B22851F36700928920 /* SPPageMenu.m */,
+			);
+			path = XMPageMenu;
+			sourceTree = "<group>";
+		};
+		E50059B52851F3AD00928920 /* XMPageMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				E50059B62851F3D100928920 /* DemoPageMenuVC.h */,
+				E50059B72851F3D100928920 /* DemoPageMenuVC.m */,
+				E50059B92851F64E00928920 /* FirstPageMenuVC.h */,
+				E50059BA2851F64E00928920 /* FirstPageMenuVC.m */,
+			);
+			path = XMPageMenuVC;
 			sourceTree = "<group>";
 		};
 		E5085E7828449CC7002863E2 /* UIImage */ = {
@@ -491,6 +520,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E50059B12851F32F00928920 /* XMPageMenu */,
 				E5B812952851726400AA86E6 /* XMSortBarView */,
 				E5702DA4284F564F00E2F256 /* ImageLabelView */,
 				E5702D84284CAD7300E2F256 /* CircleProgressView */,
@@ -592,6 +622,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E50059B52851F3AD00928920 /* XMPageMenuVC */,
 				E5B812992851761100AA86E6 /* SortBarVC */,
 				E5702DA8284F5B3400E2F256 /* ImageLabelVC */,
 				E5702D88284CAFB200E2F256 /* CircleProgressVC */,
@@ -912,6 +943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50059BB2851F64E00928920 /* FirstPageMenuVC.m in Sources */,
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */,
@@ -947,6 +979,7 @@
 				E53CDCA7283F50DA00B6AB00 /* UIButton+XMTool.m in Sources */,
 				E53CDC95283F427E00B6AB00 /* UILabel+XMTool.m in Sources */,
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
+				E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
 				E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */,
@@ -971,6 +1004,7 @@
 				E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */,
 				E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */,
 				E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */,
+				E50059B42851F36700928920 /* SPPageMenu.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

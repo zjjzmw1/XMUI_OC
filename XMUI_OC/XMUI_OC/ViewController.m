@@ -28,6 +28,7 @@
 #import "DemoCircleProgressVC.h"
 #import "DemoImageLabelVC.h"
 #import "DemoSortBarVC.h"
+#import "DemoPageMenuVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -53,7 +54,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -143,6 +144,9 @@
     }
     if ([vcString isEqualToString:@"XMImageLabelView"]) {
         vc = [DemoImageLabelVC new];
+    }
+    if ([vcString isEqualToString:@"SPPageMenu"]) {
+        vc = [DemoPageMenuVC new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
