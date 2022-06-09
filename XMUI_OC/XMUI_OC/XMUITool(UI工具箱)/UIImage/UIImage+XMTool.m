@@ -204,5 +204,13 @@
     return smallImage;
 }
 
+/// 从图片正中心拉伸图片获取新图 -- 四周不被拉伸
++ (UIImage *)getNewImageFromCenterWithOriginImage:(UIImage *)originImage {
+    // 取正中间一个点，拉伸方式
+    CGFloat width = originImage.size.width / 2.0;
+    CGFloat height = originImage.size.height / 2.0;
+    UIImage *newImage = [originImage resizableImageWithCapInsets:UIEdgeInsetsMake(height,width,height,width) resizingMode:UIImageResizingModeStretch];
+    return newImage;
+}
 
 @end

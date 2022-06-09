@@ -13,6 +13,10 @@
 @property (nonatomic, strong) UIImageView   *imgV1;
 @property (nonatomic, strong) UIImageView   *imgV2;
 
+@property (nonatomic, strong) UIImageView   *imgV3;
+@property (nonatomic, strong) UIImageView   *imgV4;
+@property (nonatomic, strong) UIImageView   *imgV5;
+
 @end
 
 @implementation DemoImageVC
@@ -30,6 +34,19 @@
     [self.view addSubview:self.imgV2];
     UIImage *img2 = [UIImage getImageFromColors:@[[UIColor redColor],[UIColor blueColor]] ByGradientType:GradientType_TopLeftToBottomRight size:CGSizeMake(200, 100)];
     self.imgV2.image = img2;
+    
+    self.imgV3 = [[UIImageView alloc] initWithFrame:CGRectMake(50, self.imgV2.bottom + 50, 100, 50)];
+    [self.view addSubview:self.imgV3];
+    self.imgV3.image = [UIImage getNewImageFromCenterWithOriginImage:[UIImage imageNamed:@"photo_icon"]];
+
+    self.imgV4 = [[UIImageView alloc] initWithFrame:CGRectMake(50, self.imgV3.bottom + 50, 50, 100)];
+    [self.view addSubview:self.imgV4];
+    self.imgV4.image = [UIImage getNewImageFromCenterWithOriginImage:[UIImage imageNamed:@"photo_icon"]];
+
+    self.imgV5 = [[UIImageView alloc] initWithFrame:CGRectMake(50, self.imgV4.bottom + 50, 20, 18)];
+    [self.view addSubview:self.imgV5];
+    self.imgV5.image = [UIImage getNewImageFromCenterWithOriginImage:[UIImage imageNamed:@"photo_icon"]];
+
 
 }
 

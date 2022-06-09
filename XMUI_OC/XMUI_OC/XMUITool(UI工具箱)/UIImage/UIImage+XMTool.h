@@ -39,6 +39,9 @@ typedef enum  {
 /// 获得某个范围内的屏幕图像 -- 原图需要考虑scale
 + (UIImage *)imageFromView:(UIView *)view atFrame:(CGRect)rect;
 
+/// 从图片正中心拉伸图片获取新图 -- 四周不被拉伸
++ (UIImage *)getNewImageFromCenterWithOriginImage:(UIImage *)originImage;
+
 @end
 
 NS_ASSUME_NONNULL_END
