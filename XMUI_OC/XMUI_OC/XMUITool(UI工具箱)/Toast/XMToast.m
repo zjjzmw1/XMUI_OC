@@ -106,10 +106,10 @@
     
     float delayTime = 1.5;
     if (text.length > 10) {
-        delayTime = 2.0;
+        delayTime = 1.8;
     }
     if (text.length > 15) { // 再多的字就不合理了
-        delayTime = 2.5;
+        delayTime = 2.0;
     }
     // 默认1.5s后隐藏
     [XMToast sharedInstance].timer = [NSTimer scheduledTimerWithTimeInterval:delayTime target:[XMToast sharedInstance] selector:@selector(hiddenAction) userInfo:nil repeats:NO];
@@ -121,7 +121,7 @@
 - (void)hiddenAction {
     [self.timer invalidate];
     self.timer = nil;
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         self.alpha = 0.0;
     } completion:^(BOOL finished) {
         
