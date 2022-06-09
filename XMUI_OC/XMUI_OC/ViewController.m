@@ -27,6 +27,7 @@
 #import "DemoTimerVC.h"
 #import "DemoCircleProgressVC.h"
 #import "DemoImageLabelVC.h"
+#import "DemoSortBarVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -52,7 +53,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -94,6 +95,9 @@
 
     if ([vcString isEqualToString:@"XMToast"]) {
         vc = [DemoToastVC new];
+    }
+    if ([vcString isEqualToString:@"XMSortBarView"]) {
+        vc = [DemoSortBarVC new];
     }
     if ([vcString isEqualToString:@"UILabel"]) {
         vc = [DemoLabelVC new];

@@ -70,6 +70,8 @@
 		E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */; };
 		E5702DA7284F567000E2F256 /* XMImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DA6284F567000E2F256 /* XMImageLabelView.m */; };
 		E5702DAB284F5B5A00E2F256 /* DemoImageLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */; };
+		E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B812972851727600AA86E6 /* XMSortBarView.m */; };
+		E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +203,10 @@
 		E5702DA6284F567000E2F256 /* XMImageLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMImageLabelView.m; sourceTree = "<group>"; };
 		E5702DA9284F5B5A00E2F256 /* DemoImageLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageLabelVC.h; sourceTree = "<group>"; };
 		E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoImageLabelVC.m; sourceTree = "<group>"; };
+		E5B812962851727600AA86E6 /* XMSortBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSortBarView.h; sourceTree = "<group>"; };
+		E5B812972851727600AA86E6 /* XMSortBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSortBarView.m; sourceTree = "<group>"; };
+		E5B8129A2851762700AA86E6 /* DemoSortBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSortBarVC.h; sourceTree = "<group>"; };
+		E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSortBarVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +491,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5B812952851726400AA86E6 /* XMSortBarView */,
 				E5702DA4284F564F00E2F256 /* ImageLabelView */,
 				E5702D84284CAD7300E2F256 /* CircleProgressView */,
 				E5702D59284A46A000E2F256 /* XMFoundation */,
@@ -585,6 +592,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5B812992851761100AA86E6 /* SortBarVC */,
 				E5702DA8284F5B3400E2F256 /* ImageLabelVC */,
 				E5702D88284CAFB200E2F256 /* CircleProgressVC */,
 				E5702D7C284A4C8D00E2F256 /* TimerVC */,
@@ -780,6 +788,24 @@
 			path = ImageLabelVC;
 			sourceTree = "<group>";
 		};
+		E5B812952851726400AA86E6 /* XMSortBarView */ = {
+			isa = PBXGroup;
+			children = (
+				E5B812962851727600AA86E6 /* XMSortBarView.h */,
+				E5B812972851727600AA86E6 /* XMSortBarView.m */,
+			);
+			path = XMSortBarView;
+			sourceTree = "<group>";
+		};
+		E5B812992851761100AA86E6 /* SortBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5B8129A2851762700AA86E6 /* DemoSortBarVC.h */,
+				E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */,
+			);
+			path = SortBarVC;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,8 +949,10 @@
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
+				E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
+				E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */,
 				E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
