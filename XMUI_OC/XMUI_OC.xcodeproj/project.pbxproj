@@ -55,6 +55,9 @@
 		E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */; };
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
+		E55F4F742855E65100A236EA /* BigEatSmallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F4F732855E65100A236EA /* BigEatSmallVC.m */; };
+		E55F4F772855E89700A236EA /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F4F752855E89700A236EA /* 1.mp3 */; };
+		E55F4F782855E89700A236EA /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F4F762855E89700A236EA /* 2.mp3 */; };
 		E5702D4228489A6A00E2F256 /* XMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D4128489A6A00E2F256 /* XMProgressBarView.m */; };
 		E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D5B284A46D000E2F256 /* XMLocationTrans.m */; };
 		E5702D64284A479600E2F256 /* NSMutableDictionary+XMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D60284A479600E2F256 /* NSMutableDictionary+XMSafe.m */; };
@@ -176,6 +179,10 @@
 		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
 		E53CDCE12841D77400B6AB00 /* XMPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPopMenu.h; sourceTree = "<group>"; };
 		E53CDCE22841D77400B6AB00 /* XMPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPopMenu.m; sourceTree = "<group>"; };
+		E55F4F722855E65100A236EA /* BigEatSmallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigEatSmallVC.h; sourceTree = "<group>"; };
+		E55F4F732855E65100A236EA /* BigEatSmallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigEatSmallVC.m; sourceTree = "<group>"; };
+		E55F4F752855E89700A236EA /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		E55F4F762855E89700A236EA /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
 		E5702D4028489A6A00E2F256 /* XMProgressBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMProgressBarView.h; sourceTree = "<group>"; };
 		E5702D4128489A6A00E2F256 /* XMProgressBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMProgressBarView.m; sourceTree = "<group>"; };
 		E5702D5B284A46D000E2F256 /* XMLocationTrans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLocationTrans.m; sourceTree = "<group>"; };
@@ -622,6 +629,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E55F4F712855E62600A236EA /* BigEatSmallVC */,
 				E50059B52851F3AD00928920 /* XMPageMenuVC */,
 				E5B812992851761100AA86E6 /* SortBarVC */,
 				E5702DA8284F5B3400E2F256 /* ImageLabelVC */,
@@ -679,6 +687,17 @@
 				E51AD07D2841D7F900DBF3C8 /* DemoPopMenuVC.m */,
 			);
 			path = PopMenuVC;
+			sourceTree = "<group>";
+		};
+		E55F4F712855E62600A236EA /* BigEatSmallVC */ = {
+			isa = PBXGroup;
+			children = (
+				E55F4F722855E65100A236EA /* BigEatSmallVC.h */,
+				E55F4F732855E65100A236EA /* BigEatSmallVC.m */,
+				E55F4F752855E89700A236EA /* 1.mp3 */,
+				E55F4F762855E89700A236EA /* 2.mp3 */,
+			);
+			path = BigEatSmallVC;
 			sourceTree = "<group>";
 		};
 		E5702D59284A46A000E2F256 /* XMFoundation */ = {
@@ -907,7 +926,9 @@
 				E53CDC86283F3DB600B6AB00 /* LaunchScreen.storyboard in Resources */,
 				E53CDC83283F3DB600B6AB00 /* Assets.xcassets in Resources */,
 				E53CDC81283F3DB500B6AB00 /* Main.storyboard in Resources */,
+				E55F4F782855E89700A236EA /* 2.mp3 in Resources */,
 				E526799528432DF000B5FDC7 /* Tabbar.xcassets in Resources */,
+				E55F4F772855E89700A236EA /* 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1004,7 @@
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
 				E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */,
+				E55F4F742855E65100A236EA /* BigEatSmallVC.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */,
@@ -1157,7 +1179,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1169,7 +1191,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoming.XMUI-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1189,7 +1211,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1201,7 +1223,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xiaoming.XMUI-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

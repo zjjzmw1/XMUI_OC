@@ -33,7 +33,7 @@
 
 #pragma mark - 这里设置竖屏，其他所有页面都竖屏了。  --- 某个VC再设置横屏也没用了
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 

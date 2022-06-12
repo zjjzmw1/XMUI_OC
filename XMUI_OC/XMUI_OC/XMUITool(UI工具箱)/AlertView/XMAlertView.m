@@ -54,6 +54,10 @@
     
     // 设置默认大小
     _contentLeftSpace = 30; // 容器左边距离
+    // 处理横屏情况
+    if (kScreenWidth_XM > kScreenHeight_XM) {
+        _contentLeftSpace = (kScreenWidth_XM - 300)/2.0;
+    }
     _contentWidth = (kScreenWidth_XM - _contentLeftSpace*2.0);
     _contentHeight = 150; // 默认容器高度
     _btnWidth = (_contentWidth - 18 - 33*2)/2.0; // 按钮宽度
