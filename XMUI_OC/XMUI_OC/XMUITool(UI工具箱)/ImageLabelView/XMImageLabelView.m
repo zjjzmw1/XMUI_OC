@@ -38,6 +38,8 @@
     CGFloat lastH = self.frame.size.height;
     if (textWidth > self.frame.size.width) {
         lastW = textWidth;
+        // 更新self.frame
+        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, lastW, lastH);
     }
     if (image.size.width > self.frame.size.width) {
         lastW = image.size.width;
