@@ -22,6 +22,8 @@
 @property (nonatomic, strong) AVAudioPlayer  *movePlayer;
 /// 定时器
 @property (nonatomic, strong) NSTimer        *myTimer;
+/// 目前鲨鱼的数量
+@property (nonatomic, assign) NSInteger      shayuCount;
 
 @end
 
@@ -33,8 +35,8 @@
     self.fd_prefersNavigationBarHidden = YES;
     self.fd_interactivePopDisabled = YES;
     // 自己的宽高
-    self.meWidth = 150;
-    self.meHeight = 150;
+    self.meWidth = 100;
+    self.meHeight = 100;
     
     [self initAllView];
     
@@ -52,7 +54,7 @@
     [self.view addSubview:self.meImageView];
     self.meImageView.frame = CGRectMake((kScreenWidth_XM - self.meWidth)/2.0, (kScreenHeight_XM - self.meHeight)/2.0, self.meWidth, self.meHeight);
     // 默认初始化多条鱼
-    for (int i = 0; i < 110; i++) {
+    for (int i = 0; i < 15; i++) {
         [self initOtherViewAction];
     }
 }
@@ -60,11 +62,11 @@
 #pragma mark - 其他鱼从屏幕外面移动过来
 /// 生成一个新鱼
 - (void)initOtherViewAction {
-    CGFloat tempWidth = arc4random()%150 + 30; // 30 -- 180 大小的鱼
+    CGFloat tempWidth = arc4random()%100 + 30; // 30 -- 180 大小的鱼
     if (tempWidth > self.meWidth) {
-        tempWidth = self.meWidth * 1.5;
+        tempWidth = self.meWidth * 1.3;
     }
-    CGFloat tempLeft = -tempWidth + arc4random()%300 - 400;
+    CGFloat tempLeft = -tempWidth + arc4random()%200 - 600;
     CGFloat tempTop = arc4random()%((int)(kScreenHeight_XM - tempWidth));
     // 临时产生的鱼
     UIImageView *tempImgV = [[UIImageView alloc] initWithFrame:CGRectMake(tempLeft, tempTop, tempWidth, tempWidth)];
@@ -88,9 +90,13 @@
         tempImgV.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d",fishInt]];
         if (tempWidth > self.meWidth) {
             tempImgV.image = [UIImage imageNamed:@"sha"];
+            self.shayuCount += 1;
         }
-    } else {
+    } else { // 相交了，重新初始化
         [tempImgV removeFromSuperview];
+        if (self.shayuCount < 3) {
+            [self initOtherViewAction];
+        }
     }
 }
 
@@ -135,6 +141,9 @@
     }
     if (isMutul) { // 相交了
         if (originV.width * originV.height  > otherV.width * otherV.height) {
+            if ([((UIImageView *)otherV).image isEqual:[UIImage imageNamed:@"sha"]]) {
+                self.shayuCount -= 1;
+            }
             [otherV removeFromSuperview];
             [self initOtherViewAction];
             [self playSoundAction:@"1.mp3"];
@@ -185,6 +194,9 @@
         if (subV.tag >= 100) {
             subV.frame = CGRectMake(subV.left + 3, subV.top, subV.width, subV.height);
             if (subV.right > kScreenWidth_XM) {
+                if ([((UIImageView *)subV).image isEqual:[UIImage imageNamed:@"sha"]]) {
+                    self.shayuCount -= 1;
+                }
                 [subV removeFromSuperview];
                 [self initOtherViewAction];
             }
