@@ -31,6 +31,7 @@
 #import "DemoPageMenuVC.h"
 #import "BigEatSmallVC.h"
 #import "DemoCollectionVC.h"
+#import "DemoCollectionVC2.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -56,7 +57,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -155,6 +156,9 @@
     }
     if ([vcString isEqualToString:@"DemoCollectionVC"]) {
         vc = [DemoCollectionVC new];
+    }
+    if ([vcString isEqualToString:@"DemoCollectionVC2"]) {
+        vc = [DemoCollectionVC2 new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];

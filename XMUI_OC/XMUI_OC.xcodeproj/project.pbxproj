@@ -76,10 +76,13 @@
 		E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702D90284D60B400E2F256 /* UILabel+GradientLayer.m */; };
 		E5702DA7284F567000E2F256 /* XMImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DA6284F567000E2F256 /* XMImageLabelView.m */; };
 		E5702DAB284F5B5A00E2F256 /* DemoImageLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */; };
+		E583A75E2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E583A75D2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m */; };
 		E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B812972851727600AA86E6 /* XMSortBarView.m */; };
 		E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */; };
 		E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */; };
 		E5E1139228581DCE007F3182 /* DemoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139128581DCE007F3182 /* DemoCollectionCell.m */; };
+		E5E1139628582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139528582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m */; };
+		E5E1139928583059007F3182 /* DemoCollectionVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139828583059007F3182 /* DemoCollectionVC2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +224,8 @@
 		E5702DA6284F567000E2F256 /* XMImageLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMImageLabelView.m; sourceTree = "<group>"; };
 		E5702DA9284F5B5A00E2F256 /* DemoImageLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoImageLabelVC.h; sourceTree = "<group>"; };
 		E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoImageLabelVC.m; sourceTree = "<group>"; };
+		E583A75C2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoHorizontalCollectionViewCell.h; sourceTree = "<group>"; };
+		E583A75D2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoHorizontalCollectionViewCell.m; sourceTree = "<group>"; };
 		E5B812962851727600AA86E6 /* XMSortBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMSortBarView.h; sourceTree = "<group>"; };
 		E5B812972851727600AA86E6 /* XMSortBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSortBarView.m; sourceTree = "<group>"; };
 		E5B8129A2851762700AA86E6 /* DemoSortBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSortBarVC.h; sourceTree = "<group>"; };
@@ -229,6 +234,10 @@
 		E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionVC.m; sourceTree = "<group>"; };
 		E5E1139028581DCE007F3182 /* DemoCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionCell.h; sourceTree = "<group>"; };
 		E5E1139128581DCE007F3182 /* DemoCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionCell.m; sourceTree = "<group>"; };
+		E5E1139428582861007F3182 /* MLHorizontalCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLHorizontalCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		E5E1139528582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLHorizontalCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		E5E1139728583059007F3182 /* DemoCollectionVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionVC2.h; sourceTree = "<group>"; };
+		E5E1139828583059007F3182 /* DemoCollectionVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionVC2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -870,8 +879,22 @@
 				E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */,
 				E5E1139028581DCE007F3182 /* DemoCollectionCell.h */,
 				E5E1139128581DCE007F3182 /* DemoCollectionCell.m */,
+				E5E1139328582818007F3182 /* MLHorizontalLayout */,
 			);
 			path = DemoCollectionViewVC;
+			sourceTree = "<group>";
+		};
+		E5E1139328582818007F3182 /* MLHorizontalLayout */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1139728583059007F3182 /* DemoCollectionVC2.h */,
+				E5E1139828583059007F3182 /* DemoCollectionVC2.m */,
+				E5E1139428582861007F3182 /* MLHorizontalCollectionViewFlowLayout.h */,
+				E5E1139528582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m */,
+				E583A75C2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.h */,
+				E583A75D2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m */,
+			);
+			path = MLHorizontalLayout;
 			sourceTree = "<group>";
 		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
@@ -995,6 +1018,7 @@
 				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
+				E583A75E2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
 				E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */,
@@ -1012,6 +1036,7 @@
 				E5085EAF2848812A002863E2 /* XMUploadProgressView.m in Sources */,
 				E5702D71284A485000E2F256 /* NSString+XMBusiness.m in Sources */,
 				E51AD0862842330000DBF3C8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				E5E1139928583059007F3182 /* DemoCollectionVC2.m in Sources */,
 				E5085E9D28461901002863E2 /* DemoSignVC.m in Sources */,
 				E53CDC9A283F42E600B6AB00 /* UITableView+XMTool.m in Sources */,
 				E51AD07E2841D7F900DBF3C8 /* DemoPopMenuVC.m in Sources */,
@@ -1047,6 +1072,7 @@
 				E5702D5D284A46D000E2F256 /* XMLocationTrans.m in Sources */,
 				E5702D87284CADAC00E2F256 /* XMCircleProgressView.m in Sources */,
 				E50059B42851F36700928920 /* SPPageMenu.m in Sources */,
+				E5E1139628582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m in Sources */,
 				E51AD08A284233D800DBF3C8 /* DemoBaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
