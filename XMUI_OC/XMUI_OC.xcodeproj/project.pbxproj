@@ -78,6 +78,8 @@
 		E5702DAB284F5B5A00E2F256 /* DemoImageLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5702DAA284F5B5A00E2F256 /* DemoImageLabelVC.m */; };
 		E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B812972851727600AA86E6 /* XMSortBarView.m */; };
 		E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */; };
+		E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */; };
+		E5E1139228581DCE007F3182 /* DemoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139128581DCE007F3182 /* DemoCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +225,10 @@
 		E5B812972851727600AA86E6 /* XMSortBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMSortBarView.m; sourceTree = "<group>"; };
 		E5B8129A2851762700AA86E6 /* DemoSortBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoSortBarVC.h; sourceTree = "<group>"; };
 		E5B8129B2851762700AA86E6 /* DemoSortBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSortBarVC.m; sourceTree = "<group>"; };
+		E5E1138D28581AB9007F3182 /* DemoCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionVC.h; sourceTree = "<group>"; };
+		E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionVC.m; sourceTree = "<group>"; };
+		E5E1139028581DCE007F3182 /* DemoCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionCell.h; sourceTree = "<group>"; };
+		E5E1139128581DCE007F3182 /* DemoCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +635,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5E1138C28581A73007F3182 /* DemoCollectionViewVC */,
 				E55F4F712855E62600A236EA /* BigEatSmallVC */,
 				E50059B52851F3AD00928920 /* XMPageMenuVC */,
 				E5B812992851761100AA86E6 /* SortBarVC */,
@@ -856,6 +863,17 @@
 			path = SortBarVC;
 			sourceTree = "<group>";
 		};
+		E5E1138C28581A73007F3182 /* DemoCollectionViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1138D28581AB9007F3182 /* DemoCollectionVC.h */,
+				E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */,
+				E5E1139028581DCE007F3182 /* DemoCollectionCell.h */,
+				E5E1139128581DCE007F3182 /* DemoCollectionCell.m */,
+			);
+			path = DemoCollectionViewVC;
+			sourceTree = "<group>";
+		};
 		FAA24D633BBC10064ABDE163 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +998,7 @@
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,
 				E5702D91284D60B400E2F256 /* UILabel+GradientLayer.m in Sources */,
+				E5E1139228581DCE007F3182 /* DemoCollectionCell.m in Sources */,
 				E52679A9284367D900B5FDC7 /* XMTextView.m in Sources */,
 				E52679AD284368D400B5FDC7 /* DemoTextViewVC.m in Sources */,
 				E5702D69284A47B100E2F256 /* NSObject+XMRuntime.m in Sources */,
@@ -1008,6 +1027,7 @@
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */,
+				E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */,
 				E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
