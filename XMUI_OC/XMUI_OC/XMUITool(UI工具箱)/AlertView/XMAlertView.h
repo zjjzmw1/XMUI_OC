@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 自定义弹框 初始化
 /// @param titleStr 标题，没有就传 nil
-/// @param contentStr 内容文字，没有就传 nil
+/// @param contentStr 内容文字（支持长文滚动），没有就传 nil
 /// @param cancelStr 左边按钮，没有就传 nil
 /// @param submitStr 右边按钮，没有传 nil
 + (XMAlertView *)initWithTitle:(nullable NSString *)titleStr contentStr:(nullable NSString *)contentStr cancelStr:(nullable NSString *)cancelStr submitStr:(nullable NSString *)submitStr;
