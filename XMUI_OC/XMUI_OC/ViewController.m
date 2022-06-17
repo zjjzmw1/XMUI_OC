@@ -33,6 +33,7 @@
 #import "DemoCollectionVC.h"
 #import "DemoCollectionVC2.h"
 #import "DemoRedPointVC.h"
+#import "DemoNoDataEmptyVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -58,7 +59,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2",@"DemoRedPointVC"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2",@"DemoRedPointVC"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -163,6 +164,9 @@
     }
     if ([vcString isEqualToString:@"DemoRedPointVC"]) {
         vc = [DemoRedPointVC new];
+    }
+    if ([vcString isEqualToString:@"XMNoDataEmptyView"]) {
+        vc = [DemoNoDataEmptyVC new];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];

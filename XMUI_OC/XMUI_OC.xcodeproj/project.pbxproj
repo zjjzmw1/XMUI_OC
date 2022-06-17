@@ -55,6 +55,8 @@
 		E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */; };
 		E53CDCDF2840D69A00B6AB00 /* DemoLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */; };
 		E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E53CDCE22841D77400B6AB00 /* XMPopMenu.m */; };
+		E54054ED285C0E9E00979CA8 /* XMNoDataEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54054EC285C0E9E00979CA8 /* XMNoDataEmptyView.m */; };
+		E54054F0285C0FAC00979CA8 /* DemoNoDataEmptyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E54054EF285C0FAC00979CA8 /* DemoNoDataEmptyVC.m */; };
 		E55F4F742855E65100A236EA /* BigEatSmallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F4F732855E65100A236EA /* BigEatSmallVC.m */; };
 		E55F4F772855E89700A236EA /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F4F752855E89700A236EA /* 1.mp3 */; };
 		E55F4F782855E89700A236EA /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E55F4F762855E89700A236EA /* 2.mp3 */; };
@@ -186,6 +188,10 @@
 		E53CDCDE2840D69A00B6AB00 /* DemoLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLabelVC.m; sourceTree = "<group>"; };
 		E53CDCE12841D77400B6AB00 /* XMPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPopMenu.h; sourceTree = "<group>"; };
 		E53CDCE22841D77400B6AB00 /* XMPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPopMenu.m; sourceTree = "<group>"; };
+		E54054EB285C0E9E00979CA8 /* XMNoDataEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMNoDataEmptyView.h; sourceTree = "<group>"; };
+		E54054EC285C0E9E00979CA8 /* XMNoDataEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMNoDataEmptyView.m; sourceTree = "<group>"; };
+		E54054EE285C0FAC00979CA8 /* DemoNoDataEmptyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoNoDataEmptyVC.h; sourceTree = "<group>"; };
+		E54054EF285C0FAC00979CA8 /* DemoNoDataEmptyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoNoDataEmptyVC.m; sourceTree = "<group>"; };
 		E55F4F722855E65100A236EA /* BigEatSmallVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigEatSmallVC.h; sourceTree = "<group>"; };
 		E55F4F732855E65100A236EA /* BigEatSmallVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigEatSmallVC.m; sourceTree = "<group>"; };
 		E55F4F752855E89700A236EA /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
@@ -327,6 +333,8 @@
 			children = (
 				E52679A32843349E00B5FDC7 /* DemoEmptyVC.h */,
 				E52679A42843349E00B5FDC7 /* DemoEmptyVC.m */,
+				E54054EE285C0FAC00979CA8 /* DemoNoDataEmptyVC.h */,
+				E54054EF285C0FAC00979CA8 /* DemoNoDataEmptyVC.m */,
 			);
 			path = EmptyVC;
 			sourceTree = "<group>";
@@ -475,6 +483,8 @@
 			children = (
 				E52679A02843332200B5FDC7 /* XMEmptyView.h */,
 				E52679A12843332200B5FDC7 /* XMEmptyView.m */,
+				E54054EB285C0E9E00979CA8 /* XMNoDataEmptyView.h */,
+				E54054EC285C0E9E00979CA8 /* XMNoDataEmptyView.m */,
 			);
 			path = EmptyView;
 			sourceTree = "<group>";
@@ -1035,6 +1045,7 @@
 				E53CDCBC283F74A900B6AB00 /* DemoToastVC.m in Sources */,
 				E53CDCE32841D77400B6AB00 /* XMPopMenu.m in Sources */,
 				E5702D8B284CAFD000E2F256 /* DemoCircleProgressVC.m in Sources */,
+				E54054ED285C0E9E00979CA8 /* XMNoDataEmptyView.m in Sources */,
 				E5702D73284A485000E2F256 /* NSString+XMTool.m in Sources */,
 				E5085E7B28449D2E002863E2 /* UIImage+XMTool.m in Sources */,
 				E5702D7F284A4CAC00E2F256 /* DemoTimerVC.m in Sources */,
@@ -1075,6 +1086,7 @@
 				E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
+				E54054F0285C0FAC00979CA8 /* DemoNoDataEmptyVC.m in Sources */,
 				E5B8129C2851762700AA86E6 /* DemoSortBarVC.m in Sources */,
 				E55F4F742855E65100A236EA /* BigEatSmallVC.m in Sources */,
 				E53CDC89283F3DB600B6AB00 /* main.m in Sources */,
