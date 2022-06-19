@@ -34,6 +34,14 @@
     XMRedPointView *redPointV4 = [[XMRedPointView alloc] initWithFrame:CGRectMake(150, 200, 0, 0)];
     [self.view addSubview:redPointV4];
     [redPointV4 reloadWithCount:233];
+    
+    XMRedPointView *redPointV5 = [[XMRedPointView alloc] initWithFrame:CGRectMake(50, 300, 0, 0)];
+    [self.view addSubview:redPointV5];
+    [redPointV5 reloadBigRedPointWithCount:6];
+    
+    XMRedPointView *redPointV6 = [[XMRedPointView alloc] initWithFrame:CGRectMake(150, 300, 0, 0)];
+    [self.view addSubview:redPointV6];
+    [redPointV6 reloadBigRedPointWithCount:34];
 }
 
 

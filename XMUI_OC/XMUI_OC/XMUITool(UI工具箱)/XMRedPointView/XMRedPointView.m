@@ -47,9 +47,36 @@
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width + 4, height + 4);
     // 添加三个圆角
     [self addRectCorner:height/2.0 corners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight toView:self.redPointLbl];
-    [self addRectCorner:(height + 4)/2.0 corners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight toView:self];
+    [self addRectCorner:(height + 2)/2.0 corners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight toView:self];
 
 }
+
+/// 刷新小红点数量 -- 大的红点气泡样式
+/// @param pointCount  【0：隐藏 】 【大于 99显示 99+】
+- (void)reloadBigRedPointWithCount:(NSInteger)pointCount {
+    if (pointCount > 0) {
+        self.hidden = NO;
+    } else {
+        self.hidden = YES;
+    }
+    self.redPointLbl.text = [NSString stringWithFormat:@"%ld",(long)pointCount];
+    if (pointCount > 99) {
+        self.redPointLbl.text = @"99+";
+    }
+    [self.redPointLbl sizeToFit];
+    CGFloat width = self.redPointLbl.width + 13;
+    CGFloat height = self.redPointLbl.height + 6;
+    if (pointCount > 9) {
+        height = self.redPointLbl.height + 6;
+    }
+    self.redPointLbl.frame = CGRectMake(2, 2, width, height);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width + 4, height + 4);
+    // 添加三个圆角
+    [self addRectCorner:height/2.0 corners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight toView:self.redPointLbl];
+    [self addRectCorner:(height + 2)/2.0 corners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomRight toView:self];
+
+}
+
 
 #pragma mark - 为了不依赖其他类，把切圆角的方法，写到这里
 /**

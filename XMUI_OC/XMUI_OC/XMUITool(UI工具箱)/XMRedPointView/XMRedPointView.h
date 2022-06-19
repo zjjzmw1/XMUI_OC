@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param pointCount  【0：隐藏 】 【大于 99显示 99+】
 - (void)reloadWithCount:(NSInteger)pointCount;
 
+/// 刷新小红点数量 -- 大的红点气泡样式
+/// @param pointCount  【0：隐藏 】 【大于 99显示 99+】
+- (void)reloadBigRedPointWithCount:(NSInteger)pointCount;
+
 @end
 
 NS_ASSUME_NONNULL_END
