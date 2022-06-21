@@ -152,11 +152,11 @@
         }
     }
     // 第二种消失逻辑 ---- 类似抖音效果 ------------- BEGIN
-    if (self.stopDragingOffsetY < -50 && (self.stopDragingOffsetY - scrollView.contentOffset.y > 1)) { // 快速下拉
+    if (self.stopDragingOffsetY < -30 && (self.stopDragingOffsetY - scrollView.contentOffset.y > 0)) { // 快速下拉
         [self hiddenAction];
-    } else if (self.stopDragingOffsetY < -90 && (self.stopDragingOffsetY - scrollView.contentOffset.y > 0)) {
+    } else if (self.stopDragingOffsetY < -50 && (self.stopDragingOffsetY - scrollView.contentOffset.y >= 0)) {
         [self hiddenAction];
-    } else if (self.stopDragingOffsetY < -100 && (self.stopDragingOffsetY - scrollView.contentOffset.y >= 0)) {
+    } else if (self.stopDragingOffsetY < -80 && (self.stopDragingOffsetY - scrollView.contentOffset.y >= -2)) {
         [self hiddenAction];
     }
     if (self.stopDragingOffsetY < 0) {
