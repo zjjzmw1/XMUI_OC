@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self.customNaviView setTitleStr:@"OrderListAlertView"];
     self.dataArr = @[@"全部",@"已完成",@"未完成",@"已过期"];
 
 }

@@ -207,13 +207,13 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-//        _tableView.separatorColor = [UIColor redColor];
+        // 添加横线
+//        _tableView.separatorColor = [UIColor lightGrayColor];
 //        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-//        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedRowHeight = 0;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.estimatedSectionHeaderHeight = 0;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerClass:[OrderListCell class] forCellReuseIdentifier:@"OrderListCell"];
         if (@available(iOS 11.0, *)) {
             _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

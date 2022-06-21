@@ -17,7 +17,8 @@
 + (instancetype)instanceWithType:(UITableViewStyle)style {
     UITableView *tableV = [[UITableView alloc] initWithFrame:CGRectZero style:style];
     [tableV registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
-    tableV.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    tableV.separatorColor = [UIColor lightGrayColor];
     tableV.backgroundColor = [UIColor whiteColor];
     tableV.rowHeight = UITableViewAutomaticDimension;
     // 0 就是不自动适配高度了。
@@ -26,6 +27,12 @@
     tableV.estimatedSectionFooterHeight = 0;
     if (@available(iOS 11.0, *)) {
         tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
+    // 修复section上面有空白的bug
+    if (@available(iOS 15.0, *)) {
+        tableV.sectionHeaderTopPadding = 0;
     } else {
         // Fallback on earlier versions
     }
