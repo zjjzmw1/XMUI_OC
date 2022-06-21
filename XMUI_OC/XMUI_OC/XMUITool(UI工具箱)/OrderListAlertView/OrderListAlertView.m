@@ -25,6 +25,8 @@
 @property (nonatomic, strong) UITableView   *tableView;
 /// 是否将要隐藏
 @property (nonatomic, assign) BOOL          willHidden;
+/// 停止拖拽的时候的偏移
+@property (nonatomic, assign) CGFloat       stopDragingOffsetY;
 
 @end
 
@@ -149,13 +151,32 @@
             scrollView.transform = CGAffineTransformIdentity;
         }
     }
+    // 第二种消失逻辑 ---- 类似抖音效果 ------------- BEGIN
+    if (self.stopDragingOffsetY < -50 && (self.stopDragingOffsetY - scrollView.contentOffset.y > 1)) { // 快速下拉
+        [self hiddenAction];
+    } else if (self.stopDragingOffsetY < -90 && (self.stopDragingOffsetY - scrollView.contentOffset.y > 0)) {
+        [self hiddenAction];
+    } else if (self.stopDragingOffsetY < -100 && (self.stopDragingOffsetY - scrollView.contentOffset.y >= 0)) {
+        [self hiddenAction];
+    }
+    if (self.stopDragingOffsetY < 0) {
+        NSLog(@"yy===%f,,,%f",self.stopDragingOffsetY, scrollView.contentOffset.y);
+    }
+    self.stopDragingOffsetY = 0;
+    // 第二种消失逻辑 ----------------- END
 }
 
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    // 第一种消失逻辑 ----------------- BEGIN
     // 停止拖拽的时候，下拉高度大于80，就消失
-    if (scrollView.contentOffset.y < -80 && scrollView.isDragging == NO) {
-        [self hiddenAction];
-    }
+//    if (scrollView.contentOffset.y < -80 && scrollView.isDragging == NO) {
+//        [self hiddenAction];
+//    }
+    // 第一种消失逻辑 ----------------- END
+
+    // 第二种消失逻辑 ---- 类似抖音效果 ------------- BEGIN
+    self.stopDragingOffsetY = scrollView.contentOffset.y;
+    // 第二种消失逻辑 ----------------- END
 }
 
 #pragma mark - 懒加载
@@ -207,9 +228,8 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        // 添加横线
-//        _tableView.separatorColor = [UIColor lightGrayColor];
-//        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        // 不添加横线
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.estimatedRowHeight = 0;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedSectionFooterHeight = 0;
