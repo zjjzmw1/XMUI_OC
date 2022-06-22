@@ -11,30 +11,6 @@
 #import "XMToast.h"
 
 #import "XMTabBarVC.h"
-#import "DemoToastVC.h"
-#import "DemoLabelVC.h"
-#import "DemoPopMenuVC.h"
-#import "DemoButtonVC.h"
-#import "DemoTextFieldVC.h"
-#import "DemoEmptyVC.h"
-#import "DemoTextViewVC.h"
-#import "DemoViewVC.h"
-#import "DemoImageVC.h"
-#import "DemoAlertVC.h"
-#import "DemoSignVC.h"
-#import "DemoToolVC.h"
-#import "DemoUploadProgressVC.h"
-#import "DemoTimerVC.h"
-#import "DemoCircleProgressVC.h"
-#import "DemoImageLabelVC.h"
-#import "DemoSortBarVC.h"
-#import "DemoPageMenuVC.h"
-#import "BigEatSmallVC.h"
-#import "DemoCollectionVC.h"
-#import "DemoCollectionVC2.h"
-#import "DemoRedPointVC.h"
-#import "DemoNoDataEmptyVC.h"
-#import "DemoOrderListAlertViewVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -60,7 +36,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2",@"DemoRedPointVC",@"OrderListAlertView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2",@"DemoRedPointVC",@"OrderListAlertView",@"XMDatePickerView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -101,76 +77,79 @@
     }
 
     if ([vcString isEqualToString:@"大鱼吃小鱼"]) {
-        vc = [BigEatSmallVC new];
+        vc = [NSClassFromString(@"BigEatSmallVC") new];
     }
     if ([vcString isEqualToString:@"XMToast"]) {
-        vc = [DemoToastVC new];
+        vc = [self getViewControllerWith:@"DemoToastVC"];
     }
     if ([vcString isEqualToString:@"XMSortBarView"]) {
-        vc = [DemoSortBarVC new];
+        vc = [self getViewControllerWith:@"DemoSortBarVC"];
     }
     if ([vcString isEqualToString:@"UILabel"]) {
-        vc = [DemoLabelVC new];
+        vc = [self getViewControllerWith:@"DemoLabelVC"];
     }
     if ([vcString isEqualToString:@"XMPopMenu"]) {
-        vc = [DemoPopMenuVC new];
+        vc = [self getViewControllerWith:@"DemoPopMenuVC"];
     }
     if ([vcString isEqualToString:@"UIButton"]) {
-        vc = [DemoButtonVC new];
+        vc = [self getViewControllerWith:@"DemoButtonVC"];
     }
     if ([vcString isEqualToString:@"UITextField"]) {
-        vc = [DemoTextFieldVC new];
+        vc = [self getViewControllerWith:@"DemoTextFieldVC"];
     }
     if ([vcString isEqualToString:@"XMEmptyView"]) {
-        vc = [DemoEmptyVC new];
+        vc = [self getViewControllerWith:@"DemoEmptyVC"];
     }
     if ([vcString isEqualToString:@"XMTextView"]) {
-        vc = [DemoTextViewVC new];
+        vc = [self getViewControllerWith:@"DemoTextViewVC"];
     }
     if ([vcString isEqualToString:@"UIView"]) {
-        vc = [DemoViewVC new];
+        vc = [self getViewControllerWith:@"DemoViewVC"];
     }
     if ([vcString isEqualToString:@"UIImage"]) {
-        vc = [DemoImageVC new];
+        vc = [self getViewControllerWith:@"DemoImageVC"];
     }
     if ([vcString isEqualToString:@"XMAlertView"]) {
-        vc = [DemoAlertVC new];
+        vc = [self getViewControllerWith:@"DemoAlertVC"];
     }
     if ([vcString isEqualToString:@"XMSignView"]) {
-        vc = [DemoSignVC new];
+        vc = [self getViewControllerWith:@"DemoSignVC"];
     }
     if ([vcString isEqualToString:@"XMTool"]) {
-        vc = [DemoToolVC new];
+        vc = [self getViewControllerWith:@"DemoToolVC"];
     }
     if ([vcString isEqualToString:@"ProgressView"]) {
-        vc = [DemoUploadProgressVC new];
+        vc = [self getViewControllerWith:@"DemoUploadProgressVC"];
     }
     if ([vcString isEqualToString:@"XMCircleProgressView"]) {
-        vc = [DemoCircleProgressVC new];
+        vc = [self getViewControllerWith:@"DemoCircleProgressVC"];
     }
     if ([vcString isEqualToString:@"XMTimer"]) {
-        vc = [DemoTimerVC new];
+        vc = [self getViewControllerWith:@"DemoTimerVC"];
     }
     if ([vcString isEqualToString:@"XMImageLabelView"]) {
-        vc = [DemoImageLabelVC new];
+        vc = [self getViewControllerWith:@"DemoImageLabelVC"];
     }
     if ([vcString isEqualToString:@"SPPageMenu"]) {
-        vc = [DemoPageMenuVC new];
+        vc = [self getViewControllerWith:@"DemoPageMenuVC"];
     }
     if ([vcString isEqualToString:@"DemoCollectionVC"]) {
-        vc = [DemoCollectionVC new];
+        vc = [self getViewControllerWith:@"DemoCollectionVC"];
     }
     if ([vcString isEqualToString:@"DemoCollectionVC2"]) {
-        vc = [DemoCollectionVC2 new];
+        vc = [self getViewControllerWith:@"DemoCollectionVC2"];
     }
     if ([vcString isEqualToString:@"DemoRedPointVC"]) {
-        vc = [DemoRedPointVC new];
+        vc = [self getViewControllerWith:@"DemoRedPointVC"];
     }
     if ([vcString isEqualToString:@"XMNoDataEmptyView"]) {
-        vc = [DemoNoDataEmptyVC new];
+        vc = [self getViewControllerWith:@"DemoNoDataEmptyVC"];
     }
     if ([vcString isEqualToString:@"OrderListAlertView"]) {
-        vc = [DemoOrderListAlertViewVC new];
+        vc = [self getViewControllerWith:@"DemoOrderListAlertViewVC"];
+    }
+    if ([vcString isEqualToString:@"XMDatePickerView"]) {
+        vc = [self getViewControllerWith:@"DemoDatePickerVC"];
     }
     
     [[XMTabBarVC defaultManager] showBadgeMark:54 index:1];
@@ -178,5 +157,11 @@
     
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+/// 根据字符串返回 class 类，省去了导入头文件了
+- (UIViewController *)getViewControllerWith:(NSString *)classString {
+    return [[NSClassFromString(classString) alloc] init];
+}
+
 
 @end

@@ -25,6 +25,19 @@
     return lastDate;
 }
 
+
+/// 根据日期字符串获取NSDate类型
+/// @param formateString 时间格式例如： @"yyyy-MM-dd HH:mm:ss"
+/// @param dateStr 字符串时间
++ (NSDate *)getDateWithFormateString:(NSString *)formateString dateString:(NSString *)dateStr {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSString *format = formateString;
+    formatter.dateFormat = format;
+    [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];//解决8小时时间差问题
+    NSDate *lastDate = [formatter dateFromString:dateStr];
+    return lastDate;
+}
+
 /// 上次存储的时间，距离当前时间的间隔 秒: 例如：距离上次存储时间，距离现在是  20秒
 + (NSTimeInterval)fromNowTimeInterval_XM:(NSString *)lastDateStr {
     NSDate *lastDate = [NSDate getDate_XM:lastDateStr];
@@ -61,6 +74,26 @@
     } else {
         return [NSString stringWithFormat:NSLocalizedString(@"%.f年前", @""), timeInterval / 31536000];
     }
+}
+
+#pragma mark - 获取 年、月、日
+/// 获取年份
+- (NSInteger)getYearInteger {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
+    return [components year];
+}
+/// 获取月份
+- (NSInteger)getMonthInteger {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
+    return [components month];
+}
+/// 获取天
+- (NSInteger)getDayInteger {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
+    return [components day];
 }
 
 @end

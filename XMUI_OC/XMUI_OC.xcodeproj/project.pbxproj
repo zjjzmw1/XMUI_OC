@@ -84,6 +84,8 @@
 		E5D3491C28607E1200DB1BBE /* OrderListAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3491B28607E1200DB1BBE /* OrderListAlertView.m */; };
 		E5D3491F28607E6B00DB1BBE /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D3491E28607E6B00DB1BBE /* OrderListCell.m */; };
 		E5D34923286080E700DB1BBE /* DemoOrderListAlertViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D34922286080E700DB1BBE /* DemoOrderListAlertViewVC.m */; };
+		E5D4CB472862C6D5007C0B3E /* XMDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D4CB462862C6D5007C0B3E /* XMDatePickerView.m */; };
+		E5D4CB4B2862CCAA007C0B3E /* DemoDatePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D4CB4A2862CCAA007C0B3E /* DemoDatePickerVC.m */; };
 		E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */; };
 		E5E1139228581DCE007F3182 /* DemoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139128581DCE007F3182 /* DemoCollectionCell.m */; };
 		E5E1139628582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1139528582861007F3182 /* MLHorizontalCollectionViewFlowLayout.m */; };
@@ -247,6 +249,10 @@
 		E5D3491E28607E6B00DB1BBE /* OrderListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
 		E5D34921286080E700DB1BBE /* DemoOrderListAlertViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoOrderListAlertViewVC.h; sourceTree = "<group>"; };
 		E5D34922286080E700DB1BBE /* DemoOrderListAlertViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoOrderListAlertViewVC.m; sourceTree = "<group>"; };
+		E5D4CB452862C6D5007C0B3E /* XMDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMDatePickerView.h; sourceTree = "<group>"; };
+		E5D4CB462862C6D5007C0B3E /* XMDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMDatePickerView.m; sourceTree = "<group>"; };
+		E5D4CB492862CCAA007C0B3E /* DemoDatePickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDatePickerVC.h; sourceTree = "<group>"; };
+		E5D4CB4A2862CCAA007C0B3E /* DemoDatePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoDatePickerVC.m; sourceTree = "<group>"; };
 		E5E1138D28581AB9007F3182 /* DemoCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionVC.h; sourceTree = "<group>"; };
 		E5E1138E28581AB9007F3182 /* DemoCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoCollectionVC.m; sourceTree = "<group>"; };
 		E5E1139028581DCE007F3182 /* DemoCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoCollectionCell.h; sourceTree = "<group>"; };
@@ -578,6 +584,7 @@
 			children = (
 				E5085E8928458DE2002863E2 /* XMUIToolHeader.h */,
 				E53CDC9B283F438F00B6AB00 /* XMSizeMacro.h */,
+				E5D4CB442862C6BD007C0B3E /* DatePickerView */,
 				E5145DA828607DB400E84621 /* OrderListAlertView */,
 				E5E4DC77285ABB44009283FC /* XMRedPointView */,
 				E50059B12851F32F00928920 /* XMPageMenu */,
@@ -682,6 +689,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				E5D4CB482862CC94007C0B3E /* DatePickerView */,
 				E5D34920286080C800DB1BBE /* OrderListAlertView */,
 				E5E4DC7E285ABCEE009283FC /* RedPointVC */,
 				E5E1138C28581A73007F3182 /* DemoCollectionViewVC */,
@@ -921,6 +929,24 @@
 			path = OrderListAlertView;
 			sourceTree = "<group>";
 		};
+		E5D4CB442862C6BD007C0B3E /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E5D4CB452862C6D5007C0B3E /* XMDatePickerView.h */,
+				E5D4CB462862C6D5007C0B3E /* XMDatePickerView.m */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		E5D4CB482862CC94007C0B3E /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E5D4CB492862CCAA007C0B3E /* DemoDatePickerVC.h */,
+				E5D4CB4A2862CCAA007C0B3E /* DemoDatePickerVC.m */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
 		E5E1138C28581A73007F3182 /* DemoCollectionViewVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1116,6 +1142,7 @@
 				E53CDCB8283F6BA400B6AB00 /* XMToast.m in Sources */,
 				E5E4DC7D285ABCE8009283FC /* DemoRedPointVC.m in Sources */,
 				E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */,
+				E5D4CB472862C6D5007C0B3E /* XMDatePickerView.m in Sources */,
 				E5D3491F28607E6B00DB1BBE /* OrderListCell.m in Sources */,
 				E53CDCB0283F519200B6AB00 /* UIView+XMTool.m in Sources */,
 				E5702D83284A4E9400E2F256 /* NSNumber+XMSafe.m in Sources */,
@@ -1126,6 +1153,7 @@
 				E52679A22843332200B5FDC7 /* XMEmptyView.m in Sources */,
 				E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */,
 				E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */,
+				E5D4CB4B2862CCAA007C0B3E /* DemoDatePickerVC.m in Sources */,
 				E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
@@ -1302,7 +1330,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1334,7 +1362,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (XMTool)
 
+/// 根据日期字符串获取NSDate类型
+/// @param formateString 时间格式例如： @"yyyy-MM-dd HH:mm:ss"
+/// @param dateStr 字符串时间
++ (NSDate *)getDateWithFormateString:(NSString *)formateString dateString:(NSString *)dateStr;
+
 /// 获取时间的字符串 "yyyy-MM-dd HH:mm:ss"
 - (NSString *)getDateStr_XM;
 /// 根据 "yyyy-MM-dd HH:mm:ss" 格式的字符串，返回NSdate格式的时间
@@ -25,6 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)dateStrWithFormat:(NSString *)format;
 /// 距离当前时间的间隔：1分钟内、几分钟前、几天前、等 -- 类似朋友圈、微博 - 的时间展示
 - (NSString *)fromNowTimeIntervalDescription;
+
+/// 获取年份
+- (NSInteger)getYearInteger;
+/// 获取月份
+- (NSInteger)getMonthInteger;
+/// 获取天
+- (NSInteger)getDayInteger;
 
 @end
 
