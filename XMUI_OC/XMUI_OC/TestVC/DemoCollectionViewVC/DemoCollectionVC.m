@@ -8,6 +8,8 @@
 #import "DemoCollectionVC.h"
 #import "DemoCollectionCell.h"
 
+#import "DemoCollectionVC2.h"
+
 @interface DemoCollectionVC ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView  *collectionView;
@@ -20,6 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"测试CollectionView"];
+    [self.customNaviView setRightBtnImage:nil title:@"demo2"];
+    __weak typeof(self) weakSelf = self;
+    [self.customNaviView setRightBlock:^{
+        DemoCollectionVC2 *vc = [DemoCollectionVC2 new];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
     [self initAllView];
 }
 

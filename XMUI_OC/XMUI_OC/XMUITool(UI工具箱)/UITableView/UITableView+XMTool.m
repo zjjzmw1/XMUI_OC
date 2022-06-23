@@ -17,7 +17,7 @@
 + (instancetype)instanceWithType:(UITableViewStyle)style {
     UITableView *tableV = [[UITableView alloc] initWithFrame:CGRectZero style:style];
     [tableV registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
-    tableV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    tableV.separatorStyle = UITableViewCellSeparatorStyleNone; // 默认不带横线
     tableV.separatorColor = [UIColor lightGrayColor];
     tableV.backgroundColor = [UIColor whiteColor];
     tableV.rowHeight = UITableViewAutomaticDimension;

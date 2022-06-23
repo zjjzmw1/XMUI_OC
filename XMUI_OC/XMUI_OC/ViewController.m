@@ -36,7 +36,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoCollectionVC2",@"DemoRedPointVC",@"OrderListAlertView",@"XMDatePickerView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoRedPointVC",@"OrderListAlertView",@"XMDatePickerView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -135,9 +135,6 @@
     }
     if ([vcString isEqualToString:@"DemoCollectionVC"]) {
         vc = [self getViewControllerWith:@"DemoCollectionVC"];
-    }
-    if ([vcString isEqualToString:@"DemoCollectionVC2"]) {
-        vc = [self getViewControllerWith:@"DemoCollectionVC2"];
     }
     if ([vcString isEqualToString:@"DemoRedPointVC"]) {
         vc = [self getViewControllerWith:@"DemoRedPointVC"];
