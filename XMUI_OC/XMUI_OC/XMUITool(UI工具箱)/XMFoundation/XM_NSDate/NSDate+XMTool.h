@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (XMTool)
 
+/// 根据时间戳返回某个格式的字符串
+/// @param timestamp 时间戳的字符串
+/// @param dateFormat 例如：「YYYY-MM-dd」
++ (NSString *)getTimeStringFromTimestamp:(NSString *)timestamp andDateFormat:(NSString *)dateFormat;
+
 /// 根据日期字符串获取NSDate类型
 /// @param formateString 时间格式例如： @"yyyy-MM-dd HH:mm:ss"
 /// @param dateStr 字符串时间
