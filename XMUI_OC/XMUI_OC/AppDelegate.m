@@ -28,6 +28,13 @@
 
     [self.window makeKeyAndVisible];
     
+    // ios项目添加flutter页面
+    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my_flutter_engine"];
+    // Runs the default Dart entrypoint with a default Flutter route.
+    [self.flutterEngine run];
+    // Used to connect plugins (only if you have plugins with iOS platform code).
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
+    
     return YES;
 }
 

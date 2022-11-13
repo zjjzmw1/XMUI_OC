@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
+		949C1ED709296B4E2CE7309A /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E429B9AEE38F6FC13F470BFD /* Pods_XMUI_OC.framework */; };
+		BDAE758F291CD8F900517BD4 /* TestFlutterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE758E291CD8F900517BD4 /* TestFlutterVC.m */; };
 		E50059B42851F36700928920 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B22851F36700928920 /* SPPageMenu.m */; };
 		E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B72851F3D100928920 /* DemoPageMenuVC.m */; };
 		E50059BB2851F64E00928920 /* FirstPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059BA2851F64E00928920 /* FirstPageMenuVC.m */; };
@@ -95,9 +96,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.release.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.release.xcconfig"; sourceTree = "<group>"; };
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
+		BDAE758D291CD8F900517BD4 /* TestFlutterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlutterVC.h; sourceTree = "<group>"; };
+		BDAE758E291CD8F900517BD4 /* TestFlutterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFlutterVC.m; sourceTree = "<group>"; };
+		E429B9AEE38F6FC13F470BFD /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50059B22851F36700928920 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		E50059B32851F36700928920 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		E50059B62851F3D100928920 /* DemoPageMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPageMenuVC.h; sourceTree = "<group>"; };
@@ -272,7 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */,
+				949C1ED709296B4E2CE7309A /* Pods_XMUI_OC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +285,18 @@
 		1EB367DA03299910153853B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */,
+				E429B9AEE38F6FC13F470BFD /* Pods_XMUI_OC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDAE758C291CD8CC00517BD4 /* FlutterVC */ = {
+			isa = PBXGroup;
+			children = (
+				BDAE758D291CD8F900517BD4 /* TestFlutterVC.h */,
+				BDAE758E291CD8F900517BD4 /* TestFlutterVC.m */,
+			);
+			path = FlutterVC;
 			sourceTree = "<group>";
 		};
 		E50059B12851F32F00928920 /* XMPageMenu */ = {
@@ -689,6 +701,7 @@
 		E53CDCB9283F747700B6AB00 /* TestVC */ = {
 			isa = PBXGroup;
 			children = (
+				BDAE758C291CD8CC00517BD4 /* FlutterVC */,
 				E5D4CB482862CC94007C0B3E /* DatePickerView */,
 				E5D34920286080C800DB1BBE /* OrderListAlertView */,
 				E5E4DC7E285ABCEE009283FC /* RedPointVC */,
@@ -1007,9 +1020,11 @@
 			buildConfigurationList = E53CDC8C283F3DB600B6AB00 /* Build configuration list for PBXNativeTarget "XMUI_OC" */;
 			buildPhases = (
 				76A930CA94239CE70D0D480C /* [CP] Check Pods Manifest.lock */,
+				0FAA6394F660DCBEBBA04C10 /* [CP-User] Run Flutter Build flutter_m Script */,
 				E53CDC6F283F3DB500B6AB00 /* Sources */,
 				E53CDC70283F3DB500B6AB00 /* Frameworks */,
 				E53CDC71283F3DB500B6AB00 /* Resources */,
+				F07957C069D233C8B9F5A426 /* [CP-User] Embed Flutter Build flutter_m Script */,
 			);
 			buildRules = (
 			);
@@ -1069,6 +1084,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FAA6394F660DCBEBBA04C10 /* [CP-User] Run Flutter Build flutter_m Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_m Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_m/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		76A930CA94239CE70D0D480C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1091,6 +1116,16 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F07957C069D233C8B9F5A426 /* [CP-User] Embed Flutter Build flutter_m Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build flutter_m Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_m/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1112,6 +1147,7 @@
 				E5085EAA284858BD002863E2 /* DemoToolVC.m in Sources */,
 				E52679B128444DEE00B5FDC7 /* DemoViewVC.m in Sources */,
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
+				BDAE758F291CD8F900517BD4 /* TestFlutterVC.m in Sources */,
 				E5E4DC7A285ABB57009283FC /* XMRedPointView.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
 				E583A75E2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m in Sources */,
@@ -1251,7 +1287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1303,7 +1339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1330,7 +1366,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1362,7 +1398,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
