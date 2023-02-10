@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CF30BE32995FF66000CE702 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF30BE22995FF66000CE702 /* Person.m */; };
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
 		E50059B42851F36700928920 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B22851F36700928920 /* SPPageMenu.m */; };
 		E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B72851F3D100928920 /* DemoPageMenuVC.m */; };
@@ -95,6 +96,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF30BE12995FF66000CE702 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0CF30BE22995FF66000CE702 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMUI_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5036F11B7088385DCE192ACF /* Pods-XMUI_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.release.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.release.xcconfig"; sourceTree = "<group>"; };
 		B0B116CDD9F7158C7D6F32B7 /* Pods-XMUI_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMUI_OC.debug.xcconfig"; path = "Target Support Files/Pods-XMUI_OC/Pods-XMUI_OC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -722,6 +725,8 @@
 			children = (
 				E53CDCBA283F74A900B6AB00 /* DemoToastVC.h */,
 				E53CDCBB283F74A900B6AB00 /* DemoToastVC.m */,
+				0CF30BE12995FF66000CE702 /* Person.h */,
+				0CF30BE22995FF66000CE702 /* Person.m */,
 			);
 			path = ToastVC;
 			sourceTree = "<group>";
@@ -1154,6 +1159,7 @@
 				E5B812982851727600AA86E6 /* XMSortBarView.m in Sources */,
 				E5E1138F28581AB9007F3182 /* DemoCollectionVC.m in Sources */,
 				E5D4CB4B2862CCAA007C0B3E /* DemoDatePickerVC.m in Sources */,
+				0CF30BE32995FF66000CE702 /* Person.m in Sources */,
 				E5702D8E284CDA3400E2F256 /* XMCircleGradientProgressView.m in Sources */,
 				E5702D65284A479600E2F256 /* NSArray+XMSafe.m in Sources */,
 				E5085EA5284850E8002863E2 /* XMTool.m in Sources */,
