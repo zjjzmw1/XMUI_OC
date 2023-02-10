@@ -12,6 +12,7 @@
 
 #import "XMToast.h"
 #import "Person.h"
+#import "TestVCViewController.h"
 
 @interface DemoToastVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -66,12 +67,18 @@
     if (indexPath.row == self.dataArr.count - 1) { // 测试用的
         // 测试局部变量的block，会不会循环引用
         __weak typeof(self) wSelf = self;
-        Person *p = [[Person alloc] init];
-        p.testBlock = ^{
-            self.title = @"1223"; // 如果self的时候，p对象没添加到self子view上或者没被引用的地方，self就OK
-            NSLog(@"234535");
+//        Person *p = [[Person alloc] init];
+//        p.testBlock = ^{
+//            self.title = @"1223"; // 如果self的时候，p对象没添加到self子view上或者没被引用的地方，self就OK
+//            NSLog(@"234535");
+//        };
+//        p.testBlock();
+        TestVCViewController *vc = [[TestVCViewController alloc] init];
+        vc.backBlock = ^{
+            self.title = @"ads"; // 这里不会循环引用，因为self并没有持有 vc。 push不算。
+            NSLog(@"sdfaf");
         };
-        p.testBlock();
+        [self.navigationController pushViewController:vc animated:YES];
         
        // 测试： __weak __strong
     //    __weak typeof(self) wSelf = self;
