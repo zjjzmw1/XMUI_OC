@@ -3,8 +3,9 @@
 
 target 'XMUI_OC' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for XMUI_OC
-
+  use_frameworks!  
+  
+  # facebook 的性能优化方案，在子线程布局、渲染、解码等
+  pod "Texture"
+  
 end
