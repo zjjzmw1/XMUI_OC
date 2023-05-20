@@ -25,6 +25,17 @@
     [self.view addSubview:self.webView];
     [self configWebView];
     [self.webView reload];
+    __weak typeof(self) wSelf = self;
+    // 右边刷新按钮
+    [self.customNaviView setRightBtnImage:nil title:@"回首页"];
+    [self.customNaviView setRightBlock:^{
+        WKBackForwardListItem *listItem = [wSelf.webView backForwardList].backList.firstObject;
+        if (listItem) {
+            [wSelf.webView goToBackForwardListItem:listItem];
+        } else {
+            [wSelf.webView goBack];
+        }
+    }];
 }
 
 //移除监听
