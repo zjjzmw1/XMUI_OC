@@ -8,7 +8,7 @@
 #import "XMWebViewVC.h"
 #import "XMWebViewManager.h"
 
-@interface XMWebViewVC ()<WKNavigationDelegate, WKUIDelegate>
+@interface XMWebViewVC ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 /// 进度条
@@ -51,6 +51,7 @@
 - (void)configWebView {
     self.webView.UIDelegate = self;
     self.webView.navigationDelegate = self;
+    self.webView.scrollView.delegate = self;
     // 添加监听
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
@@ -64,6 +65,13 @@
     [progress.layer addSublayer:layer];
     self.progresslayer = layer;
 
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y < -50) { // 下拉刷新
+        NSLog(@"contentOffset.y===%f",scrollView.contentOffset.y);
+        [self.webView reload];
+    }
 }
 
 #pragma mark - 网页加载完成的回调
