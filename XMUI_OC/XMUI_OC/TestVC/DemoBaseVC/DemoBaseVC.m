@@ -29,7 +29,7 @@
 
 - (void)dealloc {
     NSLog(@"页面销毁了");
-    [XMToast showTextToCenter:[NSString stringWithFormat:@"%@ - %@",NSStringFromClass(self.class),@"页面销毁了"]];
+//    [XMToast showTextToCenter:[NSString stringWithFormat:@"%@ - %@",NSStringFromClass(self.class),@"页面销毁了"]];
 }
 
 @end

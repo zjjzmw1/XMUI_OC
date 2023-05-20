@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "XMTabBarVC.h"
+#import "XMWebViewManager.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,10 @@
     [self.window setRootViewController:[XMTabBarVC defaultManager]];
 
     [self.window makeKeyAndVisible];
+    
+    // 预加载网页
+    NSArray *urlArr = @[@"http://www.baidu.com"];
+    [[XMWebViewManager defalutManager] preloadWebViewWithUrlArray:urlArr];
     
     return YES;
 }

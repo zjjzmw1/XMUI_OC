@@ -11,6 +11,7 @@
 #import "XMToast.h"
 
 #import "XMTabBarVC.h"
+#import "XMWebViewVC.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,7 +37,7 @@
         [[XMTabBarVC defaultManager] hideMarkIndex:1];
     }];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoRedPointVC",@"OrderListAlertView",@"XMDatePickerView"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"大鱼吃小鱼",@"网页1",@"网页2",@"XMTool",@"XMToast",@"XMSortBarView",@"UILabel",@"UIButton",@"XMPopMenu",@"UITextField",@"XMEmptyView",@"XMNoDataEmptyView",@"XMTextView",@"UIView",@"UIImage",@"XMAlertView",@"XMSignView",@"ProgressView",@"XMCircleProgressView",@"XMTimer",@"XMImageLabelView",@"SPPageMenu",@"DemoCollectionVC",@"DemoRedPointVC",@"OrderListAlertView",@"XMDatePickerView"]];
     self.tableView = [UITableView instanceWithType:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
@@ -78,6 +79,18 @@
 
     if ([vcString isEqualToString:@"大鱼吃小鱼"]) {
         vc = [NSClassFromString(@"BigEatSmallVC") new];
+    }
+    if ([vcString isEqualToString:@"网页1"]) {
+        XMWebViewVC *webVC = [XMWebViewVC new];
+        webVC.urlString = @"http://www.baidu.com";
+        webVC.needCacheFlag = YES;
+        vc = webVC;
+    }
+    if ([vcString isEqualToString:@"网页2"]) {
+        XMWebViewVC *webVC = [XMWebViewVC new];
+        webVC.urlString = @"https://www.sina.com.cn/";
+        webVC.needCacheFlag = YES;
+        vc = webVC;
     }
     if ([vcString isEqualToString:@"XMToast"]) {
         vc = [self getViewControllerWith:@"DemoToastVC"];
