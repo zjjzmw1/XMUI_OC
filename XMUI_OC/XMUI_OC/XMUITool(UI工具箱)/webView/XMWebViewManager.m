@@ -62,7 +62,8 @@
 
 /// 添加网页请求
 - (void)addRequestWithUrlString:(NSString *)urlString needCache:(BOOL)needCache webView:(WKWebView *)webV {
-    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+    NSString *requestUrlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSURLRequest *req = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
     [webV loadRequest:req];
     if (needCache) {
         NSMutableDictionary *urlWebViewDict = [NSMutableDictionary dictionary];

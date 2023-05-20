@@ -31,8 +31,10 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     // 不移除会引起崩溃
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
-    [self.webView removeObserver:self forKeyPath:@"title"];
+    if ([self.webView observationInfo]) {
+        [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+        [self.webView removeObserver:self forKeyPath:@"title"];
+    }
 }
 // 配置网页
 - (void)configWebView {
@@ -56,6 +58,7 @@
 #pragma mark - 网页加载完成的回调
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     // NSURLRequestReturnCacheDataElseLoad 优先从本地拿数据，但是如果没有本地cache，则请求源数据
+    NSLog(@"当前url===%@",webView.URL.absoluteString);
 }
 
 #pragma mark - 进度条、title等监听

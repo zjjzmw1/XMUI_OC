@@ -30,7 +30,16 @@
     [self.window makeKeyAndVisible];
     
     // 预加载网页
-    NSArray *urlArr = @[@"http://www.baidu.com"];
+    NSArray *urlArr = @[@"http://www.baidu.com",
+                        @"https://xw.qq.com/?f=c_news#news",
+                        @"https://s.weibo.com/top/summary?cate=realtimehot",
+                        @"https://www.pearvideo.com/popular",
+                        @"https://www.zhihu.com/billboard",
+                        @"https://fanyi.baidu.com",
+                        @"https://m.baidu.com",
+                        @"https://m.baidu.com/s?word=人民币汇率",
+                        
+    ];
     [[XMWebViewManager defalutManager] preloadWebViewWithUrlArray:urlArr];
     
     return YES;

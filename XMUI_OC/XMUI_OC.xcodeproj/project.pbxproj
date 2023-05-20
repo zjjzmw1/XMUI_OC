@@ -10,6 +10,7 @@
 		2FDA38751F687069DE00C5A5 /* Pods_XMUI_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C44539344E15FCB835361F2 /* Pods_XMUI_OC.framework */; };
 		BD0A77692A18446C008945A9 /* XMWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A77682A18446C008945A9 /* XMWebViewManager.m */; };
 		BD0A77732A185A45008945A9 /* XMWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0A77722A185A45008945A9 /* XMWebViewVC.m */; };
+		BDEDEDE82A187A3D00AFCEBB /* TestWebListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEDEDE72A187A3D00AFCEBB /* TestWebListVC.m */; };
 		E50059B42851F36700928920 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B22851F36700928920 /* SPPageMenu.m */; };
 		E50059B82851F3D100928920 /* DemoPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059B72851F3D100928920 /* DemoPageMenuVC.m */; };
 		E50059BB2851F64E00928920 /* FirstPageMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E50059BA2851F64E00928920 /* FirstPageMenuVC.m */; };
@@ -104,6 +105,8 @@
 		BD0A77682A18446C008945A9 /* XMWebViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMWebViewManager.m; sourceTree = "<group>"; };
 		BD0A77712A185A45008945A9 /* XMWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMWebViewVC.h; sourceTree = "<group>"; };
 		BD0A77722A185A45008945A9 /* XMWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMWebViewVC.m; sourceTree = "<group>"; };
+		BDEDEDE62A187A3D00AFCEBB /* TestWebListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWebListVC.h; sourceTree = "<group>"; };
+		BDEDEDE72A187A3D00AFCEBB /* TestWebListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWebListVC.m; sourceTree = "<group>"; };
 		E50059B22851F36700928920 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		E50059B32851F36700928920 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
 		E50059B62851F3D100928920 /* DemoPageMenuVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoPageMenuVC.h; sourceTree = "<group>"; };
@@ -302,6 +305,17 @@
 				BD0A77722A185A45008945A9 /* XMWebViewVC.m */,
 			);
 			path = webView;
+			sourceTree = "<group>";
+		};
+		BDEDEDE52A187A1B00AFCEBB /* tabVC */ = {
+			isa = PBXGroup;
+			children = (
+				E53CDC7C283F3DB500B6AB00 /* ViewController.h */,
+				E53CDC7D283F3DB500B6AB00 /* ViewController.m */,
+				BDEDEDE62A187A3D00AFCEBB /* TestWebListVC.h */,
+				BDEDEDE72A187A3D00AFCEBB /* TestWebListVC.m */,
+			);
+			path = tabVC;
 			sourceTree = "<group>";
 		};
 		E50059B12851F32F00928920 /* XMPageMenu */ = {
@@ -582,8 +596,7 @@
 			children = (
 				E53CDC76283F3DB500B6AB00 /* AppDelegate.h */,
 				E53CDC77283F3DB500B6AB00 /* AppDelegate.m */,
-				E53CDC7C283F3DB500B6AB00 /* ViewController.h */,
-				E53CDC7D283F3DB500B6AB00 /* ViewController.m */,
+				BDEDEDE52A187A1B00AFCEBB /* tabVC */,
 				E53CDCB9283F747700B6AB00 /* TestVC */,
 				E53CDC8F283F3F2300B6AB00 /* XMUITool(UI工具箱) */,
 				E53CDC7F283F3DB500B6AB00 /* Main.storyboard */,
@@ -1150,6 +1163,7 @@
 				E53CDC7E283F3DB500B6AB00 /* ViewController.m in Sources */,
 				E5E4DC7A285ABB57009283FC /* XMRedPointView.m in Sources */,
 				E53CDCB1283F519200B6AB00 /* UIView+XMConvertRect.m in Sources */,
+				BDEDEDE82A187A3D00AFCEBB /* TestWebListVC.m in Sources */,
 				E583A75E2858321E00CAD1F3 /* DemoHorizontalCollectionViewCell.m in Sources */,
 				E53CDCB4283F6A4E00B6AB00 /* XMCustomNaviView.m in Sources */,
 				E51AD0852842330000DBF3C8 /* XMNavigationController.m in Sources */,

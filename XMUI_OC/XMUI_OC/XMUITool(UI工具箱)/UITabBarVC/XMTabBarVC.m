@@ -120,8 +120,8 @@
 }
 /// 初始化tabbar的几个页面
 - (void)initTabbarVC {
-    NSMutableArray *controllerArray = @[@"ViewController",@"CourseCategoryVC",@"StudyVC",@"ShopVC",@"NewMineVC"].mutableCopy;
-    NSArray * titleArray = @[NSLocalizedString(@"首页", nil),NSLocalizedString(@"分类", nil),NSLocalizedString(@"学习", nil), NSLocalizedString(@"商城", nil),NSLocalizedString(@"我的", nil)];
+    NSMutableArray *controllerArray = @[@"ViewController",@"TestWebListVC",@"StudyVC",@"ShopVC",@"NewMineVC"].mutableCopy;
+    NSArray * titleArray = @[NSLocalizedString(@"首页", nil),NSLocalizedString(@"网页列表", nil),NSLocalizedString(@"学习", nil), NSLocalizedString(@"商城", nil),NSLocalizedString(@"我的", nil)];
     NSArray *imageArray= @[@"tabbar_1",@"tabbar_2",@"tabbar_3",@"tabbar_3",@"tabbar_4"];
     //选中图片数组
     NSArray *selImageArray = @[@"tabbar_1_s",@"tabbar_2_s",@"tabbar_3_s",@"tabbar_3_s",@"tabbar_4_s"];
