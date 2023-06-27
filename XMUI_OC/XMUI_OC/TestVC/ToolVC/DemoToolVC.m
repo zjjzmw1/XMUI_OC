@@ -16,6 +16,11 @@
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, strong) NSMutableArray    *dataArr;
 
+// 监听的测试
+@property (nonatomic, strong) NSMutableArray    *testArr;
+@property (nonatomic, copy) NSString            *name;
+@property (nonatomic, assign) NSInteger         age;
+
 @end
 
 @implementation DemoToolVC
@@ -24,7 +29,7 @@
     [super viewDidLoad];
     [self.customNaviView setTitleStr:@"DemoToolVC"];
     
-    self.dataArr = [NSMutableArray arrayWithArray:@[@"关闭全局定时器",@"获取当前VC",@"移除某一个VC",@"拨打电话",@"轻微震动 - UIImpactFeedbackGenerator",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换",@"runtime-NSObect/NSArray/NSDictionary保护"]];
+    self.dataArr = [NSMutableArray arrayWithArray:@[@"关闭全局定时器",@"获取当前VC",@"移除某一个VC",@"拨打电话",@"轻微震动 - UIImpactFeedbackGenerator",@"当前版本号",@"当前构建版本",@"用户是否在中国内地",@"XMLocationTrans -「火星、GPS、地球」转换",@"runtime-NSObect/NSArray/NSDictionary保护", @"测试监听"]];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell self] forCellReuseIdentifier:@"UITableViewCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -43,6 +48,15 @@
     self.tableView.dataSource = self;
     self.tableView.frame = CGRectMake(0, kNaviStatusBarH_XM, kScreenWidth_XM, kScreenHeight_XM - kNaviStatusBarH_XM - kTabBarH_XM);
     [self.tableView reloadData];
+    
+    // 测试监听
+    self.testArr = [NSMutableArray array];
+    self.name = @"123";
+    self.age = 10;
+    
+    [self addObserver:self forKeyPath:@"testArr" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -104,10 +118,23 @@
         UIImpactFeedbackGenerator *feedBackGenertor = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
         [feedBackGenertor impactOccurred];
     }
-    
+    if ([vcString containsString:@"监听"]) {
+        // 测试监听
+        // 数组
+        [self.testArr addObject:@"23"]; // 不会执行监听
+        [[self mutableArrayValueForKey:@"testArr"] addObject:@"3333"]; // 需要这样操作数组，才能保证监听执行。
+        // 普通字符串 ： 新老值一样的话也会执行
+        self.name = @"new_name";
+        self.name = @"new_name";
+        // 基础类型
+        self.age = 13;
+    }
 }
 
-
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"keyPath==%@,,change === %@",keyPath, change);
+    
+}
 
 
 @end
